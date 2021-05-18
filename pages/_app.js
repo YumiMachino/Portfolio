@@ -12,6 +12,7 @@ library.add(fab, fas, far); //他のコンポーネントから簡単に呼び�
 
 
 function MyApp({ Component, pageProps }) {
+  
   return <Component {...pageProps} />
 }
 

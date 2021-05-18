@@ -6,12 +6,12 @@ import Image from 'next/image'
 import { spacing } from '@material-ui/system';      //for space setting inside Box
 import { Button, Container } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
-// import GitHubIcon from '@material-ui/icons/GitHub';
-// import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import React, { useState } from 'react'
 import { red } from '@material-ui/core/colors';
-// import { ControlCameraOutlined } from '@material-ui/icons';
+import { ControlCameraOutlined } from '@material-ui/icons';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 // import emailjs from "emailjs-com";
 
@@ -40,7 +40,6 @@ const Contact = () => {
             id="contact"
             width={1} 
             height="100%"
-            style={{backgroundColor: red}}
             // style = {{backgroundImage: `url(${astronomy})`}}
             m = {0}
             p = {4} 
@@ -125,10 +124,10 @@ const Contact = () => {
                     </div>
                     <div className="link-section">
                         <IconButton color="primary" aria-label="GitHub link" size="medium">
-                            {/* <a href={gitHubLink}> <GitHubIcon /></a> */}
+                            <a href={gitHubLink}> <GitHubIcon /></a>
                         </IconButton>
                          <IconButton color="primary" aria-label="GitHub link" size="medium">
-                            {/* <a href={linkedInLink}><LinkedInIcon /></a> */}
+                            <a href={linkedInLink}><LinkedInIcon /></a>
                         </IconButton>
                     </div>
                  </Box>

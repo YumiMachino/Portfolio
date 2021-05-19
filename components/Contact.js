@@ -15,8 +15,9 @@ import { ControlCameraOutlined } from '@material-ui/icons';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 import emailjs from "emailjs-com";
 
+
 const Contact = () => {
-    
+
     /* event handlers*/
     const sendEmail = (e) => {
     e.preventDefault();
@@ -33,18 +34,20 @@ const Contact = () => {
     const gitHubLink = "https://github.com/YumiMachino"
     const linkedInLink = "https://www.linkedin.com/in/machi-no-058778210/"
 
-    const astronomy = <Image src="/astoronomy.jpg" width={500}  height={500}/>
+    const astronomy = "../public/astoronomy.jpg"
    
-    // import astronomy from '../img/astronomy.jpg'
     return ( 
         <Box 
+            className="contact-section-box"
             id="contact"
             width={1} 
             height="100%"
-            // style = {{backgroundImage: `url(${astronomy})`}}
+            style = {{backgroundImage: `url(${astronomy})`}}
+            // style={{backgroundImage: "/astoronomy.jpg"}}
             m = {0}
             p = {4} 
         >
+           {/* <Image src="/astoronomy.jpg" alt="temp" width={800}  height={500} /> */}
             <Box
                 m={10}
                 display="flex"

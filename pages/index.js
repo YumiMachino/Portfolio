@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 // import { Router } from 'react-router'
 import About from '../components/About'
+import Navbar_rev from '../components/Navbar_rev'
 import Contact from '../components/Contact'
 import Intro from '../components/Intro'
 import Navbar from '../components/Navbar'
@@ -16,6 +17,7 @@ export default function Home() {
 
       <div className="nav-intro-section">
         <Navbar/>
+        {/* <Navbar_rev /> */}
         <Intro/>
       </div>
       <About/>

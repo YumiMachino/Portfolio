@@ -267,7 +267,9 @@
   }
 }
 
-/*Intro section*/
+/*
+  Intro section
+    */
 .nav-intro-section {
   margin: auto 0;
   padding: 0;
@@ -323,6 +325,7 @@
   display: flex;
   justify-content: center;
   padding-top: 64px;
+  padding-bottom: 64px;
   /*shadow effect*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -372,6 +375,7 @@
   width: 80%;
   height: 100%;
   padding-left: 15px;
+  /*content evenly*/
 }
 
 .title-left {
@@ -493,9 +497,14 @@ h3 {
 }
 
 /* Contact section */
-.contact-section-box {
-  background-image: url(../public/earth.jpg);
-}
+/* .temp {
+  background-image: url(../public/astronomy.jpg);
+  margin: auto 0;
+  padding: 0;
+  height: 900px;
+  width: 100%;
+  background-size: cover;
+} */
 
 .btn-style {
   text-align: center;

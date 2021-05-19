@@ -14,6 +14,7 @@ import { red } from '@material-ui/core/colors';
 import { ControlCameraOutlined } from '@material-ui/icons';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 import emailjs from "emailjs-com";
+import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
 
 
 const Contact = () => {
@@ -34,17 +35,29 @@ const Contact = () => {
     const gitHubLink = "https://github.com/YumiMachino"
     const linkedInLink = "https://www.linkedin.com/in/machi-no-058778210/"
 
-    const astronomy = "../public/astoronomy.jpg"
+
+    // const astronomy = require("../public/astoronomy.jpg");
+    const styling = {
+        // backgroundImage: `url('./astoronomy.jpg')`,
+        backgroundImage: `url('../public/astoronomy.jpg')`,
+        width:"100%",
+        height:"100%",
+    }
+
+    const background = {
+        backgroundColor: "#fff"
+    }
    
     return ( 
         <Box 
             id="contact"
-            width={1} 
-            height="100%"
-            style = {{backgroundImage: `url(${astronomy})`}}
-            // style={{backgroundImage: "/astoronomy.jpg"}}
+            // width={1} 
+            // height="100%"
+            // style = {{backgroundImage: `url(${astronomy})`}}
+            // style={{backgroundImage: url('../public/astoronomy.jpg')}}
             m = {0}
             p = {4} 
+            style={styling} 
         >
            {/* <Image src="/astoronomy.jpg" alt="temp" width={800}  height={500} /> */}
             <Box
@@ -52,15 +65,17 @@ const Contact = () => {
                 display="flex"
                 flexDirection="row"
                 justifyContent="center"
+                style={{zIndex:1}} 
                 >
                  <Box
                     bgcolor="#fff"
                     width={1}
                     display="flex"
                     flexDirection="column"
+                    
                     p={8}
                     >
-                    <div>
+                    <div >
                         <h5 className="title-left">Send A Message</h5>
                     </div>
 
@@ -73,6 +88,7 @@ const Contact = () => {
                             margin="normal"
                             style={{margin: 20}}
                             name="name"
+
                              />
                          <TextField
                             id="outlined-full-width"

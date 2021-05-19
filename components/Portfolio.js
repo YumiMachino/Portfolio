@@ -10,10 +10,10 @@ const thumbnail = "/vancouver.jpg"
 const projects = [
   {
     id: 1, 
-    title: "Project1",
+    title: "Hang-Out-Planner",
     thumbnail: thumbnail,
-    languages: "HTML, CSS, JavaScript",
-    projectURL: "https://www.google.com/"
+    languages: "Swift, Mapkit",
+    projectURL: "https://github.com/cookie777/Hang-Out-Planner"
   }, 
    {
     id: 2, 

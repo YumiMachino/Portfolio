@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core';
 import { sizing } from '@material-ui/system';
 
+import Image from 'next/image'
+
 const ProjectCard = (props) => {
 
 /*setting props*/
@@ -36,6 +38,7 @@ const classes = useStyle();
             <CardMedia 
               className={classes.media}
               component='img'
+              // src="/vancouver.jpg"
               src={thumbnail}
             />
             <CardContent>

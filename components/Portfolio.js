@@ -4,7 +4,8 @@ import ProjectCard from "./ProjectCard";
 import Image from 'next/image';
 
 const Portfolio = () => {
-const thumbnail = <Image src ="/earth.jpg" alt="vancouver"/>
+
+const thumbnail = "/vancouver.jpg"
 
 const projects = [
   {

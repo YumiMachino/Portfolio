@@ -551,10 +551,18 @@ h3 {
 
 .box-container {
   /* background-color: red; */
+  background-color: blue;
   background-image: url(../public/astronomy.jpg);
-  margin: 20px;
-  padding: 50px;
+  width: auto;
   text-align: center;
+}
+.subbox-container {
+  background-color: green;
+}
+
+.form-input {
+  background-color: red;
+  padding: 20px;
 }
 
 .btn-style {

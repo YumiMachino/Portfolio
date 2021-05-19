@@ -66,6 +66,7 @@ const Contact = () => {
                 flexDirection="row"
                 justifyContent="center"
                 style={{zIndex:1}} 
+                className="subbox-container"
                 >
                  <Box
                     bgcolor="#fff"

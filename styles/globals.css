@@ -24,19 +24,25 @@
 /*When scrolled up*/
 .navbarColorChange {
   background-color: #fff;
+  /*animation movement*/
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  /*border shadow*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   width: 100%;
 }
 
 .changeLogoColor {
-  color: black;
+  color: #313f9f;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -59,8 +65,7 @@
   height: 140px;
   width: 100%;
   font-weight: bold;
-
-  /* max-width: 1500px; */
+  position: fixed; /* added */
 }
 
 .navbar-logo {
@@ -70,17 +75,6 @@
   cursor: pointer;
   text-decoration: none;
   display: flex;
-}
-
-.nav-menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 14px;
-  list-style: none;
-  text-align: center;
-  width: 60vw;
-  justify-content: end;
-  margin-right: 2rem;
 }
 
 .nav-item {
@@ -181,7 +175,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 20vh;
+    /* height: 180px; */
+    height: 26vh;
     position: absolute;
     top: 120px;
     left: -100%;
@@ -193,6 +188,7 @@
   .nav-menu.active {
     padding: 0;
     background: #242222;
+    background-color: #fff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -200,9 +196,38 @@
     padding-left: 2.2rem;
   }
 
-  .nav-item:hover::after {
-    /* margin-left: 4px; */
+  /*When scrolled up*/
+  .linkLetterColorChange {
+    text-align: left;
+    padding: 0.1rem;
+    width: 100%;
+    display: table;
+    color: #313f9f;
+  }
+
+  .changeUnderLine::after {
+    content: "";
+    display: block;
+    width: 0;
+    transition: width 0.5s;
+    border-bottom: 2.5px solid #313f9f;
+  }
+
+  .changeUnderLine:hover::after {
+    margin-left: 5px;
     width: 40px;
+  }
+
+  .nav-item:hover::after {
+    width: 40px;
+  }
+
+  .nav-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    transition: width 0.5s;
+    border-bottom: 2.5px solid #313f9f;
   }
 
   .nav-links {
@@ -210,6 +235,7 @@
     padding: 0.1rem;
     width: 100%;
     display: table;
+    color: #313f9f;
   }
 
   .fa-user {
@@ -410,7 +436,7 @@
   }
 
   .about-container {
-    height: 1550px;
+    height: 1100px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -496,6 +522,23 @@ h3 {
   margin: 4px;
 }
 
+@media screen and (max-width: 765px) {
+  .cards {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .card {
+    flex-grow: 2;
+    padding: 2px;
+    margin: 4px;
+  }
+}
+
 /* Contact section */
 /* .temp {
   background-image: url(../public/astronomy.jpg);
@@ -505,6 +548,14 @@ h3 {
   width: 100%;
   background-size: cover;
 } */
+
+.box-container {
+  /* background-color: red; */
+  background-image: url(../public/astronomy.jpg);
+  margin: 20px;
+  padding: 50px;
+  text-align: center;
+}
 
 .btn-style {
   text-align: center;
@@ -521,4 +572,18 @@ h3 {
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 545;
   font-size: 0.875rem;
+}
+
+@media screen and (max-width: 765px) {
+  .box-container {
+    /* background-color: red; */
+    background-image: url(../public/astronomy.jpg);
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .form-input {
+    padding: 50px;
+  }
 }

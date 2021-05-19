@@ -21,9 +21,9 @@ export default function Home() {
       <About/>
  
       <Portfolio/>
-      <div className="temp">
+      {/* <div className="temp"> */}
         <Contact/>
-      </div>
+      {/* </div> */}
      
      
 

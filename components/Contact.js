@@ -12,9 +12,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import React, { useState } from 'react'
 import { red } from '@material-ui/core/colors';
 import { ControlCameraOutlined } from '@material-ui/icons';
-// import FormHelperText from '@material-ui/core/FormHelperText';
 import emailjs from "emailjs-com";
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+
 
 
 const Contact = () => {
@@ -58,6 +57,7 @@ const Contact = () => {
             m = {0}
             p = {4} 
             style={styling} 
+            className="box-container"
         >
            {/* <Image src="/astoronomy.jpg" alt="temp" width={800}  height={500} /> */}
             <Box
@@ -79,7 +79,7 @@ const Contact = () => {
                         <h5 className="title-left">Send A Message</h5>
                     </div>
 
-                    <form onSubmit={sendEmail}>
+                    <form onSubmit={sendEmail} className="form-input">
                         <TextField
                             id="outlined-full-width"
                             label="Your Name"

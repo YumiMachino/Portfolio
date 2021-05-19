@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { blue } from "@material-ui/core/colors";
 
 const Navbar = () => {
 
@@ -9,12 +10,30 @@ const Navbar = () => {
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false)
 
+    useEffect(() => {
+    window.addEventListener('scroll', changeNavbarColor)
+    return () => window.removeEventListener('scroll', changeNavbarColor)
+  })
+
     /*change navbar color when scrolled*/
     const changeNavbarColor = () => {
-        console.log("changin scroll")
-     console.log(window.scrollY);
+        console.log('scroll event', window.scrollY)
+        if (window.scrollY >= 100) {
+            setColorChange(true);
+        } else {
+            setColorChange(false);
+        }
     }
 
+    // const iconStyling = () => {
+    //     if (click === true && setColorChange === true) {
+    //         icon:['fas,' 'times'];
+    //     }
+    //     console.log("temp...")
+    // }
+
+   
+ 
     return (
        <div id="top" className={colorChange ? 'navbarColorChange' : 'navbar' }>
            <div className='navbar-container'>
@@ -23,6 +42,7 @@ const Navbar = () => {
                </a>
                 <div className="menu-icon" onClick={handleClick}>
                     <FontAwesomeIcon icon={ click ? ['fas','times'] : ['fas', 'bars']} />
+                     {/* <FontAwesomeIcon onClick={iconStyling} icon={['fas','times']} /> */}
                 </div>
 
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>

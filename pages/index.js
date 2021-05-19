@@ -21,12 +21,7 @@ export default function Home() {
       <About/>
  
       <Portfolio/>
-      {/* <div className="temp"> */}
-        <Contact/>
-      {/* </div> */}
-     
-     
-
+      <Contact/>
       </div>
   )
 }

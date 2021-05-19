@@ -558,6 +558,8 @@ h3 {
 }
 .subbox-container {
   background-color: green;
+  padding: 50px;
+  margin: 50px;
 }
 
 .form-input {

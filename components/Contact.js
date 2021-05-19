@@ -38,7 +38,6 @@ const Contact = () => {
    
     return ( 
         <Box 
-            className="contact-section-box"
             id="contact"
             width={1} 
             height="100%"

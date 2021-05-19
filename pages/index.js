@@ -21,7 +21,10 @@ export default function Home() {
       <About/>
  
       <Portfolio/>
-      <Contact/>
+      <div className="contact-section-box">
+         <Contact/>
+      </div>
+     
 
       </div>
   )

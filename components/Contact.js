@@ -13,14 +13,15 @@ import React, { useState } from 'react'
 import { red } from '@material-ui/core/colors';
 import { ControlCameraOutlined } from '@material-ui/icons';
 // import FormHelperText from '@material-ui/core/FormHelperText';
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+    
     /* event handlers*/
     const sendEmail = (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-     emailjs.sendForm('gmail', 'template_cv45din', e.target)
+     emailjs.sendForm('gmail', 'template_cv45din', e.target, 'user_YuoZ9Iwz3aJJQ3IumKsdX')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

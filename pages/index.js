@@ -11,6 +11,7 @@ import Portfolio from '../components/Portfolio'
 import styles from '../styles/Home.module.css'
 import Intro_rev from '../components/Intro_rev'
 import About_rev from '../components/About_rev'
+import Portfolio_rev from '../components/Portfolio_rev'
 
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
       {/* </div> */}
       <About_rev />
       {/* <About/> */}
- 
+      <Portfolio_rev />
       <Portfolio/>
       <Contact/>
       </div>

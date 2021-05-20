@@ -17,7 +17,7 @@ const Intro = () => {
             <div className="intro-subtitle">
              <div id="typeElement"></div>
             </div>
-             <Button variant="contained" color="primary" href="#work">View My Work</Button>  
+             <Button variant="contained" color="primary">View My Work</Button>  
         </div>
      );
 }

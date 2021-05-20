@@ -33,7 +33,6 @@ const Navbar = () => {
     // }
 
    
- 
     return (
        <div id="top" className={colorChange ? 'navbarColorChange' : 'navbar' }>
            <div className='navbar-container'>

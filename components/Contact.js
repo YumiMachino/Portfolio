@@ -175,6 +175,8 @@ const useStyles = makeStyles({
       width: '100%', // Fix IE 11 issue.
     },
 });
+
+
 const sectionStyle = {
     height: "100vh",
     backgroundImage: "url('/astronomy.jpg') ",

@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import emailjs from "emailjs-com";
 
 /*
 Style setting
@@ -61,6 +62,17 @@ const linkedInLink = "https://www.linkedin.com/in/machi-no-058778210/"
 const Contact_rev = () => {
     const classes = useStyle();
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('gmail', 'template_cv45din', e.target, 'user_YuoZ9Iwz3aJJQ3IumKsdX')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    }
+
     return (
         <Grid
             className={classes.root}
@@ -73,7 +85,7 @@ const Contact_rev = () => {
                 className={classes.sectionStyle}
                 sm={12} md={6} lg={6} xl={6}>
                 <Typography variant="h4" className={classes.sectionTitle}>Send A Message</Typography>
-                <form className={classes.formStyle}>
+                <form className={classes.formStyle} onSubmit={sendEmail}>
                      <TextField
                             id="outlined-full-width"
                             label="Your Name"

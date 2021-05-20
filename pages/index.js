@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="nav-intro-section">
         <Navbar/>
-        {/* <Navbar_rev /> */}
+        <Navbar_rev />
         <Intro/>
       </div>
       <About/>

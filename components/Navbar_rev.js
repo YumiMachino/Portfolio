@@ -5,19 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(3),
-    flexGrow: 1,
-    textAlign: 'left',
-  },
-  title: {
-    flexGrow: 1,
+  userLogo: {
+    marginLeft: theme.spacing(2),
   },
 }));
 
@@ -26,20 +21,27 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar 
+          position="fixed" 
+          style={{
+            backgroundColor: 'black',
+            color: '#fff',
+            height: '100px',
+            justifyContent: 'space-evenly'
+          }}
+      >
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+          <IconButton edge="start" className={classes.userLogo} color="inherit" aria-label="menu" >
+            <PersonIcon fontSize='large'/>
           </IconButton>
-          {/* <Typography variant="h6" className={classes.title}>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-          </Typography> */}
-          <Button color="inherit">HOME</Button>
-          <Button color="inherit">ABOUT</Button>
-          <Button color="inherit">WORK</Button>
-          <Button color="inherit">CONTACT</Button>
+
+          <div style={{flexGrow: 1}} />
+          <div className={classes.navButton}>
+            <Button href="#top" color="inherit">HOME</Button>
+            <Button href="#about" color="inherit">ABOUT</Button>
+            <Button href="#work" color="inherit">WORK</Button>
+            <Button href="#contact" color="inherit">CONTACT</Button>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

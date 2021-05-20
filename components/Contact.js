@@ -13,18 +13,19 @@ Style setting
 const useStyle = makeStyles({
 
     root: {
-            height: 'fit-content',
-            backgroundImage: "url('/astronomy.jpg') ",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            paddingTop:'10vh',
-            paddingBottom: '10vh',
-            paddingLeft: '5vw',
-            paddingRight: '5vw',
+        height: 'fit-content',
+        backgroundImage: "url('/astronomy.jpg') ",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        paddingTop:'10vh',
+        paddingBottom: '10vh',
+        paddingLeft: '5vw',
+        paddingRight: '5vw',
         },
     sectionStyle: {
-            backgroundColor: '#fff',
-            padding: '28px',
+        backgroundColor: '#fff',
+        padding: '28px',
+        height: '60vh',
         }, 
     sectionTitle: {
         marginTop: '18px',
@@ -35,21 +36,21 @@ const useStyle = makeStyles({
         padding: '12px',
     } ,      
     formStyle: {
-            padding: '18px',
-            textAlign: 'center',
+        padding: '18px',
+        textAlign: 'center',
     },  
     buttonStyle: {
-            backgroundColor: '#303f9f',
-            color: '#fff',
-            boxShadow: '0px 3px 1px -2px rgb(0 0 0 / 20%)',
-            borderRadius: '4px',
-            fontWeight: '545',
-            fontSize: '0.875rem',
-            paddingTop: '6px',
-            paddingBottom: '6px',
-            paddingRight: '18px',
-            paddingLeft: '18px',
-            marginTop: '2.5vh',
+        backgroundColor: '#303f9f',
+        color: '#fff',
+        boxShadow: '0px 3px 1px -2px rgb(0 0 0 / 20%)',
+        borderRadius: '4px',
+        fontWeight: '545',
+        fontSize: '0.875rem',
+        paddingTop: '6px',
+        paddingBottom: '6px',
+        paddingRight: '18px',
+        paddingLeft: '18px',
+        marginTop: '2.5vh',
     }
 
 });
@@ -77,7 +78,7 @@ const Contact = () => {
         <Grid
             className={classes.root}
             container
-            alighItems="center"
+            alignItems="center"
             direction="row"
             id="contact"
         >
@@ -129,33 +130,33 @@ const Contact = () => {
             <Grid item 
                   className={classes.sectionStyle}
                   sm={12} md={6} lg={6} xl={6}>
-                <Typography 
-                    variant="h4" 
-                    className={classes.sectionTitle}
-                    >Get in Touch
-                    </Typography>
-                <Typography 
-                    variant="body1" 
-                    className={classes.pStyle}
-                    >Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-                             Simply fill the from and send me an email.
-                    </Typography>
-                <div>
-                    <IconButton 
-                        color="primary" 
-                        aria-label="GitHub link" 
-                        size="medium"
-                        >
-                        <a href={gitHubLink}> <GitHubIcon /></a>
-                    </IconButton>
-                    <IconButton 
-                        color="primary" 
-                        aria-label="GitHub link" 
-                        size="medium"
-                        >
-                        <a href={linkedInLink}><LinkedInIcon /></a>
-                    </IconButton>
-                </div>
+                    <Typography 
+                        variant="h4" 
+                        className={classes.sectionTitle}
+                        >Get in Touch
+                        </Typography>
+                    <Typography 
+                        variant="body1" 
+                        className={classes.pStyle}
+                        >Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
+                                Simply fill the from and send me an email.
+                        </Typography>
+                    <div>
+                        <IconButton 
+                            color="primary" 
+                            aria-label="GitHub link" 
+                            size="medium"
+                            >
+                            <a href={gitHubLink}> <GitHubIcon /></a>
+                        </IconButton>
+                        <IconButton 
+                            color="primary" 
+                            aria-label="GitHub link" 
+                            size="medium"
+                            >
+                            <a href={linkedInLink}><LinkedInIcon /></a>
+                        </IconButton>
+                    </div>
             </Grid>
         </Grid>
       );

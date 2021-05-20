@@ -90,7 +90,7 @@ const About = () => {
                 className={classes.sectionStyle}
                 container
                 justify="center"
-                text-aligh="center"
+                text-align="center"
                 >
                 <Grid 
                     item

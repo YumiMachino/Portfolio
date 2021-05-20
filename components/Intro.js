@@ -46,7 +46,7 @@ const Intro = () => {
                 <Grid item>
                     <Typography variant="h4" className={classes.typingAnimation}>  <Typist>Software Developer</Typist></Typography>
                 </Grid>
-                <Button variant="contained" color="primary">View My Work</Button>  
+                <Button href="#work" variant="contained" color="primary">View My Work</Button>  
             </Grid>
      );
 }

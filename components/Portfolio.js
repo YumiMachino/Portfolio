@@ -59,14 +59,14 @@ const Portfolio = () => {
             <Grid
             className={classes.sectionStyle}
             container
-            alighItems="center"
+            alignItems="center"
             direction="column"
                 >
                 <Grid 
                     item xs={12} 
                     style={{marginBottom: '14px'}} 
                     >
-                    <Typography variant="h3" align="center"> POTFOLIO</Typography>
+                    <Typography variant="h3" > POTFOLIO</Typography>
                 </Grid>    
                 <Grid item
                       container

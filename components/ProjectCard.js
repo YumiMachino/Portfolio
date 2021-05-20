@@ -18,10 +18,10 @@ const useStyle = makeStyles({
     card: {
       // backgroundColor: "#CDE1F8",
       backgroundColor:"#fff",
-      marginLeft:14,
-      marginRight:14,
-      marginTop:14,
-      marginBottom:14,
+      marginLeft:'12px',
+      marginRight:'12px',
+      marginTop:'12px',
+      marginBottom:'12px',
     },
     media: {
       height: "300px",

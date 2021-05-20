@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar'
 import Portfolio from '../components/Portfolio'
 import styles from '../styles/Home.module.css'
 import Intro_rev from '../components/Intro_rev'
+import About_rev from '../components/About_rev'
 
 
 export default function Home() {
@@ -18,11 +19,12 @@ export default function Home() {
 
       {/* <div className="nav-intro-section"> */}
         {/* <Navbar/> */}
-        <Navbar_rev />
-        {/* <Intro/> */}
-        <Intro_rev />
+      <Navbar_rev />
+        {/* <Intro/> */}  
+      <Intro_rev />
       {/* </div> */}
-      <About/>
+      <About_rev />
+      {/* <About/> */}
  
       <Portfolio/>
       <Contact/>

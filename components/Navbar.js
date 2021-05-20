@@ -1,96 +1,52 @@
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import { blue } from "@material-ui/core/colors";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import PersonIcon from '@material-ui/icons/Person';
 
-const Navbar = () => {
+/*
+Style setting
+ */
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  userLogo: {
+    marginLeft: theme.spacing(2),
+  },
+}));
 
-    const [click, setClick] = useState(false);
-    const [colorChange, setColorChange] = useState(false);
+export default function Navbar() {
+  const classes = useStyles();
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false)
+  return (
+    <div className={classes.root}>
+      <AppBar 
+          position="fixed" 
+          style={{
+            backgroundColor: 'black',
+            color: '#fff',
+            height: '100px',
+            justifyContent: 'space-evenly'
+          }}
+      >
+        <Toolbar>
+          <IconButton edge="start" className={classes.userLogo} color="inherit" aria-label="menu" >
+            <PersonIcon fontSize='large'/>
+          </IconButton>
 
-    useEffect(() => {
-    window.addEventListener('scroll', changeNavbarColor)
-    return () => window.removeEventListener('scroll', changeNavbarColor)
-  })
-
-    /*change navbar color when scrolled*/
-    const changeNavbarColor = () => {
-        console.log('scroll event', window.scrollY)
-        if (window.scrollY >= 100) {
-            setColorChange(true);
-        } else {
-            setColorChange(false);
-        }
-    }
-
-    // const iconStyling = () => {
-    //     if (click === true && setColorChange === true) {
-    //         icon:['fas,' 'times'];
-    //     }
-    //     console.log("temp...")
-    // }
-
-   
-    return (
-       <div id="top" className={colorChange ? 'navbarColorChange' : 'navbar' }>
-           <div className='navbar-container'>
-               <a href="/" className={colorChange ? 'changeLogoColor' : 'navbar-logo'} onClick={closeMobileMenu}>
-                    <FontAwesomeIcon icon={['fa', 'user']} />
-               </a>
-                <div className="menu-icon" onClick={handleClick}>
-                    <FontAwesomeIcon icon={ click ? ['fas','times'] : ['fas', 'bars']} />
-                     {/* <FontAwesomeIcon onClick={iconStyling} icon={['fas','times']} /> */}
-                </div>
-
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <li 
-                    className={colorChange ? 'changeUnderLine' : 'nav-item'}  
-                    >
-                        <a 
-                            href="#top"  
-                            className={colorChange ? 'linkLetterColorChange' : 'nav-links' } 
-                            onClick={closeMobileMenu}
-                            >
-                                HOME
-                            </a>
-                    </li>
-                <li 
-                    className={colorChange ? 'changeUnderLine' : 'nav-item'}>
-                        <a 
-                            href="#about" 
-                            className={colorChange ? 'linkLetterColorChange' : 'nav-links' }  
-                            onClick={closeMobileMenu}
-                            >
-                                ABOUT
-                            </a>
-                     </li>
-                <li 
-                    className={colorChange ? 'changeUnderLine' : 'nav-item'} 
-                    >
-                        <a
-                            href='#work'
-                            className={colorChange ? 'linkLetterColorChange' : 'nav-links' }
-                            onClick={closeMobileMenu}
-                        >
-                            WORK
-                            </a>
-
-                    </li>
-                <li 
-                    className={colorChange ? 'changeUnderLine' : 'nav-item'}  
-                    >
-                        <a
-                            href='#contact'
-                            className={colorChange ? 'linkLetterColorChange' : 'nav-links' }
-                            onClick={closeMobileMenu}
-                            >CONTACT</a>
-                    </li>
-           </ul>
-         </div>
-       </div>
-      );
+          <div style={{flexGrow: 1}} />
+          <div className={classes.navButton}>
+            <Button href="#top" color="inherit">HOME</Button>
+            <Button href="#about" color="inherit">ABOUT</Button>
+            <Button href="#work" color="inherit">WORK</Button>
+            <Button href="#contact" color="inherit">CONTACT</Button>
+          </div>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
- 
-export default Navbar;

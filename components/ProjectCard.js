@@ -38,7 +38,6 @@ const classes = useStyle();
             <CardMedia 
               className={classes.media}
               component='img'
-              // src="/vancouver.jpg"
               src={thumbnail}
             />
             <CardContent>

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import { useEffect } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ProjectCard from "./ProjectCard";
@@ -67,7 +66,7 @@ const Portfolio_rev = () => {
             direction="column"
             >
                 <Grid item xs={12} style={{marginBottom: '14px'}} >
-                    <Typography variant="h3" align="center"> Portfolio section </Typography>
+                    <Typography variant="h3" align="center"> POTFOLIO</Typography>
                 </Grid>    
                 <Grid item
                       container

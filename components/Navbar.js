@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import PersonIcon from '@material-ui/icons/Person';
+import { Link, NavLink } from 'react-router-dom';
+
 
 /*
 Style setting
@@ -17,10 +19,23 @@ const useStyles = makeStyles((theme) => ({
   userLogo: {
     marginLeft: theme.spacing(2),
   },
+  btnHover: {
+    margin:'10px',
+    '&:hover': {
+      border: '1px solid #fff',
+    },
+    '&.active': {
+      border: '1px solid red',
+    },
+  }
 }));
+
+
 
 export default function Navbar() {
   const classes = useStyles();
+
+
 
   return (
     <div className={classes.root}>
@@ -39,11 +54,11 @@ export default function Navbar() {
           </IconButton>
 
           <div style={{flexGrow: 1}} />
-          <div className={classes.navButton}>
-            <Button href="#top" color="inherit">HOME</Button>
-            <Button href="#about" color="inherit">ABOUT</Button>
-            <Button href="#work" color="inherit">WORK</Button>
-            <Button href="#contact" color="inherit">CONTACT</Button>
+          <div>
+            <Button href="#top" color="inherit" className={classes.btnHover}>HOME</Button>
+            <Button href="#about" color="inherit"  className={classes.btnHover}  >ABOUT</Button>
+            <Button href="#work" color="inherit" className={classes.btnHover}>WORK</Button>
+            <Button href="#contact" color="inherit" className={classes.btnHover}>CONTACT</Button>
           </div>
         </Toolbar>
       </AppBar>

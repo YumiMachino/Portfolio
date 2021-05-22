@@ -41,7 +41,7 @@ const Intro = () => {
                 id="top"
                 >
                 <Grid item >
-                    <Typography variant="h1" className={classes.introTitle}>Hi, I'm Yumi Machino</Typography>
+                    <Typography variant="h1" className={classes.introTitle} align='center'>Hi, I'm Yumi Machino</Typography>
                 </Grid>
                 <Grid item>
                     <Typography variant="h4" className={classes.typingAnimation}>  <Typist>Software Developer</Typist></Typography>

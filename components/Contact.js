@@ -1,11 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image'
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography,Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import emailjs from "emailjs-com";
+import { useState } from 'react';
+import { TrendingUpRounded } from '@material-ui/icons';
+import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
 
 /*
 Style setting
@@ -64,6 +67,7 @@ const Contact = () => {
     const classes = useStyle();
 
     const sendEmail = (e) => {
+        concole.log(e)
         e.preventDefault();
         emailjs.sendForm('gmail', 'template_cv45din', e.target, 'user_YuoZ9Iwz3aJJQ3IumKsdX')
             .then((result) => {
@@ -87,6 +91,8 @@ const Contact = () => {
                 className={classes.sectionStyle}
                 sm={12} md={6} lg={6} xl={6}>
                 <Typography variant="h4" className={classes.sectionTitle}>Send A Message</Typography>
+
+
                 <form className={classes.formStyle} onSubmit={sendEmail}>
                      <TextField
                             id="outlined-full-width"
@@ -95,8 +101,8 @@ const Contact = () => {
                             fullWidth
                             margin="normal"
                             name="name"
-
                              />
+
                          <TextField
                             id="outlined-full-width"
                             label="Your Email"
@@ -105,6 +111,8 @@ const Contact = () => {
                             margin="normal"
                             name="email"
                              />
+
+
                         <TextField
                             id="outlined-full-width"
                             label="Subject"

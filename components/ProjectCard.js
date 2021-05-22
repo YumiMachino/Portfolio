@@ -18,10 +18,10 @@ const useStyle = makeStyles({
     card: {
       // backgroundColor: "#CDE1F8",
       backgroundColor:"#fff",
-      marginLeft:20,
-      marginRight:20,
-      marginTop:10,
-      marginBottom:10,
+      marginLeft:'12px',
+      marginRight:'12px',
+      marginTop:'12px',
+      marginBottom:'12px',
     },
     media: {
       height: "300px",
@@ -38,7 +38,6 @@ const classes = useStyle();
             <CardMedia 
               className={classes.media}
               component='img'
-              // src="/vancouver.jpg"
               src={thumbnail}
             />
             <CardContent>

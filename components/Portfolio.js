@@ -1,10 +1,13 @@
-import ProjectCard from "./ProjectCard";
-/*load thumbnails of projects here*/
-// import thumbnail from '../public/earth.jpg';
 import Image from 'next/image';
+import { Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import ProjectCard from "./ProjectCard";
 
-const Portfolio = () => {
+/*
+Projects data
+ */
 
+// temp image setting
 const thumbnail = "/vancouver.jpg"
 
 const projects = [
@@ -31,19 +34,59 @@ const projects = [
   }
 ]
 
+/*
+Style setting
+ */
+const useStyles = makeStyles({
+    root: {
+        flexGrow: 1,
+        paddingLeft: '5vw',
+        paddingRight: '5vw',
+    },
+    sectionStyle: {
+        width: '100%',
+        paddingTop:'5vh',
+        paddingBottom: '5vh',
+    },
+})
+
+
+const Portfolio = () => {   
+    const classes = useStyles();
+
     return (
-         <div id="work" className="portfolio-section">
-          <div className="portfolio_title">
-              <h3>PORTFOLIO</h3>
-              <p>Here, you can see projects I've worked so far!</p>
-          </div>
-          <div className="cards">
-            {projects.map((project) => (
-              <div className="card" key={project.id}>
-                <ProjectCard key={project.id} title={project.title} thumbnail={project.thumbnail} languages={project.languages} projectURL={project.projectURL}/>
-              </div>
-            ))}
-            </div>
+        <div className={classes.root} id="work">
+            <Grid
+            className={classes.sectionStyle}
+            container
+            alignItems="center"
+            direction="column"
+                >
+                <Grid 
+                    item xs={12} 
+                    style={{marginBottom: '14px'}} 
+                    >
+                    <Typography variant="h3" > POTFOLIO</Typography>
+                </Grid>    
+                <Grid item
+                      container
+                      xs={12}
+                    >
+                    {projects.map((project) => (
+                        <Grid 
+                            item md={4} lg={4} 
+                            key={project.id}
+                            >
+                            <ProjectCard 
+                                key={project.id} 
+                                title={project.title} 
+                                thumbnail={project.thumbnail} 
+                                languages={project.languages} 
+                                projectURL={project.projectURL}/>
+                        </Grid>
+                    ))}
+                </Grid>            
+            </Grid>
         </div>
       );
 }

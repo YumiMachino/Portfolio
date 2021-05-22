@@ -1,19 +1,47 @@
-import '../styles/globals.css'
-// import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+// import '../styles/globals.css'
 
-import ReactDOM from 'react-dom';
-import { library } from '@fortawesome/fontawesome-svg-core'; //fontawesomeのコアファイル
-import { fab } from '@fortawesome/free-brands-svg-icons'; //fontawesomeのbrandアイコンのインポート
-import { fas } from '@fortawesome/free-solid-svg-icons'; //fontawesomeのsolidアイコンのインポート
-import { far } from '@fortawesome/free-regular-svg-icons'; //fontawesomeのregularアイコンのインポート
-library.add(fab, fas, far); //他のコンポーネントから簡単に呼び出せるようにするための登録処理？
-
-
-function MyApp({ Component, pageProps }) {
+// function MyApp({ Component, pageProps }) {
   
-  return <Component {...pageProps} />
+//   return <Component {...pageProps} />
+// }
+
+// export default MyApp
+
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../components/theme';
+
+export default function MyApp(props) {
+  const { Component, pageProps } = props;
+
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Yumi's portfolio</title>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </React.Fragment>
+  );
 }
 
-export default MyApp
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};

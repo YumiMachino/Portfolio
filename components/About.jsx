@@ -2,12 +2,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
 import { Typography } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 
 /*
 my personal data
 */
+
+
+
 const programming_skills = [
-    {id: "HTML_skill", content: "HTML", percentage: 90},
+    {id: "HTML_skill", content:"HTML", percentage: 90},
     {id: "CSS_skill", content: "CSS", percentage: 70},
     {id: "JavaScript_skill", content:"JavaScript", percentage:85},
     {id: "Swift_skill", content: "Swift", percentage:80},
@@ -35,6 +41,8 @@ const self_intro = [
     }
 ]
 
+const config = { mass: 5, tension: 2000, friction: 200 };
+
 /*
 Style setting
 */
@@ -61,22 +69,26 @@ const useStyles = makeStyles({
         marginLeft: '20px',
         marginTop: '5vh',
         marginBottom: '5vh',
+        fontWeight: 'bolder',
     },
     titleStyle: {
         marginLeft: '20px',
         marginTop: '5vh',
+        fontWeight: "bolder",
     },
     eachSkillTitle: {
         marginLeft:'20px',
         marginRight: '20px',
         display: 'flex',
         justifyContent: 'space-between',
+        fontWeight: 'bolder',
     },
     pStyle: {
         marginTop: '18px',
         marginBottom: '18px',
         padding: '12px',
         marginRight: '20px',
+        fontWeight: 'bolder',
     },
     borderBottomStyle: {
         width: '120px',
@@ -90,7 +102,7 @@ const useStyles = makeStyles({
 
 const About = () => {
     const classes = useStyles();
-
+   
     return ( 
         <div className={classes.root} id="about">
             <Grid  
@@ -112,7 +124,7 @@ const About = () => {
                             <div className={classes.eachSkillTitle}>
                                 <Typography 
                                     variant="subtitle1"
-                                    >{skill.content}
+                                    > {skill.content}
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"

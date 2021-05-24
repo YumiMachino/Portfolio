@@ -7,8 +7,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import emailjs from "emailjs-com";
 import { useState } from 'react';
-import { TrendingUpRounded } from '@material-ui/icons';
-import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
+// import { TrendingUpRounded } from '@material-ui/icons';
+// import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
 
 /*
 Style setting
@@ -32,11 +32,13 @@ const useStyle = makeStyles({
         }, 
     sectionTitle: {
         marginTop: '18px',
+        fontWeight: 'bolder',
     },
     pStyle: {
         marginTop: '18px',
         marginBottom: '18px',
         padding: '12px',
+        fontWeight: 'bolder',
     } ,      
     formStyle: {
         padding: '18px',
@@ -54,6 +56,7 @@ const useStyle = makeStyles({
         paddingRight: '18px',
         paddingLeft: '18px',
         marginTop: '2.5vh',
+        fontWeight: 'bolder',
     },
      borderBottomStyle: {
         width: '120px',

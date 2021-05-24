@@ -20,11 +20,12 @@ const useStyle = makeStyles({
         marginLeft: '10vh',
         marginRight: '10vh',
         fontSize: '72px',
+        fontWeight: 'bolder',
     },
     typingAnimation: {
         marginTop: '5vh',
         marginBottom: '5vh',
-        fontWeight: 'lighter'
+        fontWeight: 'bolder',
     },
 })
 

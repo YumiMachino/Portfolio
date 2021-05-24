@@ -9,28 +9,36 @@ Projects data
 
 // temp image setting
 const thumbnail = "/vancouver.jpg"
+const hangoutPlaner = "/img1.png"
+
 
 const projects = [
   {
     id: 1, 
     title: "Hang-Out-Planner",
-    thumbnail: thumbnail,
+    thumbnail: hangoutPlaner,
     languages: "Swift, Mapkit",
-    projectURL: "https://github.com/cookie777/Hang-Out-Planner"
+    projectURL: "https://github.com/cookie777/Hang-Out-Planner",
+    app: "mobile",
+    description: "iOS app generates hang out plan for the day.",
   }, 
    {
     id: 2, 
-    title: "Project2",
+    title: "BlackJack",
     thumbnail: thumbnail,
-    languages: "HTML, CSS, JavaScript",
-    projectURL: "https://www.google.com/"
+    languages: "JAVA, JavaFX",
+    projectURL: "https://github.com/YumiMachino/Group1_BlackJack",
+    app: "web",
+    description: "Web app for user to play BlackJack card game.",
   }, 
    {
     id: 3, 
     title: "Project3",
     thumbnail: thumbnail,
     languages: "HTML, CSS, JavaScript",
-    projectURL: "https://www.google.com/"
+    projectURL: "https://www.google.com/",
+    app: "web",
+    description: "temp",
   }
 ]
 
@@ -72,7 +80,7 @@ const Portfolio = () => {
                     item xs={12} 
                     style={{marginBottom: '14px'}} 
                     >
-                    <Typography variant="h3" > POTFOLIO</Typography>
+                    <Typography variant="h3" style={{fontWeight: 'bolder'}} > POTFOLIO</Typography>
                     <div className={classes.borderBottomStyle} />
                 </Grid>    
                 <Grid item
@@ -89,7 +97,9 @@ const Portfolio = () => {
                                 title={project.title} 
                                 thumbnail={project.thumbnail} 
                                 languages={project.languages} 
-                                projectURL={project.projectURL}/>
+                                projectURL={project.projectURL}
+                                app={project.app}
+                                description={project.description}/>
                         </Grid>
                     ))}
                 </Grid>            

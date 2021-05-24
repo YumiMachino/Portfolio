@@ -37,27 +37,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const classes = useStyles();
 
-  //  const [scrolled, setScrolled] = useState(false);
- 
-
-  // const handleScroll = () => {
-  //   console.log('scrol event', window.scrollY)
-  //   if (window.scrollY < 760) {
-  //     console.log("760以下である")
-  //     setScrolled(false);
-  //   } else {
-  //     console.log("760以上である")
-  //     setScrolled(true);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // });
-
-
-
   return (
     <div className={classes.root}>
      

@@ -54,8 +54,13 @@ const useStyle = makeStyles({
         paddingRight: '18px',
         paddingLeft: '18px',
         marginTop: '2.5vh',
-    }
-
+    },
+     borderBottomStyle: {
+        width: '120px',
+        height: '2px',
+        backgroundColor: '#303f9f',
+        marginTop: '6px',
+    },
 });
 
 
@@ -91,8 +96,7 @@ const Contact = () => {
                 className={classes.sectionStyle}
                 sm={12} md={6} lg={6} xl={6}>
                 <Typography variant="h4" className={classes.sectionTitle}>Send A Message</Typography>
-
-
+                <div className={classes.borderBottomStyle}/>
                 <form className={classes.formStyle} onSubmit={sendEmail}>
                      <TextField
                             id="outlined-full-width"
@@ -143,6 +147,7 @@ const Contact = () => {
                         className={classes.sectionTitle}
                         >Get in Touch
                         </Typography>
+                        <div className={classes.borderBottomStyle}/>
                     <Typography 
                         variant="body1" 
                         className={classes.pStyle}

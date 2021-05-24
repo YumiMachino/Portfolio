@@ -48,6 +48,12 @@ const useStyles = makeStyles({
         paddingTop:'5vh',
         paddingBottom: '5vh',
     },
+    borderBottomStyle: {
+        width: '120px',
+        height: '2px',
+        backgroundColor: '#303f9f',
+        marginTop: '6px',
+    },
 })
 
 
@@ -67,6 +73,7 @@ const Portfolio = () => {
                     style={{marginBottom: '14px'}} 
                     >
                     <Typography variant="h3" > POTFOLIO</Typography>
+                    <div className={classes.borderBottomStyle} />
                 </Grid>    
                 <Grid item
                       container

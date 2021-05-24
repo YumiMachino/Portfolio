@@ -78,6 +78,13 @@ const useStyles = makeStyles({
         padding: '12px',
         marginRight: '20px',
     },
+    borderBottomStyle: {
+        width: '120px',
+        marginLeft: '20px',
+        height: '2px',
+        backgroundColor: '#303f9f',
+        marginTop: '6px',
+    },
 })
 
 
@@ -154,6 +161,7 @@ const About = () => {
                         className={classes.titleStyle}
                         >About Me
                         </Typography>
+                    <div className={classes.borderBottomStyle} />    
                     {self_intro.map((paragraph) => (
                         <div  key={paragraph.id}>
                             <Typography 

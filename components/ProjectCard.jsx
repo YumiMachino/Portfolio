@@ -22,6 +22,7 @@ const useStyle = makeStyles({
       marginRight:'12px',
       marginTop:'12px',
       marginBottom:'12px',
+      textAlign: 'center',
     },
     media: {
       height: "300px",

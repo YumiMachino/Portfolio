@@ -19,7 +19,8 @@ const ProgressBar = (props) => {
         width: `${percentage}%`,
         backgroundColor: "#313F9F",
         borderRadius: 'inherit',
-        textAlign: 'right'
+        textAlign: 'right',
+        transition: "1s",
     }
 
     return ( 

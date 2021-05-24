@@ -101,7 +101,7 @@ const About = () => {
                         className={classes.skillTitleStyle}
                         >Programming Skills</Typography>
                     {programming_skills.map((skill) => (
-                        <div key={skill.id} style={{margin: '20px'}}>
+                        <div key={skill.id} style={{margin: '10px'}}>
                             <div className={classes.eachSkillTitle}>
                                 <Typography 
                                     variant="subtitle1"

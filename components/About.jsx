@@ -2,15 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
 import { Typography } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
 
 /*
 my personal data
 */
-
-
 
 const programming_skills = [
     {id: "HTML_skill", content:"HTML", percentage: 90},

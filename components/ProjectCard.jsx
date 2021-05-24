@@ -17,7 +17,6 @@ const ProjectCard = (props) => {
 const { title, thumbnail, languages, projectURL, app, description} = props;  /*setting for styling */
 const useStyle = makeStyles({
     card: {
-      // backgroundColor: "#CDE1F8",
       backgroundColor:"#fff",
       marginLeft:'12px',
       marginRight:'12px',

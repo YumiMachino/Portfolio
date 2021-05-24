@@ -10,6 +10,7 @@ Projects data
 // temp image setting
 const thumbnail = "/vancouver.jpg"
 const hangoutPlaner = "/img1.png"
+const toDoList = "/img2.png"
 
 
 const projects = [
@@ -24,6 +25,15 @@ const projects = [
   }, 
    {
     id: 2, 
+    title: "To Do List",
+    thumbnail: toDoList,
+    languages: "Swift, CoreData",
+    projectURL: "https://github.com/YumiMachino/SimpleToDoApp_CoreData",
+    app: "mobile",
+    description: "iOS app tracking To Do List items.",
+  }, 
+   {
+    id: 3, 
     title: "BlackJack",
     thumbnail: thumbnail,
     languages: "JAVA, JavaFX",
@@ -31,15 +41,6 @@ const projects = [
     app: "web",
     description: "Web app for user to play BlackJack card game.",
   }, 
-   {
-    id: 3, 
-    title: "Project3",
-    thumbnail: thumbnail,
-    languages: "HTML, CSS, JavaScript",
-    projectURL: "https://www.google.com/",
-    app: "web",
-    description: "temp",
-  }
 ]
 
 /*

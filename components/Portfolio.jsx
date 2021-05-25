@@ -87,11 +87,11 @@ const Portfolio = () => {
                 </Grid>    
                 <Grid item
                       container
-                      xs={12}
+                      xs={10}
                     >
                     {projects.map((project) => (
                         <Grid 
-                            item sm={12} md={4} lg={4} 
+                            item sm={12} md={6} lg={4} 
                             key={project.id}
                             >
                             <ProjectCard 

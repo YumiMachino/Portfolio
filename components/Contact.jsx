@@ -20,8 +20,10 @@ const useStyle = makeStyles({
         backgroundSize: "cover",
         paddingTop:'10vh',
         paddingBottom: '10vh',
-        paddingLeft: '5vw',
-        paddingRight: '5vw',
+        // paddingLeft: '5vw',
+        // paddingRight: '5vw',
+        paddingLeft: '16vw',
+        paddingRight: '16vw',
         },
     sectionStyle: {
         backgroundColor: '#fff',
@@ -30,13 +32,13 @@ const useStyle = makeStyles({
         }, 
     sectionTitle: {
         marginTop: '18px',
-        fontWeight: 'bolder',
+        // fontWeight: 'bolder',
     },
     pStyle: {
         marginTop: '18px',
         marginBottom: '18px',
         padding: '12px',
-        fontWeight: 'bolder',
+        // fontWeight: 'bolder',
     } ,      
     formStyle: {
         padding: '18px',
@@ -64,7 +66,6 @@ const useStyle = makeStyles({
         transitionDuration: '0.3s',
         borderColor: '#303f9f',
         },
-
     },
      borderBottomStyle: {
         width: '120px',
@@ -117,7 +118,7 @@ const Contact = () => {
                 item 
                 className={classes.sectionStyle}
                 sm={12} md={6} lg={6} xl={6}>
-                <Typography variant="h4" className={classes.sectionTitle}>Send A Message</Typography>
+                <Typography variant="h5" className={classes.sectionTitle}>Send A Message</Typography>
                 <div className={classes.borderBottomStyle}/>
                 <form className={classes.formStyle} onSubmit={sendEmail}>
                      <TextField
@@ -163,7 +164,7 @@ const Contact = () => {
                   className={classes.sectionStyle}
                   sm={12} md={6} lg={6} xl={6}>
                     <Typography 
-                        variant="h4" 
+                        variant="h5" 
                         className={classes.sectionTitle}
                         >Get in Touch
                         </Typography>

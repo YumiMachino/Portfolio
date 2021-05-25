@@ -49,12 +49,12 @@ Style setting
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
-        paddingLeft: '5vw',
-        paddingRight: '5vw',
+        paddingLeft: '10vw',
+        paddingRight: '10vw',
     },
     sectionStyle: {
         width: '100%',
-        paddingTop:'5vh',
+        paddingTop:'2.5vh',
         paddingBottom: '5vh',
     },
     borderBottomStyle: {
@@ -62,6 +62,7 @@ const useStyles = makeStyles({
         height: '2px',
         backgroundColor: '#303f9f',
         marginTop: '6px',
+        marginBottom: '12px',
     },
 })
 
@@ -81,7 +82,7 @@ const Portfolio = () => {
                     item xs={12} 
                     style={{marginBottom: '14px'}} 
                     >
-                    <Typography variant="h3" style={{fontWeight: 'bolder'}} > POTFOLIO</Typography>
+                    <Typography variant="h4" style={{fontWeight: 'bolder'}} > POTFOLIO</Typography>
                     <div className={classes.borderBottomStyle} />
                 </Grid>    
                 <Grid item

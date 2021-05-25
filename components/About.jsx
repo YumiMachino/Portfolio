@@ -57,10 +57,10 @@ const useStyles = makeStyles({
         flexGrow: 1,
         backgroundColor: '#f5f5f5',
         justifyContent: 'center',
-        paddingLeft: '7.5vw',
-        paddingRight: '7.5vw',
-        paddingBottom: '8vh',
-        paddingTop: '8vh',
+        paddingLeft: '16vw',
+        paddingRight: '16vw',
+        paddingBottom: '6vh',
+        paddingTop: '6vh',
     },
     sectionStyle: {
        backgroundColor: 'white',
@@ -70,17 +70,15 @@ const useStyles = makeStyles({
        padding: "10px",
     },
     skillTitleStyle: {
-        fontSize: '20px',
         color: '#1f1f1f',
         textAlign: 'left',
         marginLeft: '10px',
-        marginTop: '5vh',
-        marginBottom: '5vh',
-        fontWeight: 'bolder',
+        marginTop: '2.5vh',
+        marginBottom: '2.5vh',
     },
     titleStyle: {
         marginLeft: '10px',
-        marginTop: '5vh',
+        marginTop: '2.5vh',
         fontWeight: "bolder",
     },
     eachSkillTitle: {
@@ -123,7 +121,7 @@ const About = () => {
                     style={{padding:"0px"}}
                     > 
                     <Typography 
-                        variant="h4" 
+                        variant="h6" 
                         className={classes.skillTitleStyle}
                         >Programming Skills</Typography>
                     {programming_skills.map((skill) => (
@@ -146,7 +144,7 @@ const About = () => {
                         </div>
                     ))}
                     <Typography 
-                        variant="h4" 
+                        variant="h6" 
                         className={classes.skillTitleStyle}
                         >Frameworks/Tools
                         </Typography>
@@ -178,7 +176,7 @@ const About = () => {
                     sm = {12} md={6} lg={6} xl={6}
                     >
                     <Typography 
-                        variant="h3" 
+                        variant="h5" 
                         className={classes.titleStyle}
                         >About Me
                         </Typography>
@@ -186,7 +184,7 @@ const About = () => {
                     {self_intro.map((paragraph) => (
                         <div  key={paragraph.id}>
                             <Typography 
-                                variant="h6" 
+                                variant="body1" 
                                 className={classes.pStyle}
                                 >{paragraph.content}
                                 </Typography>

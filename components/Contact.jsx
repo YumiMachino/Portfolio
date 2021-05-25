@@ -87,7 +87,7 @@ const useStyle = makeStyles({
 
 
 const gitHubLink = "https://github.com/YumiMachino"
-const linkedInLink = "https://www.linkedin.com/in/machi-no-058778210/"
+const linkedInLink = "https://www.linkedin.com/in/yumi-machino/"
 
 
 const Contact = () => {

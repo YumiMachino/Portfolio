@@ -57,8 +57,8 @@ const useStyles = makeStyles({
         flexGrow: 1,
         backgroundColor: '#f5f5f5',
         justifyContent: 'center',
-        paddingLeft: '8.5vw',
-        paddingRight: '8.5vw',
+        paddingLeft: '7.5vw',
+        paddingRight: '7.5vw',
         paddingBottom: '8vh',
         paddingTop: '8vh',
     },
@@ -67,6 +67,7 @@ const useStyles = makeStyles({
        height: 'fit-content',
        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
        paddingBottom: '5vh',
+       padding: '10px',
     },
     skillTitleStyle: {
         fontSize: '20px',
@@ -152,7 +153,7 @@ const About = () => {
                     {other_skills.map((skill) => (
                         <div 
                             key={skill.id} 
-                            style={{margin: '20px'}}
+                            style={{margin: '10px'}}
                             >
                             <div className={classes.eachSkillTitle}>  
                                 <Typography 

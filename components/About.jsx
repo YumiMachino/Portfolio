@@ -67,19 +67,19 @@ const useStyles = makeStyles({
        height: 'fit-content',
        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
        paddingBottom: '5vh',
-       padding: '10px',
+       padding: "10px",
     },
     skillTitleStyle: {
         fontSize: '20px',
         color: '#1f1f1f',
         textAlign: 'left',
-        marginLeft: '20px',
+        marginLeft: '10px',
         marginTop: '5vh',
         marginBottom: '5vh',
         fontWeight: 'bolder',
     },
     titleStyle: {
-        marginLeft: '20px',
+        marginLeft: '10px',
         marginTop: '5vh',
         fontWeight: "bolder",
     },
@@ -95,7 +95,6 @@ const useStyles = makeStyles({
         marginBottom: '18px',
         padding: '12px',
         marginRight: '20px',
-        fontWeight: 'bold',
     },
     borderBottomStyle: {
         width: '120px',
@@ -121,6 +120,7 @@ const About = () => {
                 <Grid 
                     item
                     sm = {12} md={6} lg={6} xl={6}
+                    style={{padding:"0px"}}
                     > 
                     <Typography 
                         variant="h4" 

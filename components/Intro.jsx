@@ -26,6 +26,9 @@ const useStyle = makeStyles({
         marginTop: '5vh',
         marginBottom: '5vh',
         fontWeight: 'bolder',
+        marginLeft: '3vw',
+        marginRight: '3vw',
+        textAlign: 'center',
     },
 })
 
@@ -42,10 +45,10 @@ const Intro = () => {
                 id="top"
                 >
                 <Grid item >
-                    <Typography variant="h1" className={classes.introTitle} align='center'>Hi, I'm Yumi Machino</Typography>
+                    <Typography variant="h1" className={classes.introTitle} align='center'>Hi there, I'm Yumi</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography variant="h4" className={classes.typingAnimation}>  <Typist>Software Developer</Typist></Typography>
+                    <Typography variant="h4" className={classes.typingAnimation}>  <Typist>A Vancouver-based Software Developer</Typist></Typography>
                 </Grid>
                 <Button href="#work" variant="contained" color="primary">View My Work</Button>  
             </Grid>

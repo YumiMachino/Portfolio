@@ -7,8 +7,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import emailjs from "emailjs-com";
 import { useState } from 'react';
-// import { TrendingUpRounded } from '@material-ui/icons';
-// import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
 
 /*
 Style setting
@@ -57,6 +55,16 @@ const useStyle = makeStyles({
         paddingLeft: '18px',
         marginTop: '2.5vh',
         fontWeight: 'bolder',
+         '&:hover': {
+        backgroundColor: 'white',
+        color: '#303f9f',
+        size: 'large',
+        fontWeight: 'bolder',
+        transform: 'scale(1.1)',
+        transitionDuration: '0.3s',
+        borderColor: '#303f9f',
+        },
+
     },
      borderBottomStyle: {
         width: '120px',
@@ -64,6 +72,17 @@ const useStyle = makeStyles({
         backgroundColor: '#303f9f',
         marginTop: '6px',
     },
+    iconStyle: {
+        '&:hover': {
+        borderRadius: '10px',
+        backgroundColor: '#303f9f',
+        color: 'white',
+        size: 'large',
+        fontWeight: 'bolder',
+        transform: 'scale(1.1)',
+        transitionDuration: '0.3s',
+        },
+    }
 });
 
 
@@ -154,23 +173,23 @@ const Contact = () => {
                     <Typography 
                         variant="body1" 
                         className={classes.pStyle}
-                        >Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-                                Simply fill the from and send me an email.
+                        > I'd love to hear from you!
+                            <br/>Simply fill the from and send me an email.
                         </Typography>
                     <div>
                         <IconButton 
                             color="primary" 
                             aria-label="GitHub link" 
-                            size="medium"
+                            size="large"
                             >
-                            <a href={gitHubLink}> <GitHubIcon /></a>
+                            <a href={gitHubLink}> <GitHubIcon className={classes.iconStyle} /></a>
                         </IconButton>
                         <IconButton 
                             color="primary" 
                             aria-label="GitHub link" 
-                            size="medium"
+                            size="large"
                             >
-                            <a href={linkedInLink}><LinkedInIcon /></a>
+                            <a href={linkedInLink}><LinkedInIcon  className={classes.iconStyle} /></a>
                         </IconButton>
                     </div>
             </Grid>

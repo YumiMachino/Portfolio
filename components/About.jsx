@@ -2,37 +2,48 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
 import { Typography } from '@material-ui/core';
+import Chip from '@material-ui/core/Chip';
 
 /*
 my personal data
 */
 
 const programming_skills = [
-    {id: "HTML_skill", content:"HTML", percentage: 90},
-    {id: "CSS_skill", content: "CSS", percentage: 70},
-    {id: "JavaScript_skill", content:"JavaScript", percentage:85},
-    {id: "Swift_skill", content: "Swift", percentage:80},
-    {id: "Objective-C_skill", content: "Objective-C", percentage:70},
-    {id: "Java_skill", content: "Java", percentage: 60},
-    {id: "Python_skill", content: "Python", percentage: 70}
+    {id: "HTML_skill", content:"HTML", percentage: 90, colorChange: false},
+    {id: "CSS_skill", content: "CSS", percentage: 70, colorChange: false },
+    {id: "JavaScript_skill", content:"JavaScript", percentage:85, colorChange: false },
+    {id: "Swift_skill", content: "Swift", percentage:80, colorChange: false },
+    {id: "Objective-C_skill", content: "Objective-C", percentage:70, colorChange: false },
+    {id: "Java_skill", content: "Java", percentage: 60, colorChange: false},
+    {id: "Python_skill", content: "Python", percentage: 70,colorChange: false }
 ]
 
 const other_skills = [
-    {id: "iOS_skill", content:"iOS Development", percentage: 70},
-    {id: "Web_skill", content: "React(Next.js)", percentage: 75},
-    {id: "Tool_skill", content:"Git, Bash", percentage: 60}
+    {id: "iOS_skill", content:"iOS Development", percentage: 70, colorChange: true },
+    {id: "Web_skill", content: "React(Next.js)", percentage: 75, colorChange: true },
+    {id: "Tool_skill", content:"Git, Bash", percentage: 60, colorChange: true }
 ]
 
 const self_intro = [
     {
         id: "first-p-about",
         content:
-            "I'm a passionate web developer/iOS developer student living in Vancouver, Canada."
+            "Hello! I'm Yumi Machino, a motivated web developer/iOS developer based in Vancouver, Canada🇨🇦"
     },
     {
         id: "second-p-about",
         content:
-            "My language skill is native proficiency of Japanese and professional working proficiency of English. I enjoy working in a team and am eager to learn new things!"
+            "I have learned solid working level of Front-End development including HTML, CSS, JavaScript and React as well as iOS development with Swift. I enjoy working in a team, also have fun working myself while challenging new things. My motto is to have fun learning!"
+    },
+     {
+        id: "third-p-about",
+        content:
+            "Apart from programming, I'm passionate about travellng✈️, meeting with people from different backgrounds and learn their culture always excites me! I also love watching animes and reading comics📕."
+    },
+    {
+        id: "forth-p-about",
+        content:
+            "My language skillset is both native proficiency of Japanese and professional working proficiency of English. "
     }
 ]
 
@@ -83,7 +94,7 @@ const useStyles = makeStyles({
         marginBottom: '18px',
         padding: '12px',
         marginRight: '20px',
-        fontWeight: 'bolder',
+        fontWeight: 'bold',
     },
     borderBottomStyle: {
         width: '120px',
@@ -119,7 +130,7 @@ const About = () => {
                             <div className={classes.eachSkillTitle}>
                                 <Typography 
                                     variant="subtitle1"
-                                    > {skill.content}
+                                    > <Chip label={skill.content} color="primary"/>
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
@@ -129,6 +140,7 @@ const About = () => {
                             <ProgressBar 
                                 key={skill.id} 
                                 percentage={skill.percentage}
+                                colorChange={skill.colorChange}
                                 />
                         </div>
                     ))}
@@ -145,7 +157,7 @@ const About = () => {
                             <div className={classes.eachSkillTitle}>  
                                 <Typography 
                                     variant="subtitle1"
-                                    >{skill.content}
+                                    > <Chip label={skill.content} color="secondary" />
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
@@ -155,6 +167,7 @@ const About = () => {
                             <ProgressBar 
                                 key={skill.id} 
                                 percentage={skill.percentage}
+                                colorChange={skill.colorChange}
                                 />
                         </div>
                     ))}
@@ -172,7 +185,7 @@ const About = () => {
                     {self_intro.map((paragraph) => (
                         <div  key={paragraph.id}>
                             <Typography 
-                                variant="body1" 
+                                variant="h6" 
                                 className={classes.pStyle}
                                 >{paragraph.content}
                                 </Typography>

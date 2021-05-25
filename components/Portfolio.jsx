@@ -90,7 +90,7 @@ const Portfolio = () => {
                     >
                     {projects.map((project) => (
                         <Grid 
-                            item md={4} lg={4} 
+                            item sm={12} md={4} lg={4} 
                             key={project.id}
                             >
                             <ProjectCard 

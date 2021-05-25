@@ -11,6 +11,8 @@ import {useState, useEffect} from 'react';
 import HideOnScroll from './HideOnScroll';
 import BackToTop from "./BackToTop";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Avatar from '@material-ui/core/Avatar';
+import {deepPurple } from '@material-ui/core/colors';
 
 /*
 Style setting
@@ -30,7 +32,13 @@ const useStyles = makeStyles((theme) => ({
     '&.active': {
       border: '1px solid red',
     },
-  }
+  },
+   purple: {
+    color: theme.palette.getContrastText(deepPurple[500]),
+    backgroundColor: '#303f9f',
+    width: theme.spacing(6),
+    height: theme.spacing(6),
+  },
 }));
 
 
@@ -52,7 +60,7 @@ export default function Navbar() {
       >
         <Toolbar>
           <IconButton edge="start" className={classes.userLogo} color="inherit" aria-label="menu" >
-            <PersonIcon fontSize='large'/>
+            <Avatar href="#top" className={classes.purple}>YM</Avatar>
           </IconButton>
 
           <div style={{flexGrow: 1}} />

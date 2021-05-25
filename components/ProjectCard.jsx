@@ -26,8 +26,22 @@ const useStyle = makeStyles({
     },
     media: {
       height: "300px",
-      backgroundColor:"#fff"
+      backgroundColor:"#fff",
+      overflow: 'hidden',
+      '&:hover': {
+        transform: 'scale(1.1)',
+        transitionDuration: '0.3s',
+      },
+    },
+    button : {  
+      '&:hover': {
+        size: 'medium',
+        fontWeight: 'bolder',
+        transform: 'scale(1.1)',
+        transitionDuration: '0.3s',
+      },
     }
+
   });
 
 const classes = useStyle();
@@ -64,7 +78,7 @@ const setColor = (app) => {
           </CardActionArea>
 
           <CardActions style={{justifyContent: 'center'}}>
-            <Button size="small" color={setColor(app)} href={projectURL} variant='outlined'>
+            <Button size="small" color={setColor(app)} href={projectURL} className={classes.button} variant='outlined'>
               Check this out
             </Button>
            </CardActions>

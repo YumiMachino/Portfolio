@@ -27,19 +27,21 @@ const useStyles = makeStyles((theme) => ({
   userLogo: {
     marginLeft: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
-            marginLeft: theme.spacing(1),
-        },
+      marginLeft: theme.spacing(1),
+    },
   },
   btnHover: {
     margin:'10px',
-    transition: '2s',
+    transition: '0.5s',
     '&:hover': {
       border: '1px solid #fff',   
     },
-    '&.active': {
-      border: '1px solid red',
+    [theme.breakpoints.down('sm')]: {
+       '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      },
     },
-  
   },
    purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
@@ -52,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
-  // const { width }  = props;
   const [drawerOpen, setDrawerOpen] = useState(false);
   const flag = () => {
     setDrawerOpen(!drawerOpen);
@@ -90,11 +91,11 @@ export default function Navbar() {
 
             <Hidden smUp>
               <MenuIcon onClick={handleClick} />
-              <Drawer anchor='top' open ={drawerOpen} onClose={flag} variant="temporary">
-                  <Button href="#top" color="inherit" className={classes.btnHover}>HOME</Button>
-                  <Button href="#about" color="inherit"  className={classes.btnHover}  >ABOUT</Button>
-                  <Button href="#work" color="inherit" className={classes.btnHover}>WORK</Button>
-                  <Button href="#contact" color="inherit" className={classes.btnHover}>CONTACT</Button>           
+              <Drawer anchor='top' open ={drawerOpen} onClose={flag} variant="temporary" transitionDuration={500} >
+                  <Button href="#top" color="inherit" className={classes.btnHover} onClick={flag}>HOME</Button>
+                  <Button href="#about" color="inherit"  className={classes.btnHover} onClick={flag} >ABOUT</Button>
+                  <Button href="#work" color="inherit" className={classes.btnHover} onClick={flag}>WORK</Button>
+                  <Button href="#contact" color="inherit" className={classes.btnHover} onClick={flag} >CONTACT</Button>           
               </Drawer>
             </Hidden>
 

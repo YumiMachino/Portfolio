@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Zoom, useScrollTrigger} from "@material-ui/core";
+import { Zoom, useScrollTrigger } from "@material-ui/core";
 
 const style = {
     position: 'fixed',

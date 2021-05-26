@@ -1,12 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image'
-import { Grid, Typography,Button } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
+// import { Grid, Typography,Button } from '@material-ui/core';
+// import TextField from '@material-ui/core/TextField';
+// import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import emailjs from "emailjs-com";
 import { useState } from 'react';
+
+import { Grid, Typography,Button,TextField, IconButton } from '@material-ui/core';
+
 
 /*
 Style setting

@@ -1,10 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
-import { Typography } from '@material-ui/core';
-import Chip from '@material-ui/core/Chip';
-import Hidden from '@material-ui/core/Hidden';
+// import { Typography } from '@material-ui/core';
+// import Chip from '@material-ui/core/Chip';
+// import Hidden from '@material-ui/core/Hidden';
 
+import { Grid, Typography, Hidden, Chip } from '@material-ui/core';
 /*
 my personal data
 */
@@ -48,7 +49,6 @@ const self_intro = [
     }
 ]
 
-const config = { mass: 5, tension: 2000, friction: 200 };
 
 /*
 Style setting
@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: '16vw',
         paddingBottom: '6vh',
         paddingTop: '6vh',
-
          [theme.breakpoints.down('sm')]: {
             paddingLeft: '8vw',
             paddingRight: '8vw',

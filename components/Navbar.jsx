@@ -1,21 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {AppBar, Fab} from '@material-ui/core';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import PersonIcon from '@material-ui/icons/Person';
+// import {AppBar, Fab} from '@material-ui/core';
+// import Toolbar from '@material-ui/core/Toolbar';
+// import Typography from '@material-ui/core/Typography';
+// import Button from '@material-ui/core/Button';
+// import IconButton from '@material-ui/core/IconButton';
+// import PersonIcon from '@material-ui/icons/Person';
 import { Link, NavLink } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import HideOnScroll from './HideOnScroll';
 import BackToTop from "./BackToTop";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import Avatar from '@material-ui/core/Avatar';
+// import Avatar from '@material-ui/core/Avatar';
 import {deepPurple } from '@material-ui/core/colors';
-import Hidden from '@material-ui/core/Hidden';
+// import Hidden from '@material-ui/core/Hidden';
 import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
+// import Drawer from '@material-ui/core/Drawer';
+
+
+import { AppBar, Fab, Toolbar, Typography, Button, IconButton, Avatar, Hidden, Drawer } from '@material-ui/core';
+
 
 /*
 Style setting

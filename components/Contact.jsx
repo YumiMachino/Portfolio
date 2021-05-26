@@ -11,8 +11,7 @@ import { useState } from 'react';
 /*
 Style setting
  */
-const useStyle = makeStyles({
-
+const useStyle = makeStyles((theme) => ({
     root: {
         height: 'fit-content',
         backgroundImage: "url('/astronomy.jpg') ",
@@ -20,29 +19,43 @@ const useStyle = makeStyles({
         backgroundSize: "cover",
         paddingTop:'10vh',
         paddingBottom: '10vh',
-        // paddingLeft: '5vw',
-        // paddingRight: '5vw',
         paddingLeft: '16vw',
         paddingRight: '16vw',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop:'6vh',
+            paddingBottom: '6vh',
+            paddingLeft: '6vw',
+            paddingRight: '6vw',
         },
+    },
     sectionStyle: {
         backgroundColor: '#fff',
         padding: '28px',
         height: '60vh',
-        }, 
+        [theme.breakpoints.down('sm')]: {
+           padding: '12px',
+           height: 'fit-content',
+           width: '80vw',
+        },
+    }, 
     sectionTitle: {
         marginTop: '18px',
-        // fontWeight: 'bolder',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '6px',
+           fontWeight: 'bold',
+        },
     },
     pStyle: {
         marginTop: '18px',
         marginBottom: '18px',
         padding: '12px',
-        // fontWeight: 'bolder',
-    } ,      
+    },      
     formStyle: {
         padding: '18px',
         textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
+            padding: '8px',
+        },
     },  
     buttonStyle: {
         backgroundColor: '#303f9f',
@@ -58,13 +71,13 @@ const useStyle = makeStyles({
         marginTop: '2.5vh',
         fontWeight: 'bolder',
          '&:hover': {
-        backgroundColor: 'white',
-        color: '#303f9f',
-        size: 'large',
-        fontWeight: 'bolder',
-        transform: 'scale(1.1)',
-        transitionDuration: '0.3s',
-        borderColor: '#303f9f',
+            backgroundColor: 'white',
+            color: '#303f9f',
+            size: 'large',
+            fontWeight: 'bolder',
+            transform: 'scale(1.1)',
+            transitionDuration: '0.3s',
+            borderColor: '#303f9f',
         },
     },
      borderBottomStyle: {
@@ -75,17 +88,16 @@ const useStyle = makeStyles({
     },
     iconStyle: {
         '&:hover': {
-        borderRadius: '10px',
-        backgroundColor: '#303f9f',
-        color: 'white',
-        size: 'large',
-        fontWeight: 'bolder',
-        transform: 'scale(1.1)',
-        transitionDuration: '0.3s',
+            borderRadius: '10px',
+            backgroundColor: '#303f9f',
+            color: 'white',
+            size: 'large',
+            fontWeight: 'bolder',
+            transform: 'scale(1.1)',
+            transitionDuration: '0.3s',
         },
     }
-});
-
+}));
 
 const gitHubLink = "https://github.com/YumiMachino"
 const linkedInLink = "https://www.linkedin.com/in/yumi-machino/"

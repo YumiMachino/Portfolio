@@ -7,11 +7,9 @@ import ProjectCard from "./ProjectCard";
 Projects data
  */
 
-// temp image setting
-const thumbnail = "/vancouver.jpg"
-const hangoutPlaner = "/img1.png"
-const toDoList = "/img2.png"
-
+const hangoutPlaner = "/hangOutPlanner.png"
+const toDoList = "/toDoList.png"
+const portfolio = "/portfolio.png"
 
 const projects = [
   {
@@ -34,19 +32,20 @@ const projects = [
   }, 
    {
     id: 3, 
-    title: "BlackJack",
-    thumbnail: thumbnail,
-    languages: "JAVA, JavaFX",
-    projectURL: "https://github.com/YumiMachino/Group1_BlackJack",
+    title: "Portfolio",
+    thumbnail: portfolio,
+    languages: "React, Nextjs",
+    projectURL: "https://github.com/YumiMachino/Portfolio-nextJS",
     app: "web",
-    description: "Web app for user to play BlackJack card game.",
+    description: "My own portfolio website.",
   }, 
 ]
 
 /*
 Style setting
  */
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         paddingLeft: '10vw',
@@ -63,8 +62,17 @@ const useStyles = makeStyles({
         backgroundColor: '#303f9f',
         marginTop: '6px',
         marginBottom: '12px',
+         [theme.breakpoints.down('sm')]: {
+            width: '60px',
+            height: '2px',
+            marginTop: '3px',
+            marginBottom: '6px',
+        },
     },
-})
+    titleStyle: {
+        fontWeight: 'bolder',
+    }
+}));
 
 
 const Portfolio = () => {   
@@ -73,25 +81,25 @@ const Portfolio = () => {
     return (
         <div className={classes.root} id="work">
             <Grid
-            className={classes.sectionStyle}
-            container
-            alignItems="center"
-            direction="column"
+                className={classes.sectionStyle}
+                container
+                alignItems="center"
+                direction="column"
                 >
                 <Grid 
                     item xs={12} 
                     style={{marginBottom: '14px'}} 
                     >
-                    <Typography variant="h4" style={{fontWeight: 'bolder'}} > POTFOLIO</Typography>
+                    <Typography variant="h5" className={classes.titleStyle}> Portfolio</Typography>
                     <div className={classes.borderBottomStyle} />
                 </Grid>    
                 <Grid item
                       container
-                      xs={10}
+                      xs={12}
                     >
                     {projects.map((project) => (
                         <Grid 
-                            item sm={12} md={6} lg={4} 
+                            item xs={12} sm={12} md={6} lg={4} 
                             key={project.id}
                             >
                             <ProjectCard 

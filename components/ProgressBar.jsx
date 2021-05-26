@@ -22,7 +22,6 @@ const ProgressBar = (props) => {
         borderRadius: 'inherit',
         textAlign: 'right',   
     }
-   
     return ( 
         /*main parent div: represents the whole bar, child div represents percentage */
         <div style={containerStyle}>

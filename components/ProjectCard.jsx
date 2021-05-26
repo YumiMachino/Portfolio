@@ -15,7 +15,37 @@ const ProjectCard = (props) => {
 
 /*setting props*/
 const { title, thumbnail, languages, projectURL, app, description} = props;  /*setting for styling */
-const useStyle = makeStyles({
+// const useStyle = makeStyles({
+//     card: {
+//       backgroundColor:"#fff",
+//       marginLeft:'12px',
+//       marginRight:'12px',
+//       marginTop:'12px',
+//       marginBottom:'12px',
+//       textAlign: 'center',
+//     },
+//     media: {
+//       height: "300px",
+//       backgroundColor:"#fff",
+//       overflow: 'hidden',
+//       '&:hover': {
+//         transform: 'scale(1.1)',
+//         transitionDuration: '0.3s',
+//       },
+//     },
+//     button : {  
+//       '&:hover': {
+//         size: 'medium',
+//         fontWeight: 'bolder',
+//         transform: 'scale(1.1)',
+//         transitionDuration: '0.3s',
+//       },
+//     }
+
+//   });
+
+
+  const useStyles = makeStyles((theme) => ({
     card: {
       backgroundColor:"#fff",
       marginLeft:'12px',
@@ -23,6 +53,12 @@ const useStyle = makeStyles({
       marginTop:'12px',
       marginBottom:'12px',
       textAlign: 'center',
+      [theme.breakpoints.down('sm')]: {
+          marginLeft:'8vw',
+          marginRight:'8vw',
+          marginTop:'2vh',
+          marginBottom:'2vh',
+        },
     },
     media: {
       height: "300px",
@@ -32,19 +68,34 @@ const useStyle = makeStyles({
         transform: 'scale(1.1)',
         transitionDuration: '0.3s',
       },
+      [theme.breakpoints.down('sm')]: {
+          height: "150px",
+        },
     },
     button : {  
       '&:hover': {
         size: 'medium',
         fontWeight: 'bolder',
         transform: 'scale(1.1)',
-        transitionDuration: '0.3s',
+        transitionDuration: '0.4s',
+        [theme.breakpoints.down('sm')]: {
+          size: 'small',
+        },
       },
-    }
+    },
+    titleStyle: {
+      marginTop: '10px',
+      [theme.breakpoints.down('sm')]: {
+          marginTop: '2px',
+          fontSize: '18px',
+        },
+    },
+}));
 
-  });
 
-const classes = useStyle();
+
+
+const classes = useStyles();
 
 const setColor = (app) => {
   if (app === "web") {
@@ -63,22 +114,22 @@ const setColor = (app) => {
               src={thumbnail}
             />
             <CardContent>
-               <Chip label={app}  color={setColor(app)} />
-              <Typography gutterBottom variant="h5" component="h2" style={{marginTop: '10px'}}> 
+               <Chip label={app}  color={setColor(app)} size="small" />
+              <Typography gutterBottom variant="h5" component="h2" className={classes.titleStyle}> 
                 {title}
               </Typography>
-              <Typography variant="body2" color="inherit" component="body2" style={{height: '10px'}}>
+              <Typography variant="body2" color="inherit" component="body2" >
                 {description}
               </Typography>
 
-              <Typography variant="body1" color={setColor(app)} component="p" style={{marginTop: '10px'}}>
+              <Typography variant="body1" color={setColor(app)} component="p">
                 {languages}
               </Typography>
             </CardContent>
           </CardActionArea>
 
           <CardActions style={{justifyContent: 'center'}}>
-            <Button size="small" color={setColor(app)} href={projectURL} className={classes.button} variant='outlined'>
+            <Button size="small" color={setColor(app)} href={projectURL} className={classes.button} variant='contained' >
               Check this out
             </Button>
            </CardActions>

@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
 import { Typography } from '@material-ui/core';
 import Chip from '@material-ui/core/Chip';
+import Hidden from '@material-ui/core/Hidden';
 
 /*
 my personal data
@@ -52,8 +53,9 @@ const config = { mass: 5, tension: 2000, friction: 200 };
 /*
 Style setting
 */
-const useStyles = makeStyles({
-    root: {
+
+const useStyles = makeStyles((theme) => ({
+     root: {
         flexGrow: 1,
         backgroundColor: '#f5f5f5',
         justifyContent: 'center',
@@ -61,13 +63,25 @@ const useStyles = makeStyles({
         paddingRight: '16vw',
         paddingBottom: '6vh',
         paddingTop: '6vh',
+
+         [theme.breakpoints.down('sm')]: {
+            paddingLeft: '8vw',
+            paddingRight: '8vw',
+            paddingTop: '4vh',
+            paddingBottom: '4vh',
+        },
     },
     sectionStyle: {
        backgroundColor: 'white',
        height: 'fit-content',
        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
        paddingBottom: '5vh',
-       padding: "10px",
+       paddingLeft: '20px',
+       paddingRight: '20px',
+         [theme.breakpoints.down('sm')]: {
+            paddingTop: '2vh',
+            paddingBottom: '2vh',
+        },
     },
     skillTitleStyle: {
         color: '#1f1f1f',
@@ -75,6 +89,12 @@ const useStyles = makeStyles({
         marginLeft: '10px',
         marginTop: '2.5vh',
         marginBottom: '2.5vh',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "18px",
+            marginTop: '1.8vh',
+            marginBottom: '1.8vh',
+            textAlign: 'center',
+        },
     },
     titleStyle: {
         marginLeft: '10px',
@@ -87,12 +107,22 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'space-between',
         fontWeight: 'bolder',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft:'0px',
+            marginRight: '0px',
+        },
     },
     pStyle: {
         marginTop: '18px',
         marginBottom: '18px',
         padding: '12px',
         marginRight: '20px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '4px',
+            marginBottom: '4px',
+            padding: '4px',
+            fontSize: "14px",
+        },
     },
     borderBottomStyle: {
         width: '120px',
@@ -100,8 +130,15 @@ const useStyles = makeStyles({
         height: '2px',
         backgroundColor: '#303f9f',
         marginTop: '6px',
+        [theme.breakpoints.down('sm')]: {
+            width: '60px',
+            height: '2px',
+            marginTop: '3px',
+            marginBottom: '6px',
+            marginLeft: '8px',
+        },
     },
-})
+}));
 
 
 const About = () => {
@@ -117,19 +154,18 @@ const About = () => {
                 >
                 <Grid 
                     item
-                    sm = {12} md={6} lg={6} xl={6}
-                    style={{padding:"0px"}}
+                    xs={12} sm = {12} md={6} lg={6} xl={6}
                     > 
                     <Typography 
                         variant="h6" 
                         className={classes.skillTitleStyle}
                         >Programming Skills</Typography>
                     {programming_skills.map((skill) => (
-                        <div key={skill.id} style={{margin: '10px'}}>
+                        <div key={skill.id}>
                             <div className={classes.eachSkillTitle}>
                                 <Typography 
                                     variant="subtitle1"
-                                    > <Chip label={skill.content} color="primary"/>
+                                    > <Chip label={skill.content} color="primary" size="small"/>
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
@@ -151,12 +187,11 @@ const About = () => {
                     {other_skills.map((skill) => (
                         <div 
                             key={skill.id} 
-                            style={{margin: '10px'}}
                             >
                             <div className={classes.eachSkillTitle}>  
                                 <Typography 
                                     variant="subtitle1"
-                                    > <Chip label={skill.content} color="secondary" />
+                                    > <Chip label={skill.content} color="secondary" size="small" />
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"

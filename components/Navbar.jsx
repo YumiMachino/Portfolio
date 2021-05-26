@@ -13,6 +13,9 @@ import BackToTop from "./BackToTop";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Avatar from '@material-ui/core/Avatar';
 import {deepPurple } from '@material-ui/core/colors';
+import Hidden from '@material-ui/core/Hidden';
+import MenuIcon from '@material-ui/icons/Menu';
+import Drawer from '@material-ui/core/Drawer';
 
 /*
 Style setting
@@ -23,15 +26,20 @@ const useStyles = makeStyles((theme) => ({
   },
   userLogo: {
     marginLeft: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+            marginLeft: theme.spacing(1),
+        },
   },
   btnHover: {
     margin:'10px',
+    transition: '2s',
     '&:hover': {
-      border: '1px solid #fff',
+      border: '1px solid #fff',   
     },
     '&.active': {
       border: '1px solid red',
     },
+  
   },
    purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
@@ -44,6 +52,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
+  // const { width }  = props;
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const flag = () => {
+    setDrawerOpen(!drawerOpen);
+  }
+ 
+  const handleClick = () => {
+    drawerOpen ? setDrawerOpen(false) : setDrawerOpen(true);
+  }
 
   return (
     <div className={classes.root}>
@@ -64,12 +81,23 @@ export default function Navbar() {
           </IconButton>
 
           <div style={{flexGrow: 1}} />
-          <div>
+          <Hidden xsDown>
             <Button href="#top" color="inherit" className={classes.btnHover}>HOME</Button>
             <Button href="#about" color="inherit"  className={classes.btnHover}  >ABOUT</Button>
             <Button href="#work" color="inherit" className={classes.btnHover}>WORK</Button>
             <Button href="#contact" color="inherit" className={classes.btnHover}>CONTACT</Button>
-          </div>
+            </Hidden> 
+
+            <Hidden smUp>
+              <MenuIcon onClick={handleClick} />
+              <Drawer anchor='top' open ={drawerOpen} onClose={flag} variant="temporary">
+                  <Button href="#top" color="inherit" className={classes.btnHover}>HOME</Button>
+                  <Button href="#about" color="inherit"  className={classes.btnHover}  >ABOUT</Button>
+                  <Button href="#work" color="inherit" className={classes.btnHover}>WORK</Button>
+                  <Button href="#contact" color="inherit" className={classes.btnHover}>CONTACT</Button>           
+              </Drawer>
+            </Hidden>
+
         </Toolbar>
       </AppBar>
     </HideOnScroll>

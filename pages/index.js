@@ -5,7 +5,6 @@ import About from '../components/About'
 import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
 
-
 export default function Home() {
 
   return (
@@ -16,8 +15,6 @@ export default function Home() {
       <Portfolio />
       <Contact />
       </div> 
-  )
-
-    
-    
+  )  
 }
+

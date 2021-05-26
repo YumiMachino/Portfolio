@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
         fontSize: '72px',
         fontWeight: 'bolder',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '12vh',
+            marginTop: '16vh',
             fontSize: '44px',
             marginLeft: '3.5vw',
             marginRight: '3.5vw',

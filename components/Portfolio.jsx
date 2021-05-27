@@ -14,7 +14,7 @@ const portfolio = "/portfolio.png"
 const projects = [
   {
     id: 1, 
-    title: "Hang-Out-Planner",
+    title: "Hang Out Planner",
     thumbnail: hangoutPlaner,
     languages: "Swift, Mapkit",
     projectURL: "https://github.com/cookie777/Hang-Out-Planner",

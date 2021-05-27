@@ -118,7 +118,7 @@ const setColor = (app) => {
           className={classes.button} 
           variant='contained' 
           >
-          Check this out
+          Check it out
         </Button>
         </CardActions>
     </Card>

@@ -29,22 +29,22 @@ const self_intro = [
     {
         id: "first-p-about",
         content:
-            "Hello! I'm Yumi Machino, a motivated web developer/iOS developer based in Vancouver, Canada🇨🇦"
+            "Hello! I'm Yumi Machino, a motivated web developer/iOS developer based in Vancouver, Canada 🇨🇦"
     },
     {
         id: "second-p-about",
         content:
-            "I have learned solid working level of Front-End development including HTML, CSS, JavaScript and React as well as iOS development with Swift. I enjoy working in a team, also have fun working myself while challenging new things. My motto is to have fun learning!"
+            "I have learned front-end web development and iOS development. I enjoy working in a team, also have fun working myself while challenging new things. My motto is to have fun learning!"
     },
      {
         id: "third-p-about",
         content:
-            "Apart from programming, I'm passionate about travellng✈️, meeting with people from different backgrounds and learn their culture always excites me! I also love watching animes and reading comics📕."
+            "Apart from programming, I'm passionate about travelling ✈️, meeting with people from different backgrounds, learning about different cultures! I also love watching anime and reading comics 📕."
     },
     {
         id: "forth-p-about",
         content:
-            "My language skillset is both native proficiency of Japanese and professional working proficiency of English. "
+            "I'm also a native Japanese speaker."
     }
 ]
 

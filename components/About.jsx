@@ -18,8 +18,11 @@ const programming_skills = [
 
 const other_skills = [
     {id: "iOS_skill", content:"iOS Development", percentage: 70, colorChange: true },
-    {id: "Web_skill", content: "React(Next.js)", percentage: 75, colorChange: true },
-    {id: "Tool_skill", content:"Git, Bash", percentage: 60, colorChange: true }
+    {id: "React_skill", content: "React", percentage: 75, colorChange: true },
+    {id: "Nextjs_skill", content: "Node.js", percentage: 75, colorChange: true },
+    {id: "Nodejs_skill", content: "Next.js", percentage: 75, colorChange: true },
+    {id: "Git_skill", content:"Git", percentage: 60, colorChange: true },
+    {id: "Bash_skill", content:"Bash", percentage: 60, colorChange: true }
 ]
 
 const self_intro = [

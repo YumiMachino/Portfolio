@@ -60,11 +60,20 @@ const Intro = () => {
                 direction="column"
                 id="top"
                 >
-                <Grid item >
-                    <Typography variant="h1" className={classes.introTitle} align='center'>Hi there, I'm Yumi</Typography>
+                <Grid item>
+                    <Typography 
+                        variant="h1" 
+                        className={classes.introTitle} 
+                        align='center'>
+                            Hi there, I'm Yumi
+                            </Typography>
                 </Grid>
                 <Grid item>
-                    <Typography variant="h4" className={classes.typingAnimation}>  <Typist>A Vancouver-based Software Developer</Typist></Typography>
+                    <Typography 
+                        variant="h4" 
+                        className={classes.typingAnimation}>  
+                        <Typist>A Vancouver-based Software Developer</Typist>
+                        </Typography>
                 </Grid>
                 <Button href="#work" variant="contained" color="primary">View My Work</Button>  
             </Grid>

@@ -1,11 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
 import ProgressBar from './ProgressBar';
-// import { Typography } from '@material-ui/core';
-// import Chip from '@material-ui/core/Chip';
-// import Hidden from '@material-ui/core/Hidden';
-
 import { Grid, Typography, Hidden, Chip } from '@material-ui/core';
+
 /*
 my personal data
 */
@@ -158,13 +154,18 @@ const About = () => {
                     <Typography 
                         variant="h6" 
                         className={classes.skillTitleStyle}
-                        >Programming Skills</Typography>
+                        >Programming Skills
+                        </Typography>
                     {programming_skills.map((skill) => (
                         <div key={skill.id}>
                             <div className={classes.eachSkillTitle}>
                                 <Typography 
                                     variant="subtitle1"
-                                    > <Chip label={skill.content} color="primary" size="small"/>
+                                    > <Chip 
+                                        label={skill.content} 
+                                        color="primary" 
+                                        size="small"
+                                        />
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
@@ -177,7 +178,8 @@ const About = () => {
                                 colorChange={skill.colorChange}
                                 />
                         </div>
-                    ))}
+                    ))
+                    }
                     <Typography 
                         variant="h6" 
                         className={classes.skillTitleStyle}
@@ -190,7 +192,11 @@ const About = () => {
                             <div className={classes.eachSkillTitle}>  
                                 <Typography 
                                     variant="subtitle1"
-                                    > <Chip label={skill.content} color="secondary" size="small" />
+                                    > <Chip 
+                                        label={skill.content} 
+                                        color="secondary" 
+                                        size="small" 
+                                        />
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
@@ -203,7 +209,8 @@ const About = () => {
                                 colorChange={skill.colorChange}
                                 />
                         </div>
-                    ))}
+                    ))
+                    }
                 </Grid>
                  <Grid 
                     item

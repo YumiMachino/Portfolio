@@ -1,19 +1,16 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image'
-// import { Grid, Typography,Button } from '@material-ui/core';
-// import TextField from '@material-ui/core/TextField';
-// import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import emailjs from "emailjs-com";
 import { useState } from 'react';
-
 import { Grid, Typography,Button,TextField, IconButton } from '@material-ui/core';
 
 
 /*
 Style setting
  */
+
 const useStyle = makeStyles((theme) => ({
     root: {
         height: 'fit-content',
@@ -34,7 +31,7 @@ const useStyle = makeStyles((theme) => ({
     sectionStyle: {
         backgroundColor: '#fff',
         padding: '28px',
-        height: '60vh',
+        height: '70vh',
         [theme.breakpoints.down('sm')]: {
            padding: '12px',
            height: 'fit-content',
@@ -133,7 +130,11 @@ const Contact = () => {
                 item 
                 className={classes.sectionStyle}
                 sm={12} md={6} lg={6} xl={6}>
-                <Typography variant="h5" className={classes.sectionTitle}>Send A Message</Typography>
+                <Typography 
+                    variant="h5" 
+                    className={classes.sectionTitle}>
+                        Send A Message
+                        </Typography>
                 <div className={classes.borderBottomStyle}/>
                 <form className={classes.formStyle} onSubmit={sendEmail}>
                      <TextField

@@ -1,29 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import {AppBar, Fab} from '@material-ui/core';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import PersonIcon from '@material-ui/icons/Person';
 import { Link, NavLink } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import HideOnScroll from './HideOnScroll';
 import BackToTop from "./BackToTop";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-// import Avatar from '@material-ui/core/Avatar';
 import {deepPurple } from '@material-ui/core/colors';
-// import Hidden from '@material-ui/core/Hidden';
 import MenuIcon from '@material-ui/icons/Menu';
-// import Drawer from '@material-ui/core/Drawer';
-
-
 import { AppBar, Fab, Toolbar, Typography, Button, IconButton, Avatar, Hidden, Drawer } from '@material-ui/core';
 
 
 /*
 Style setting
  */
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -81,25 +71,84 @@ export default function Navbar() {
           }}
       >
         <Toolbar>
-          <IconButton edge="start" className={classes.userLogo} color="inherit" aria-label="menu" >
-            <Avatar href="#top" className={classes.purple}>YM</Avatar>
+          <IconButton 
+            edge="start" 
+            className={classes.userLogo} 
+            color="inherit" 
+            aria-label="menu"
+             >
+            <Avatar 
+              href="#top" 
+              className={classes.purple}>
+                YM
+                </Avatar>
           </IconButton>
 
           <div style={{flexGrow: 1}} />
           <Hidden xsDown>
-            <Button href="#top" color="inherit" className={classes.btnHover}>HOME</Button>
-            <Button href="#about" color="inherit"  className={classes.btnHover}  >ABOUT</Button>
-            <Button href="#work" color="inherit" className={classes.btnHover}>WORK</Button>
-            <Button href="#contact" color="inherit" className={classes.btnHover}>CONTACT</Button>
+            <Button 
+              href="#top" 
+              color="inherit" 
+              className={classes.btnHover}>
+                HOME
+                </Button>
+            <Button 
+              href="#about" 
+              color="inherit"  
+              className={classes.btnHover}>
+                ABOUT
+                </Button>
+            <Button 
+              href="#work" 
+              color="inherit" 
+              className={classes.btnHover}>
+                WORK
+                </Button>
+            <Button 
+              href="#contact" 
+              color="inherit" 
+              className={classes.btnHover}>
+                CONTACT
+                </Button>
             </Hidden> 
 
             <Hidden smUp>
               <MenuIcon onClick={handleClick} />
-              <Drawer anchor='top' open ={drawerOpen} onClose={flag} variant="temporary" transitionDuration={500} >
-                  <Button href="#top" color="inherit" className={classes.btnHover} onClick={flag}>HOME</Button>
-                  <Button href="#about" color="inherit"  className={classes.btnHover} onClick={flag} >ABOUT</Button>
-                  <Button href="#work" color="inherit" className={classes.btnHover} onClick={flag}>WORK</Button>
-                  <Button href="#contact" color="inherit" className={classes.btnHover} onClick={flag} >CONTACT</Button>           
+              <Drawer 
+                anchor='top' 
+                open ={drawerOpen} 
+                onClose={flag} 
+                variant="temporary" 
+                transitionDuration={500} 
+                >
+                  <Button 
+                    href="#top" 
+                    color="inherit" 
+                    className={classes.btnHover} 
+                    onClick={flag}>
+                      HOME
+                      </Button>
+                  <Button 
+                    href="#about" 
+                    color="inherit"  
+                    className={classes.btnHover} 
+                    onClick={flag}
+                     >ABOUT
+                     </Button>
+                  <Button 
+                    href="#work" 
+                    color="inherit" 
+                    className={classes.btnHover} 
+                    onClick={flag}>
+                      WORK
+                      </Button>
+                  <Button 
+                    href="#contact" 
+                    color="inherit" 
+                    className={classes.btnHover} 
+                    onClick={flag} >
+                      CONTACT
+                      </Button>           
               </Drawer>
             </Hidden>
 
@@ -107,7 +156,7 @@ export default function Navbar() {
       </AppBar>
     </HideOnScroll>
 
-    <Toolbar  id="back-to-top-anchor"/>
+    <Toolbar id="back-to-top-anchor"/>
     <BackToTop>
       <Fab 
         color="primary" 

@@ -169,7 +169,7 @@ const About = () => {
                                     </Typography>
                                 <Typography 
                                     variant="subtitle1"
-                                    >{skill.percentage}%
+                                    >{skill.percentage}
                                     </Typography>
                             </div>
                             <ProgressBar 

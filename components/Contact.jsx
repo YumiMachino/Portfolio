@@ -172,7 +172,7 @@ const Contact = () => {
                             margin="normal"
                             name="message"
                              />
-                        <input className={classes.buttonStyle} type="submit" value="SEND MESSAGES" />
+                        <input className={classes.buttonStyle} type="submit" value="SEND MESSAGE" />
                 </form>
             </Grid>
 

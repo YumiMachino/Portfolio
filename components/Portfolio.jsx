@@ -19,7 +19,7 @@ const projects = [
     languages: "Swift, Mapkit",
     projectURL: "https://github.com/cookie777/Hang-Out-Planner",
     app: "mobile",
-    description: "iOS app generates hang out plan for the day.",
+    description: "iOS app that generates a hangout plan for the day",
   }, 
    {
     id: 2, 
@@ -28,7 +28,7 @@ const projects = [
     languages: "Swift, CoreData",
     projectURL: "https://github.com/YumiMachino/SimpleToDoApp_CoreData",
     app: "mobile",
-    description: "iOS app tracking To Do List items.",
+    description: "iOS to-do list app",
   }, 
    {
     id: 3, 
@@ -37,7 +37,7 @@ const projects = [
     languages: "React, Nextjs",
     projectURL: "https://github.com/YumiMachino/Portfolio-nextJS",
     app: "web",
-    description: "My own portfolio website.",
+    description: "This website!",
   }, 
 ]
 

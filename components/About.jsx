@@ -170,10 +170,6 @@ const About = () => {
                                         size="small"
                                         />
                                     </Typography>
-                                <Typography 
-                                    variant="subtitle1"
-                                    >{skill.percentage}
-                                    </Typography>
                             </div>
                             <ProgressBar 
                                 key={skill.id} 

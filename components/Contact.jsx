@@ -172,7 +172,7 @@ const Contact = () => {
                             margin="normal"
                             name="message"
                              />
-                        <input className={classes.buttonStyle} type="submit" value="SEND MESSAGES" />
+                        <input className={classes.buttonStyle} type="submit" value="SEND MESSAGE" />
                 </form>
             </Grid>
 
@@ -189,7 +189,7 @@ const Contact = () => {
                         variant="body1" 
                         className={classes.pStyle}
                         > I'd love to hear from you!
-                            <br/>Simply fill the from and send me an email.
+                            <br/>Simply fill the form or send me an email.
                         </Typography>
                     <div>
                         <IconButton 

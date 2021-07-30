@@ -50,6 +50,12 @@ const other_skills = [
   },
   {
     id: "Web_skill",
+    content: "Node.js",
+    percentage: 70,
+    colorChange: true,
+  },
+  {
+    id: "Web_skill",
     content: "Material UI",
     percentage: 75,
     colorChange: true,

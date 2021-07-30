@@ -159,6 +159,7 @@ const Contact = () => {
             name="name"
           />
 
+<<<<<<< HEAD
           <TextField
             id="outlined-full-width"
             label="Your Email"
@@ -219,5 +220,74 @@ const Contact = () => {
     </Grid>
   );
 };
+=======
+                         <TextField
+                            id="outlined-full-width"
+                            label="Your Email"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                            name="email"
+                             />
+                        <TextField
+                            id="outlined-full-width"
+                            label="Subject"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                            name="subject"
+                             />
+                        <TextField
+                            id="outlined-full-width"
+                            label="Message"
+                            variant="outlined"
+                            fullWidth
+                            multiline
+                            rows={4}
+                            margin="normal"
+                            name="message"
+                             />
+                        <input className={classes.buttonStyle} type="submit" value="SEND MESSAGE" />
+                </form>
+            </Grid>
+
+            <Grid item 
+                  className={classes.sectionStyle}
+                  sm={12} md={6} lg={6} xl={6}>
+                    <Typography 
+                        variant="h5" 
+                        className={classes.sectionTitle}
+                        >Get in Touch
+                        </Typography>
+                        <div className={classes.borderBottomStyle}/>
+                    <Typography 
+                        variant="body1" 
+                        className={classes.pStyle}
+                        > I'd love to hear from you!
+                            <br/>Simply fill the form or send me an email.
+                        </Typography>
+                    <div>
+                        <IconButton 
+                            color="primary" 
+                            aria-label="GitHub link" 
+                            size="large"
+                            >
+                            <a href={gitHubLink}> <GitHubIcon className={classes.iconStyle} /></a>
+                        </IconButton>
+                        <IconButton 
+                            color="primary" 
+                            aria-label="GitHub link" 
+                            size="large"
+                            >
+                            <a href={linkedInLink}><LinkedInIcon  className={classes.iconStyle} /></a>
+                        </IconButton>
+                    </div>
+            </Grid>
+        </Grid>
+      );
+}
+ 
+export default Contact;
+>>>>>>> 7d9d171af1976492d36699530c7417119953f66e
 
 export default Contact;

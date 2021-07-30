@@ -15,7 +15,6 @@ import {
 /*
 Style setting
  */
-// const font = "Raleway, sans-serif";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -46,7 +45,6 @@ const useStyle = makeStyles((theme) => ({
   },
   sectionTitle: {
     marginTop: "18px",
-    // fontFamily: font,
     [theme.breakpoints.down("sm")]: {
       marginTop: "6px",
       fontWeight: "bold",
@@ -56,12 +54,10 @@ const useStyle = makeStyles((theme) => ({
     marginTop: "18px",
     marginBottom: "18px",
     padding: "12px",
-    // fontFamily: font,
   },
   formStyle: {
     padding: "18px",
     textAlign: "center",
-    // fontFamily: font,
     [theme.breakpoints.down("sm")]: {
       padding: "8px",
     },
@@ -71,6 +67,7 @@ const useStyle = makeStyles((theme) => ({
     color: "#fff",
     boxShadow: "0px 3px 1px -2px rgb(0 0 0 / 20%)",
     borderRadius: "4px",
+    borderColor: "transparent",
     fontWeight: "545",
     fontSize: "0.875rem",
     paddingTop: "6px",

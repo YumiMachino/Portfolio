@@ -21,8 +21,6 @@ setting props
 
   /*setting for styling */
 
-  // const font = "Raleway, sans-serif";
-
   const useStyles = makeStyles((theme) => ({
     card: {
       backgroundColor: "#fff",
@@ -51,7 +49,6 @@ setting props
       },
     },
     button: {
-      // fontFamily: font,
       "&:hover": {
         size: "medium",
         fontWeight: "bolder",
@@ -63,15 +60,11 @@ setting props
       },
     },
     titleStyle: {
-      // fontFamily: font,
       marginTop: "10px",
       [theme.breakpoints.down("sm")]: {
         marginTop: "2px",
         fontSize: "18px",
       },
-    },
-    fontStyle: {
-      // fontFamily: font,
     },
   }));
 
@@ -90,29 +83,14 @@ setting props
       <CardActionArea>
         <CardMedia className={classes.media} component="img" src={thumbnail} />
         <CardContent>
-          <Chip
-            label={app}
-            color={setColor(app)}
-            size="small"
-            className={classes.fontStyle}
-          />
+          <Chip label={app} color={setColor(app)} size="small" />
           <Typography gutterBottom variant="h6" className={classes.titleStyle}>
             {title}
           </Typography>
-          <Typography
-            variant="body2"
-            color="inherit"
-            component="body2"
-            className={classes.fontStyle}
-          >
+          <Typography variant="body2" color="inherit" component="body2">
             {description}
           </Typography>
-          <Typography
-            variant="body1"
-            color={setColor(app)}
-            component="p"
-            className={classes.fontStyle}
-          >
+          <Typography variant="body1" color={setColor(app)} component="p">
             {languages}
           </Typography>
         </CardContent>

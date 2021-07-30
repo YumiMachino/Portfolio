@@ -6,7 +6,6 @@ import Typist from "react-typist";
 /*
 Style setting
  */
-// const font = "Raleway, sans-serif";
 
 const useStyle = makeStyles((theme) => ({
   sectionStyle: {
@@ -23,8 +22,6 @@ const useStyle = makeStyles((theme) => ({
     marginRight: "10vh",
     fontSize: "72px",
     fontWeight: "600",
-    // fontFamily: font,
-    // fontFamily: theme.typography,
     [theme.breakpoints.down("sm")]: {
       marginTop: "20vh",
       fontSize: "44px",
@@ -39,7 +36,6 @@ const useStyle = makeStyles((theme) => ({
     marginLeft: "3vw",
     marginRight: "3vw",
     textAlign: "center",
-    // fontFamily: font,
     [theme.breakpoints.down("sm")]: {
       fontSize: "22px",
       marginLeft: "3.5vw",
@@ -48,7 +44,6 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   btnStyle: {
-    // fontFamily: "Raleway, sans-serif",
     fontWeight: "600",
   },
 }));

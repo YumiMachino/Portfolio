@@ -16,10 +16,6 @@ export default class MyDocument extends Document {
             https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          {/* <style
-            data-href="
-            https://fonts.googleapis.com/css2?family=Raleway">
-              @font-face{font-family:'Raleway'; font-style:normal}</style> */}
         </Head>
         <body>
           <Main />

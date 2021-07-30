@@ -71,7 +71,6 @@ const other_skills = [
 /*
 Style setting
 */
-const font = "Raleway, sans-serif";
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
@@ -85,7 +84,6 @@ const useStyles = makeStyles((theme) => ({
       "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
   },
   titleStyle: {
-    // fontFamily: font,
     marginLeft: "10px",
     marginTop: "2.5vh",
     fontWeight: "bolder",
@@ -108,7 +106,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pStyle: {
-    // fontFamily: font,
     marginTop: "14vh",
     marginBottom: "18px",
     textAlign: "left",
@@ -149,7 +146,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2vw",
     marginTop: "2.5vh",
     marginBottom: "2.5vh",
-    // fontFamily: font,
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       marginTop: "2vh",
@@ -194,9 +190,6 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "2vw",
       width: "45vw",
     },
-  },
-  chipStyle: {
-    // fontFamily: font,
   },
   skillBoxStyle: {
     display: "flex",
@@ -270,7 +263,6 @@ const About = () => {
                       label={skill.content}
                       color="secondary"
                       size="small"
-                      className={classes.chipStyle}
                     />
                   </div>
                   <ProgressBar

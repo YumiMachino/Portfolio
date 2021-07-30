@@ -65,7 +65,6 @@ const projects = [
 /*
 Style setting
  */
-// const font = "Raleway, sans-serif";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -92,7 +91,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   titleStyle: {
-    // fontFamily: font,
     marginLeft: "10px",
     marginTop: "2.5vh",
     fontWeight: "bolder",

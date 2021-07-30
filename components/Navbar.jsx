@@ -28,16 +28,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     zIndex: 1,
   },
-  // userLogo: {
-  //   marginLeft: theme.spacing(2),
-  //   [theme.breakpoints.down("sm")]: {
-  //     marginLeft: theme.spacing(1),
-  //   },
-  // },
   btnHover: {
     margin: "10px",
     transition: "0.5s",
-    // fontFamily: "Raleway, sans-serif",
     fontWeight: "600",
     "&:hover": {
       border: "1px solid #fff",
@@ -48,12 +41,6 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
       },
     },
-  },
-  purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
-    backgroundColor: "#303f9f",
-    width: theme.spacing(6),
-    height: theme.spacing(6),
   },
 }));
 
@@ -81,17 +68,6 @@ export default function Navbar() {
           }}
         >
           <Toolbar>
-            {/* <IconButton
-              edge="start"
-              className={classes.userLogo}
-              color="inherit"
-              aria-label="menu"
-            >
-              <Avatar href="#top" className={classes.purple}>
-                YM
-              </Avatar>
-            </IconButton> */}
-
             <div style={{ flexGrow: 1 }} />
             <Hidden xsDown>
               <Button href="#top" color="inherit" className={classes.btnHover}>

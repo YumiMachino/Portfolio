@@ -19,9 +19,9 @@ const projects = [
     title: "DPCODE ACADEMY",
     thumbnail: dpCodeAcademy,
     languages: "NextJS, MaterialUI, Storyboard",
-    projectURL: "https://github.com/cookie777/Hang-Out-Planner",
+    projectURL: "https://dpcode-frontend-git-develop-itzderr.vercel.app",
     app: "web",
-    description: "DPcode.",
+    description: "A web application created for DPCODE ACADEMY.",
   },
   {
     id: 1,
@@ -30,22 +30,23 @@ const projects = [
     languages: "React, Nextjs",
     projectURL: "https://github.com/YumiMachino/Portfolio-nextJS",
     app: "web",
-    description: "My own portfolio website.",
+    description: "My portfolio website which introduces about myself.",
   },
   {
     id: 2,
     title: "Black Jack",
     thumbnail: blackJack,
     languages: "Java, JavaFX, SceneBuilder",
-    projectURL: "https://github.com/YumiMachino/Portfolio-nextJS",
+    projectURL: "https://github.com/YumiMachino/Black-Jack",
     app: "web",
-    description: "Black Jack game",
+    description:
+      'A website which users can play a card game called "Black Jack"',
   },
   {
     id: 3,
     title: "Hang-Out-Planner",
     thumbnail: hangoutPlaner,
-    languages: "Swift, Mapkit",
+    languages: "Swift, Mapkit, REST API",
     projectURL: "https://github.com/cookie777/Hang-Out-Planner",
     app: "mobile",
     description: "iOS app generates hang out plan for the day.",
@@ -57,7 +58,7 @@ const projects = [
     languages: "Swift, CoreData",
     projectURL: "https://github.com/YumiMachino/SimpleToDoApp_CoreData",
     app: "mobile",
-    description: "iOS app tracking To Do List items.",
+    description: "iOS app which tracks to-do list items.",
   },
 ];
 
@@ -114,7 +115,7 @@ const Portfolio = () => {
       >
         <Grid item xs={12} style={{ marginBottom: "14px" }}>
           <Typography variant="h4" className={classes.titleStyle}>
-            Portfolio
+            Portfolio Projects
           </Typography>
           <div className={classes.borderBottomStyle} />
         </Grid>

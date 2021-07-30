@@ -38,7 +38,6 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: "#fff",
     padding: "28px",
     height: "70vh",
-    height: "80vh",
     [theme.breakpoints.down("sm")]: {
       padding: "12px",
       height: "fit-content",
@@ -97,12 +96,12 @@ const useStyle = makeStyles((theme) => ({
     marginTop: "6px",
   },
   iconStyle: {
+    width: "40px",
+    height: "40px",
     "&:hover": {
-      borderRadius: "10px",
+      borderRadius: "50px",
       backgroundColor: "#303f9f",
       color: "white",
-      size: "large",
-      fontWeight: "bolder",
       transform: "scale(1.1)",
       transitionDuration: "0.3s",
     },
@@ -198,17 +197,17 @@ const Contact = () => {
         </Typography>
         <div className={classes.borderBottomStyle} />
         <Typography variant="body1" className={classes.pStyle}>
-          I'd love to hear from you! Simply fill the from and send me an email.
+          I'd love to hear from you! Simply fill the form and send me an email.
           <br />
           Or check my work in Github or connect with me on LinkedIn.
         </Typography>
         <div>
-          <IconButton color="primary" aria-label="GitHub link" size="large">
+          <IconButton color="primary" aria-label="GitHub link" size="medium">
             <a href={gitHubLink}>
               <GitHubIcon className={classes.iconStyle} />
             </a>
           </IconButton>
-          <IconButton color="primary" aria-label="GitHub link" size="large">
+          <IconButton color="primary" aria-label="GitHub link" size="medium">
             <a href={linkedInLink}>
               <LinkedInIcon className={classes.iconStyle} />
             </a>

@@ -9,7 +9,6 @@ const ProgressBar = (props) => {
     backgroundColor: colorChange ? "#bdf5bd" : "#CDE1F8",
     marginTop: 8,
     marginBottom: 19.2,
-    // marginLeft: 4,
     marginRight: 4,
     width: "200px",
   };

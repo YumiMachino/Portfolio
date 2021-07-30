@@ -22,7 +22,6 @@ const useStyle = makeStyles((theme) => ({
     marginLeft: "10vh",
     marginRight: "10vh",
     fontSize: "72px",
-    // fontWeight: "bold",
     fontWeight: "600",
     fontFamily: font,
     [theme.breakpoints.down("sm")]: {
@@ -35,7 +34,6 @@ const useStyle = makeStyles((theme) => ({
   typingAnimation: {
     marginTop: "5vh",
     marginBottom: "5vh",
-    // fontWeight: "bolder",
     fontWeight: "400",
     marginLeft: "3vw",
     marginRight: "3vw",
@@ -67,12 +65,12 @@ const Intro = () => {
     >
       <Grid item>
         <Typography variant="h1" className={classes.introTitle} align="center">
-          Hello, I'm Yumi Machino.
+          Hello, I am Yumi Machino.
         </Typography>
       </Grid>
       <Grid item>
         <Typography variant="h4" className={classes.typingAnimation}>
-          <Typist>I'm a front-end developer.</Typist>
+          <Typist>Front End Developer</Typist>
         </Typography>
       </Grid>
       <Button

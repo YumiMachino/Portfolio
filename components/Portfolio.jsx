@@ -7,11 +7,11 @@ import ProjectCard from "./ProjectCard";
 Projects data
  */
 
-const hangoutPlaner = "/hangOutPlanner.png";
-const toDoList = "/toDoList.png";
-const portfolio = "/portfolio.png";
-const dpCodeAcademy = "/dpCodeAcademy.png";
-const blackJack = "/blackJack.png";
+const hangoutPlaner = "/hangOutPlanner.jpg";
+const toDoList = "/toDoList.jpg";
+const portfolio = "/portfolio.jpg";
+const dpCodeAcademy = "/dpcodeAcademy.jpg";
+const blackJack = "/blackJack.jpg";
 
 const projects = [
   {
@@ -21,7 +21,8 @@ const projects = [
     languages: "NextJS, MaterialUI, Storyboard",
     projectURL: "https://dpcode-frontend-git-develop-itzderr.vercel.app",
     app: "web",
-    description: "A web application created for DPCODE ACADEMY.",
+    description:
+      "A web application created for DPCODE ACADEMY(in development).",
   },
   {
     id: 1,
@@ -39,8 +40,7 @@ const projects = [
     languages: "Java, JavaFX, SceneBuilder",
     projectURL: "https://github.com/YumiMachino/Black-Jack",
     app: "web",
-    description:
-      'A website which users can play a card game called "Black Jack"',
+    description: 'A website to play a card game called "Black Jack"',
   },
   {
     id: 3,

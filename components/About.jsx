@@ -1,13 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 import ProgressBar from "./ProgressBar";
 import { Grid, Typography, Hidden, Chip, Avatar } from "@material-ui/core";
-// import Image from "next/image";
 
 /*
 my personal data
 */
 const self_intro =
-  "I'm a motivated front-end developer with passion for user experience and interaction design and strength in creative and strategic thinking. Learning and growing as a software developer is my passion.I've learnt front-end development as well as iOS App development, throughout school projects and volunteer work, I've alwayes enjoyed working in a team, also have fun working myself while challengin new things. My motto is to have fun learning!";
+  "I'm a motivated front-end developer with passion for user experience and interaction design and strength in creative and strategic thinking. Learning and growing as a software developer is my passion.I've learnt front-end development as well as iOS App development, throughout school projects and volunteer work, I've always enjoyed working in a team, also love taking new challenges.My motto is to have fun learning!";
 
 const programming_skills = [
   { id: "HTML_skill", content: "HTML", percentage: 90, colorChange: false },
@@ -37,31 +36,31 @@ const other_skills = [
     colorChange: true,
   },
   {
-    id: "Web_skill",
+    id: "Web_skill1",
     content: "React",
     percentage: 80,
     colorChange: true,
   },
   {
-    id: "Web_skill",
+    id: "Web_skill2",
     content: "Next.js",
     percentage: 80,
     colorChange: true,
   },
   {
-    id: "Web_skill",
+    id: "Web_skill3",
     content: "Node.js",
     percentage: 70,
     colorChange: true,
   },
   {
-    id: "Web_skill",
+    id: "Web_skill4",
     content: "Material UI",
     percentage: 75,
     colorChange: true,
   },
   {
-    id: "Web_skill",
+    id: "Web_skill5",
     content: "Storybook",
     percentage: 60,
     colorChange: true,

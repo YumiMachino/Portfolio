@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     zIndex: 1,
   },
-  userLogo: {
-    marginLeft: theme.spacing(2),
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(1),
-    },
-  },
+  // userLogo: {
+  //   marginLeft: theme.spacing(2),
+  //   [theme.breakpoints.down("sm")]: {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  // },
   btnHover: {
     margin: "10px",
     transition: "0.5s",
@@ -81,7 +81,7 @@ export default function Navbar() {
           }}
         >
           <Toolbar>
-            <IconButton
+            {/* <IconButton
               edge="start"
               className={classes.userLogo}
               color="inherit"
@@ -90,7 +90,7 @@ export default function Navbar() {
               <Avatar href="#top" className={classes.purple}>
                 YM
               </Avatar>
-            </IconButton>
+            </IconButton> */}
 
             <div style={{ flexGrow: 1 }} />
             <Hidden xsDown>

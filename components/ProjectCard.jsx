@@ -21,7 +21,7 @@ setting props
 
   /*setting for styling */
 
-  const font = "Raleway, sans-serif";
+  // const font = "Raleway, sans-serif";
 
   const useStyles = makeStyles((theme) => ({
     card: {
@@ -51,7 +51,7 @@ setting props
       },
     },
     button: {
-      fontFamily: font,
+      // fontFamily: font,
       "&:hover": {
         size: "medium",
         fontWeight: "bolder",
@@ -63,7 +63,7 @@ setting props
       },
     },
     titleStyle: {
-      fontFamily: font,
+      // fontFamily: font,
       marginTop: "10px",
       [theme.breakpoints.down("sm")]: {
         marginTop: "2px",
@@ -71,7 +71,7 @@ setting props
       },
     },
     fontStyle: {
-      fontFamily: font,
+      // fontFamily: font,
     },
   }));
 

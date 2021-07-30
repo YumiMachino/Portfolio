@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   btnHover: {
     margin: "10px",
     transition: "0.5s",
-    fontFamily: "Raleway, sans-serif",
+    // fontFamily: "Raleway, sans-serif",
     fontWeight: "600",
     "&:hover": {
       border: "1px solid #fff",

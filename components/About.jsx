@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
       "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
   },
   titleStyle: {
-    fontFamily: font,
+    // fontFamily: font,
     marginLeft: "10px",
     marginTop: "2.5vh",
     fontWeight: "bolder",
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pStyle: {
-    fontFamily: font,
+    // fontFamily: font,
     marginTop: "14vh",
     marginBottom: "18px",
     textAlign: "left",
@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2vw",
     marginTop: "2.5vh",
     marginBottom: "2.5vh",
-    fontFamily: font,
+    // fontFamily: font,
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       marginTop: "2vh",
@@ -196,7 +196,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   chipStyle: {
-    fontFamily: font,
+    // fontFamily: font,
   },
   skillBoxStyle: {
     display: "flex",
@@ -216,6 +216,7 @@ const About = () => {
               <Typography variant="h4" className={classes.titleStyle}>
                 About Me
               </Typography>
+
               <div className={classes.borderBottomStyle} />
               <Avatar
                 alt="Yumi Machino"

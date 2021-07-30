@@ -15,7 +15,6 @@ const blackJack = "/blackJack.png";
 
 const projects = [
   {
-<<<<<<< HEAD
     id: 0,
     title: "DPCODE ACADEMY",
     thumbnail: dpCodeAcademy,
@@ -46,48 +45,22 @@ const projects = [
   {
     id: 3,
     title: "Hang-Out-Planner",
-=======
-    id: 1, 
-    title: "Hang Out Planner",
->>>>>>> 7d9d171af1976492d36699530c7417119953f66e
     thumbnail: hangoutPlaner,
     languages: "Swift, Mapkit, REST API",
     projectURL: "https://github.com/cookie777/Hang-Out-Planner",
     app: "mobile",
-<<<<<<< HEAD
     description: "iOS app generates hang out plan for the day.",
   },
   {
     id: 4,
-=======
-    description: "iOS app that generates a hangout plan for the day",
-  }, 
-   {
-    id: 2, 
->>>>>>> 7d9d171af1976492d36699530c7417119953f66e
     title: "To Do List",
     thumbnail: toDoList,
     languages: "Swift, CoreData",
     projectURL: "https://github.com/YumiMachino/SimpleToDoApp_CoreData",
     app: "mobile",
-<<<<<<< HEAD
     description: "iOS app which tracks to-do list items.",
   },
 ];
-=======
-    description: "iOS to-do list app",
-  }, 
-   {
-    id: 3, 
-    title: "Portfolio",
-    thumbnail: portfolio,
-    languages: "React, Nextjs",
-    projectURL: "https://github.com/YumiMachino/Portfolio-nextJS",
-    app: "web",
-    description: "This website!",
-  }, 
-]
->>>>>>> 7d9d171af1976492d36699530c7417119953f66e
 
 /*
 Style setting
@@ -159,7 +132,6 @@ const Portfolio = () => {
                 description={project.description}
               />
             </Grid>
-<<<<<<< HEAD
           ))}
         </Grid>
       </Grid>
@@ -167,10 +139,4 @@ const Portfolio = () => {
   );
 };
 
-=======
-        </div>
-      );
-}
- 
->>>>>>> 7d9d171af1976492d36699530c7417119953f66e
 export default Portfolio;

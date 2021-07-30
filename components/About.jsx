@@ -237,12 +237,7 @@ const About = () => {
               {programming_skills.map((skill) => (
                 <div key={skill.id} className={classes.skillBoxStyle}>
                   <div className={classes.eachSkillTitle}>
-                    <Chip
-                      label={skill.content}
-                      color="primary"
-                      size="small"
-                      className={classes.chipStyle}
-                    />
+                    <Chip label={skill.content} color="primary" size="small" />
                   </div>
                   <ProgressBar
                     key={skill.id}

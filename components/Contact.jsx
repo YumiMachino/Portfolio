@@ -147,7 +147,7 @@ const Contact = () => {
         <div className={classes.borderBottomStyle} />
         <form className={classes.formStyle} onSubmit={sendEmail}>
           <TextField
-            id="outlined-full-width"
+            id="outlined-full-width1"
             label="Your Name"
             variant="outlined"
             fullWidth
@@ -155,7 +155,7 @@ const Contact = () => {
             name="name"
           />
           <TextField
-            id="outlined-full-width"
+            id="outlined-full-width2"
             label="Your Email"
             variant="outlined"
             fullWidth
@@ -163,7 +163,7 @@ const Contact = () => {
             name="email"
           />
           <TextField
-            id="outlined-full-width"
+            id="outlined-full-width3"
             label="Subject"
             variant="outlined"
             fullWidth
@@ -171,7 +171,7 @@ const Contact = () => {
             name="subject"
           />
           <TextField
-            id="outlined-full-width"
+            id="outlined-full-width4"
             label="Message"
             variant="outlined"
             fullWidth
@@ -184,6 +184,7 @@ const Contact = () => {
             className={classes.buttonStyle}
             type="submit"
             value="SEND A MESSAGE"
+            role="button"
           />
         </form>
       </Grid>
@@ -200,12 +201,12 @@ const Contact = () => {
         </Typography>
         <div>
           <IconButton color="primary" aria-label="GitHub link" size="medium">
-            <a href={gitHubLink}>
+            <a href={gitHubLink} alt="github">
               <GitHubIcon className={classes.iconStyle} />
             </a>
           </IconButton>
           <IconButton color="primary" aria-label="GitHub link" size="medium">
-            <a href={linkedInLink}>
+            <a href={linkedInLink} alt="linkedIn">
               <LinkedInIcon className={classes.iconStyle} />
             </a>
           </IconButton>

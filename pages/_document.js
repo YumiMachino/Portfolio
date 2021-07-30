@@ -11,6 +11,10 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta
+            name="description"
+            content="Yumi Machino's portfolio website."
+          ></meta>
           <link
             href="
             https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"

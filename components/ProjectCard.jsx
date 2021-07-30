@@ -81,7 +81,12 @@ setting props
   return (
     <Card className={classes.card} width="auto">
       <CardActionArea>
-        <CardMedia className={classes.media} component="img" src={thumbnail} />
+        <CardMedia
+          className={classes.media}
+          component="img"
+          src={thumbnail}
+          alt={classes.title}
+        />
         <CardContent>
           <Chip label={app} color={setColor(app)} size="small" />
           <Typography gutterBottom variant="h6" className={classes.titleStyle}>

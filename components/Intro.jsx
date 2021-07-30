@@ -65,7 +65,7 @@ const Intro = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant="h4" className={classes.typingAnimation}>
+        <Typography variant="h3" className={classes.typingAnimation}>
           <Typist>Front End Developer</Typist>
         </Typography>
       </Grid>

@@ -85,7 +85,7 @@ setting props
           className={classes.media}
           component="img"
           src={thumbnail}
-          alt={classes.title}
+          title={classes.title}
         />
         <CardContent>
           <Chip label={app} color={setColor(app)} size="small" />

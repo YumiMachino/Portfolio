@@ -200,15 +200,21 @@ const Contact = () => {
           Or check my work in Github or connect with me on LinkedIn.
         </Typography>
         <div>
-          <IconButton color="primary" aria-label="GitHub link" size="medium">
-            <a href={gitHubLink} alt="github">
-              <GitHubIcon className={classes.iconStyle} />
-            </a>
+          <IconButton
+            color="primary"
+            aria-label="GitHubLink"
+            size="medium"
+            href={gitHubLink}
+          >
+            <GitHubIcon className={classes.iconStyle} />
           </IconButton>
-          <IconButton color="primary" aria-label="GitHub link" size="medium">
-            <a href={linkedInLink} alt="linkedIn">
-              <LinkedInIcon className={classes.iconStyle} />
-            </a>
+          <IconButton
+            color="primary"
+            aria-label="linkedInLink"
+            size="medium"
+            href={linkedInLink}
+          >
+            <LinkedInIcon className={classes.iconStyle} />
           </IconButton>
         </div>
       </Grid>

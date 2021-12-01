@@ -17,15 +17,3 @@ export default function Home() {
   );
 }
 
-<style jsx global>{`
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: Lobster;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-`}</style>;

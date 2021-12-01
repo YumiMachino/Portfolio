@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './Header';
+import Pagination from './Pagination';
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ title, keywords, description, children }) => {
         logo navbar, head
         {children}
         footer pagination
+        <Pagination />
       </div>
     </div>
   );

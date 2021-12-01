@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply bg-blue w-screen overflow-hidden box-border;
+    @apply bg-indigo-blue w-screen overflow-hidden box-border;
   }
 }

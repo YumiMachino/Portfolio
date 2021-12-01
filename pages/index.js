@@ -1,19 +1,11 @@
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Intro from '../components/Intro';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
-import About from '../components/About';
+import Layout from '../components/Layout';
 
-// Original version
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <Intro />
-      <About />
-      <Portfolio />
-      <Contact />
-    </div>
+    <Layout>
+      <div className='container mx-auto w-full bg-gray-500'>
+        <h1 className='font-orbitron text-white'>Font changed?</h1>
+      </div>
+    </Layout>
   );
 }

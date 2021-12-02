@@ -1,0 +1,35 @@
+@import '/styles/base/base';
+
+.headerItem {
+  font-size: size(xl);
+  color: lightslategray;
+  letter-spacing: 3px;
+  opacity: 0.6;
+  font-weight: 300;
+  margin: 1rem;
+  position: relative;
+  @include transition(transform 0.9s ease);
+
+  &:after {
+    content: '';
+    width: 10px;
+    height: 4px;
+    background-color: color(pink);
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    right: -100px;
+    @include transform-origin(right);
+    @include transition(transform 0.9s ease);
+  }
+
+  &:hover {
+    color: color(pink);
+    cursor: pointer;
+    @include transform(translateX(-120px));
+  }
+  &:hover:after {
+    @include transform(scaleX(10));
+    opacity: 1;
+  }
+}

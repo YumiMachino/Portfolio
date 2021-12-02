@@ -1,23 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import HeaderItem from './HeaderItem';
+import styles from '@/styles/components/Header.module.scss';
 
-const Header = () => {
+const Header = ({ headerItems }) => {
+  const { home, about, projects, contact } = headerItems;
+  console.log('this is contact', contact);
+
   return (
-    <header className='z-50 w-4/5 h-24  flex justify-between outline-white mx-auto '>
-      <div className='text-white outline-white w-18'>
-        <Link href='/'>
-          <Image
-            src='/../public/logoImg.png'
-            alt='logo'
-            width={90}
-            height={90}
-          />
-        </Link>
+    <header className={styles.container}>
+      <div>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <Image
+              src='/../public/logoImg.png'
+              alt='logo'
+              width={90}
+              height={90}
+            />
+          </Link>
+        </div>
       </div>
-      <div className='outline-white h-24 w-auto'>
-        <HeaderItem />
-        <HeaderItem />
+      <div className={styles.itemContainer}>
+        <HeaderItem title={home.item} link={home.link} />
+        <HeaderItem title={about.item} link={about.link} />
+        <HeaderItem title={projects.item} link={projects.link} />
+        <HeaderItem title={contact.item} link={contact.link} />
       </div>
     </header>
   );

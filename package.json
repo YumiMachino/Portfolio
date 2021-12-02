@@ -27,11 +27,10 @@
     "react-spinners": "^0.11.0",
     "react-spring": "^9.1.2",
     "react-typing-animation": "^1.6.2",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "sass": "^1.44.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
+    "autoprefixer": "^10.4.0"
   }
 }

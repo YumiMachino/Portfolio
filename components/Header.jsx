@@ -11,12 +11,7 @@ const Header = ({ headerItems }) => {
       <div>
         <div className={styles.logo}>
           <Link href={home.link}>
-            <Image
-              src='/../public/logoImg.png'
-              alt='logo'
-              width={90}
-              height={90}
-            />
+            <Image src={'/logo_img.png'} alt='logo' width={90} height={90} />
           </Link>
         </div>
       </div>

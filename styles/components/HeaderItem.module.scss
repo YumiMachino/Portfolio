@@ -2,6 +2,7 @@
 
 .headerItem {
   font-size: size(xl);
+  font-family: $font-tomorrow;
   //   color: lightslategray;
   letter-spacing: 3px;
   opacity: 0.6;
@@ -34,6 +35,7 @@
   }
 
   &:hover a {
+    font-weight: 400;
     color: color(strong-pink);
   }
   &:hover:after {

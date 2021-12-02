@@ -4,18 +4,21 @@
   // background-color: yellow;
   @include transform(translateY(-40%));
 
+  padding-left: 4rem;
+
   .name {
     font-size: size(xl) * 2;
     font-weight: 600;
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 2rem 1rem 0;
     color: color(white);
     -webkit-text-stroke: 2px color(strong-pink);
   }
 
   .role {
     font-size: size(xl);
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     font-weight: 300;
-    -webkit-text-stroke: 0.8px color(light-blue);
+    color: color(light-blue);
+    // color: color(orange);
   }
 }

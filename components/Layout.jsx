@@ -12,8 +12,7 @@ const Layout = ({ title, keywords, description, headerItems, children }) => {
       </Head>
       <Header headerItems={headerItems} />
 
-      <div className='text-black bg-red-400'>
-        logo navbar, head
+      <div>
         {children}
         footer pagination
         <Pagination />

@@ -2,7 +2,7 @@
 
 .headerItem {
   font-size: size(xl);
-  color: lightslategray;
+  //   color: lightslategray;
   letter-spacing: 3px;
   opacity: 0.6;
   font-weight: 300;
@@ -14,7 +14,7 @@
     content: '';
     width: 10px;
     height: 4px;
-    background-color: color(pink);
+    background-color: color(strong-pink);
     position: absolute;
     opacity: 0;
     top: 50%;
@@ -24,9 +24,17 @@
   }
 
   &:hover {
-    color: color(pink);
     cursor: pointer;
     @include transform(translateX(-120px));
+  }
+
+  a {
+    color: color(weak-pink);
+    @include transition(color 0.9s ease);
+  }
+
+  &:hover a {
+    color: color(strong-pink);
   }
   &:hover:after {
     @include transform(scaleX(10));

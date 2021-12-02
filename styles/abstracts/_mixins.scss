@@ -47,6 +47,17 @@
   transition: $args;
 }
 
+@mixin headingStyle($size, $weight, $color, $stroke) {
+  font-size: size($size);
+  font-weight: $weight;
+  color: #fff;
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin btnStyle() {
+  padding: 1rem 2rem;
+}
+
 // Responsive breakpoints
 @mixin responsive($breakpoint) {
   @if ($breakpoint == xl) {

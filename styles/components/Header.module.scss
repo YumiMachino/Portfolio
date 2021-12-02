@@ -4,15 +4,19 @@
   // height: 8rem;
   display: flex;
   @include flexPosition($justCont: space-between, $alignItem: center);
+  // background-color: pink;
 
   .logo {
     position: absolute;
     top: 30px;
     left: 60px;
+    cursor: pointer;
   }
 
   .itemContainer {
-    margin: 6rem 0;
+    margin: 3rem 0 0 0;
+    z-index: 100;
+    // background-color: green;
     // .lines {
     //   padding-top: 100px;
     //   @include flexPosition($justCont: space-between, $alignItem: center);

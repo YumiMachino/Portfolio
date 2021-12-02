@@ -1,0 +1,17 @@
+@import '/styles/base/base';
+
+.primaryBtn {
+  background-color: color(strong-pink);
+}
+
+.secondaryBtn {
+  background-color: color(light-blue);
+}
+
+.lg {
+  font-size: size(sm);
+}
+
+.sm {
+  font-size: size(xs);
+}

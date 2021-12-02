@@ -5,13 +5,12 @@ import styles from '@/styles/components/Header.module.scss';
 
 const Header = ({ headerItems }) => {
   const { home, about, projects, contact } = headerItems;
-  console.log('this is contact', contact);
 
   return (
     <header className={styles.container}>
       <div>
         <div className={styles.logo}>
-          <Link href='/'>
+          <Link href={home.link}>
             <Image
               src='/../public/logoImg.png'
               alt='logo'

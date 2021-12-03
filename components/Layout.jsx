@@ -7,12 +7,6 @@ import Pagination from './Pagination';
 const Layout = ({ title, keywords, description, headerItems, children }) => {
   const router = useRouter();
 
-  const currentLink = headerItemLinks.filter(
-    (item, idx) => item === router.pathname
-  );
-
-  console.log('current link', currentLink);
-
   return (
     <div>
       <Head>
@@ -35,12 +29,27 @@ const Layout = ({ title, keywords, description, headerItems, children }) => {
           {children}
         </div>
 
-        {/* {router.pathname === '/' && (
-          <Pagination next={true} link={'/about'} page='02. About' />
+        {router.pathname === '/' && (
+          <Pagination next={true} link={'/about'} page='02. About Me' />
         )}
+
+        {router.pathname === '/about' && (
+          <>
+            <Pagination next={false} link={'/'} page='01. Home' />
+            <Pagination next={true} link={'/projects'} page='03. Projects' />
+          </>
+        )}
+
+        {router.pathname === '/projects' && (
+          <>
+            <Pagination next={true} link={'/contact'} page='04. Contact' />
+            <Pagination next={false} link={'/about'} page='02. About Me' />
+          </>
+        )}
+
         {router.pathname === '/contact' && (
           <Pagination next={true} link={'/'} page='01. Home' />
-        )} */}
+        )}
       </div>
     </div>
   );
@@ -90,6 +99,3 @@ const headerItems = [
     link: '/contact',
   },
 ];
-
-const headerItemLinks = ['/', '/about', '/projects', '/contact'];
-const headerItem = ['01. Home', '02. About Me', '03. Projects', '04.Contact'];

@@ -1,0 +1,13 @@
+@import '/styles/base/base';
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  cursor: pointer;
+
+  &:hover {
+    animation: logoAnimation 2s;
+    // transform: rotate(45deg);
+  }
+}

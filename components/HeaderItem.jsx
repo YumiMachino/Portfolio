@@ -10,4 +10,3 @@ const HeaderItem = ({ title, link }) => (
 );
 
 export default HeaderItem;
-

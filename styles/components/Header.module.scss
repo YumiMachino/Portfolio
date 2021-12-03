@@ -11,11 +11,19 @@
     top: 30px;
     left: 60px;
     cursor: pointer;
+
+    &:hover {
+      animation: logoAnimation 2s;
+      // transform: rotate(45deg);
+    }
   }
 
   .itemContainer {
-    margin: 3rem 0 0 0;
+    // margin: 3rem 0 0 0;
     z-index: 100;
+    position: absolute;
+    top: 3rem;
+    right: 30px;
     // background-color: green;
     // .lines {
     //   padding-top: 100px;
@@ -40,5 +48,72 @@
     //     @include transition(transform 0.8s ease);
     //     @include transform-origin(right);
     //   }
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(2px);
+  }
+  10% {
+    transform: translateX(-2px);
+  }
+  15% {
+    transform: translateX(2px);
+  }
+
+  20% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  30% {
+    transform: translateX(-2px);
+  }
+  35% {
+    transform: translateX(2px);
+  }
+  40% {
+    transform: translateX(-2px);
+  }
+  45% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  55% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  65% {
+    transform: translateX(2px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+  85% {
+    transform: translateX(2px);
+  }
+  90% {
+    transform: translateX(-2px);
+  }
+  95% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
   }
 }

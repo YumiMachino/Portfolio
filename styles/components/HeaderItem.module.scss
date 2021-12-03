@@ -3,7 +3,6 @@
 .headerItem {
   font-size: size(xl);
   font-family: $font-tomorrow;
-  //   color: lightslategray;
   letter-spacing: 3px;
   opacity: 0.6;
   font-weight: 300;
@@ -41,5 +40,15 @@
   &:hover:after {
     @include transform(scaleX(10));
     opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    @include transform(translateY(1000%));
+  }
+
+  100% {
+    @include transform(translateY(0));
   }
 }

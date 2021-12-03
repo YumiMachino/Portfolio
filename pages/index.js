@@ -1,29 +1,12 @@
-import Link from 'next/link';
-
+import Header from '@/components/Header';
 import Layout from '@/components/Layout';
-import Button from '@/components/Button';
-import CyButton from '@/components/CyButton';
-
+import TopPage from '@/components/TopPage';
 import styles from '@/styles/Home.module.scss';
 
-export default function Home() {
+export default function Home({ headerItems }) {
   return (
     <Layout>
-      <div className={styles.container}>
-        <h1 className={styles.glitch}>
-          <span>
-            Yumi <br /> Machino
-          </span>
-          Yumi <br /> Machino
-          <span>
-            Yumi <br />
-            Machino
-          </span>
-        </h1>
-
-        <h5 className={styles.role}>Front End Developer.</h5>
-        <CyButton />
-      </div>
+      <TopPage />
     </Layout>
   );
 }

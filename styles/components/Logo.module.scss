@@ -5,6 +5,7 @@
   top: 30px;
   left: 60px;
   cursor: pointer;
+  z-index: 30;
 
   &:hover {
     animation: logoAnimation 2s;

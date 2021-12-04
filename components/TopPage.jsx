@@ -32,7 +32,7 @@ const TopPage = () => {
         </Typist>
       </h5>
 
-      <CyButton link='/projects' />
+      <CyButton link='/projects' content='Check Projects_' />
     </div>
   );
 };

@@ -1,1 +1,10 @@
 @import '/styles/base/base';
+
+.title {
+  font-size: size(xl);
+  color: #ffffff;
+  text-shadow: -5px 5px 0px color(strong-pink), -10px 10px 0px color(light-blue);
+  text-transform: uppercase;
+  padding: 0.8rem 1rem 1.4rem 1rem;
+}
+

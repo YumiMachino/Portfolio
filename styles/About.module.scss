@@ -1,0 +1,59 @@
+@import '/styles/base/base';
+
+.border {
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  height: 100%;
+  border: 1px solid color(weak-pink);
+
+  .introContainer {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 220px;
+    height: 220px;
+
+    & > div {
+      border-radius: 50%;
+    }
+  }
+
+  .introRight {
+    width: 60%;
+  }
+
+  .intro {
+    font-family: $font-tomorrow;
+    font-size: size(sm) * 1.1;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+  .skillContainer {
+    @include flexPosition($justCont: center, $alignItem: center);
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .iconContainer {
+    width: 38px;
+    font-size: 3rem;
+    color: color(strong-pink);
+    margin: 1.2rem 1.2rem -0.4rem 1.2rem;
+  }
+}
+
+.iconSet {
+  span {
+    font-size: size(xs);
+    color: color(strong-pink);
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+}

@@ -32,6 +32,8 @@
     line-height: 1.5;
     font-weight: 200;
     margin-bottom: 1rem;
+    transform: translateY(-30px);
+    animation: introAnimation 1s forwards;
   }
   .skillContainer {
     @include flexPosition($justCont: center, $alignItem: center);
@@ -44,16 +46,35 @@
     width: 38px;
     font-size: 3rem;
     color: color(strong-pink);
-    margin: 1.2rem 1.2rem -0.4rem 1.2rem;
+    margin: 1.2rem 2rem -0.4rem 1.2rem;
   }
 }
 
 .iconSet {
+  animation: iconAnimation 2s forwards;
   span {
     font-size: size(xs);
     color: color(strong-pink);
     width: 100%;
     display: inline-block;
     text-align: center;
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

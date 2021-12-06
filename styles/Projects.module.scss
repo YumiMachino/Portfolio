@@ -1,0 +1,49 @@
+@import '/styles/base/base';
+
+.border {
+  margin: auto;
+  padding: 0.2rem;
+  width: 90%;
+  height: 100%;
+  border: 1px solid color(weak-pink);
+
+  .projectContainer {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    flex-wrap: wrap;
+  }
+}
+
+.arrows {
+  size: size(md);
+  color: color(strong-pink);
+  width: 40px;
+  height: 40px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+}
+
+.pagination {
+  font-size: size(md);
+  position: absolute;
+  top: 8rem;
+  right: 10rem;
+
+  & > span {
+    color: color(strong-pink);
+  }
+}

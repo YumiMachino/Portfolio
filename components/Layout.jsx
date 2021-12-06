@@ -22,8 +22,9 @@ const Layout = ({ title, keywords, description, headerItems, children }) => {
         <div
           style={{
             width: '90vw',
-            height: '70vh',
+            height: '75vh',
             margin: '100px auto',
+            // backgroundColor: 'yellow',
           }}
         >
           {children}

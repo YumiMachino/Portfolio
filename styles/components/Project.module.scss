@@ -1,0 +1,73 @@
+@import '/styles/base/base';
+
+.project {
+  width: 380px;
+  height: 235px;
+  margin: 3px;
+  background-color: yellow;
+  position: relative;
+
+  &:hover .back {
+    opacity: 1;
+  }
+
+  &:hover .overview {
+    transform: scale(1.02);
+  }
+
+  .back {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    opacity: 0.8;
+    padding: 1rem;
+    @include flexPosition($justCont: center, $alignItem: flex-start);
+    flex-direction: column;
+    z-index: 10;
+    transition: transform 0.3s;
+
+    .name {
+      font-size: size(md);
+      color: color(indigo-blue);
+      padding: 0.8rem 0;
+    }
+
+    .techs {
+      width: 90%;
+      @include flexPosition($justCont: flex-start, $alignItem: flex-start);
+      flex-wrap: wrap;
+
+      .tech {
+        background-color: color(strong-pink);
+        padding: 0.2rem 0.4rem;
+        color: color(white);
+        border-radius: 3px;
+        margin: 0 0.2rem;
+      }
+    }
+  }
+}
+
+.app {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid color(light-blue);
+  color: color(light-blue);
+  border-radius: 3px;
+}
+
+.button {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}

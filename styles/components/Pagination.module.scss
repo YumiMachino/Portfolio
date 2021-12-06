@@ -4,6 +4,7 @@
   font-size: size(sm);
   display: inline-block;
   padding: 1rem 2rem;
+
   //   position: relative;
   //   position: absolute;
   //   bottom: 4rem;
@@ -33,7 +34,7 @@
 .nextPagination {
   position: relative;
   position: absolute;
-  bottom: 4rem;
+  bottom: 3rem;
   right: 4rem;
   @include transition(transform 1s);
   color: color(strong-pink);
@@ -42,7 +43,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: -80%;
+    left: -90%;
     width: 160px;
     height: 1px;
     background-color: color(strong-pink);
@@ -52,7 +53,7 @@
 .backPagination {
   position: relative;
   position: absolute;
-  bottom: 4rem;
+  bottom: 3rem;
   left: 4rem;
   @include transition(transform 1s);
   color: color(light-blue);
@@ -61,7 +62,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: -80%;
+    right: -120%;
     width: 160px;
     height: 1px;
     background-color: color(light-blue);

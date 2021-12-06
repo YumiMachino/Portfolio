@@ -1,0 +1,66 @@
+@import '/styles/base/base';
+
+.border {
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  height: 100%;
+  border: 1px solid color(weak-pink);
+
+  .container {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    width: 100%;
+    height: 94%;
+
+    .heading {
+      font-weight: 200;
+      padding-bottom: 1.2rem;
+    }
+
+    .contactLeft {
+      width: 40%;
+      height: 100%;
+    }
+    .contactRight {
+      width: 40%;
+      height: 100%;
+    }
+  }
+
+  .para {
+    font-size: size(sm) * 1.4;
+    font-family: $font-tomorrow;
+    font-weight: 300;
+    padding: 1rem 0;
+
+    .email {
+      color: color(light-blue);
+      display: inline-block;
+      padding: 0.8rem;
+      transition: transform 0.5s;
+      &:hover {
+        color: color(light-blue);
+        color: color(strong-pink);
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .icons {
+    @include flexPosition($justCont: center, $alignItem: center);
+  }
+
+  .icon {
+    font-size: size(lg);
+    color: color(light-blue);
+
+    margin: 0.8rem 1rem;
+    transition: transform 0.5s;
+
+    &:hover {
+      color: color(light-blue);
+      color: color(strong-pink);
+      transform: scale(1.2);
+    }
+  }
+}

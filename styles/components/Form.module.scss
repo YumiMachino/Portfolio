@@ -1,0 +1,52 @@
+@import '/styles/base/base';
+
+.form {
+  @include flexPosition($justCont: space-around, $alignItem: flex-end);
+  flex-direction: column;
+  height: 80%;
+
+  .inputStyle {
+    width: 80%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem;
+    background-color: transparent;
+    color: color(white);
+    border: 0.6px solid color(white);
+    border-radius: 3px;
+    font-size: size(sm);
+    outline: none;
+    font-family: inherit;
+
+    &::placeholder {
+      color: lightgray;
+    }
+  }
+
+  .text {
+    width: 80%;
+    max-height: 280px;
+    resize: none;
+  }
+
+  .btn {
+    width: 60%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    background-color: color(light-blue);
+    cursor: pointer;
+    font-family: $font-tomorrow;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: color(indigo-blue);
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: color(strong-pink);
+    }
+  }
+}

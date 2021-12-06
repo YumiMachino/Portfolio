@@ -8,7 +8,7 @@
   border: 1px solid color(weak-pink);
 
   .projectContainer {
-    @include flexPosition($justCont: space-around, $alignItem: center);
+    @include flexPosition($justCont: center, $alignItem: center);
     flex-wrap: wrap;
   }
 }

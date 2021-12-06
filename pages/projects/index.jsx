@@ -27,15 +27,14 @@ const projects = () => {
   };
 
   const renderProjects = (projects) => {
-    console.log('this is currentPage', currentPage);
     if (currentPage === 1) {
       return projects.slice(0, pageSize).map((project) => {
-        return <Project project={project} />;
+        return <Project key={project.id} project={project} />;
       });
     }
     if (currentPage === 2) {
       return projects.slice(pageSize).map((project) => {
-        return <Project project={project} />;
+        return <Project key={project.id} project={project} />;
       });
     }
   };

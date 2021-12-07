@@ -75,7 +75,7 @@ const Form = () => {
         onChange={handleChange}
         required
       ></textarea>
-      <input type='submit' value='Send a message' className={styles.btn} />
+      <input type='submit' value='Send a message_' className={styles.btn} />
     </form>
   );
 };

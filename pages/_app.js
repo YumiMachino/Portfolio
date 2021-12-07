@@ -1,5 +1,6 @@
 import '@/styles/globals.scss';
 import Head from 'next/head';
+import DotRing from '@/components/DotRing';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +8,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <Component {...pageProps} />
+      <>
+        <DotRing />
+        <Component {...pageProps} />
+      </>
     </>
   );
 }

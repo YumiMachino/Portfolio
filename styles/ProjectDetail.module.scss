@@ -1,1 +1,51 @@
 @import '/styles/base/base';
+
+.border {
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  height: 100%;
+  border: 1px solid color(weak-pink);
+
+  .container {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    width: 100%;
+    height: 75%;
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 40%;
+    height: 400px;
+  }
+
+  .rightContainer {
+    width: 60%;
+    height: 90%;
+    padding: 1rem 3rem;
+    @include flexPosition($justCont: space-around, $alignItem: flex-start);
+    flex-direction: column;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: size(sm) * 1.4;
+    color: color(weak-pink);
+  }
+
+  h3 {
+    color: color(light-blue);
+    font-size: size(md);
+    padding: 0 0 1rem 0;
+  }
+
+  .tech {
+    font-weight: 200;
+    font-size: size(sm) * 1.4;
+  }
+  .about {
+    font-family: $font-tomorrow;
+    font-size: size(sm) * 1.2;
+    font-weight: 100;
+  }
+}

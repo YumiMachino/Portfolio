@@ -55,6 +55,9 @@ const contact = () => {
             </div>
           </div>
         </div>
+        <p className={styles.msg}>
+          This website is designed & developed by me! (with passion)
+        </p>
       </div>
     </Layout>
   );

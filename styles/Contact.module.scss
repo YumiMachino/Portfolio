@@ -6,6 +6,17 @@
   width: 90%;
   height: 100%;
   border: 1px solid color(weak-pink);
+  position: relative;
+
+  .msg {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font-family: $font-tomorrow;
+    font-weight: 100;
+    color: color(strong-pink);
+    font-size: size(sm);
+  }
 
   .container {
     @include flexPosition($justCont: space-around, $alignItem: center);

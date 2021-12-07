@@ -5,6 +5,8 @@ import CyButton from './CyButton';
 const Project = ({ project }) => {
   const { id, title, thumbnail, technology, web } = project;
 
+  const url = `/projects/${id}`;
+
   const renderTechs = () => {
     return technology.map((tech) => {
       return (
@@ -30,7 +32,7 @@ const Project = ({ project }) => {
           <div className={styles.techs}>{renderTechs()}</div>
           <span className={styles.app}>{web ? `Web` : 'Mobile'}</span>
           <span className={styles.button}>
-            <CyButton content='Check Project_' link='/' />
+            <CyButton content='Check Project_' link={url} />
           </span>
         </div>
       </div>

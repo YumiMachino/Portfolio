@@ -113,6 +113,11 @@ export const myProjects = [
       },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    design: null,
+    live: '',
+    repo: null,
   },
   {
     id: 1,
@@ -133,6 +138,11 @@ export const myProjects = [
       },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    design: [''],
+    live: '',
+    repo: '',
   },
   {
     id: 2,
@@ -146,6 +156,11 @@ export const myProjects = [
       { id: 22, tech: 'SCSS' },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    design: ['/portfolio.jpg'],
+    live: '',
+    repo: '',
   },
   {
     id: 3,
@@ -158,6 +173,11 @@ export const myProjects = [
       { id: 34, tech: 'Webpack' },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    design: [''],
+    live: '',
+    repo: '',
   },
   {
     id: 4,
@@ -169,6 +189,11 @@ export const myProjects = [
       { id: 43, tech: 'JS' },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    design: [''],
+    live: '',
+    repo: '',
   },
   {
     id: 5,
@@ -179,6 +204,11 @@ export const myProjects = [
       { id: 52, tech: 'JAVAFX' },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    repo: '',
+    design: null,
+    live: null,
   },
   {
     id: 6,
@@ -189,6 +219,11 @@ export const myProjects = [
       { id: 62, tech: 'REST API' },
     ],
     web: false,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    repo: '',
+    design: null,
+    live: null,
   },
   {
     id: 7,
@@ -200,5 +235,10 @@ export const myProjects = [
       { id: 73, tech: 'Redux Toolkit' },
     ],
     web: true,
+    about:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+    live: '',
+    repo: '',
+    design: null,
   },
 ];

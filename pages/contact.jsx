@@ -39,13 +39,13 @@ const contact = () => {
 
             <div className={styles.icons}>
               <IconContext.Provider value={{ className: `${styles.icon}` }}>
-                <a href='/'>
+                <a href='https://github.com/YumiMachino'>
                   <FaGithub />
                 </a>
-                <a href='/'>
+                <a href='https://ca.linkedin.com/in/yumi-machino'>
                   <FaLinkedin />
                 </a>
-                <a href='/'>
+                <a href='https://twitter.com/YumiMachino'>
                   <FaTwitterSquare />
                 </a>
                 <a>

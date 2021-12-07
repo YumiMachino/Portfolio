@@ -14,7 +14,6 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log('Sending email...', input);
     emailjs
       .sendForm(
         'service_v8qakih',
@@ -48,6 +47,7 @@ const Form = () => {
         value={input.name}
         name='name'
         onChange={handleChange}
+        required
       />
 
       <input
@@ -57,6 +57,7 @@ const Form = () => {
         value={input.email}
         name='email'
         onChange={handleChange}
+        required
       />
       <input
         type='text'
@@ -72,6 +73,7 @@ const Form = () => {
         value={input.message}
         name='message'
         onChange={handleChange}
+        required
       ></textarea>
       <input type='submit' value='Send a message' className={styles.btn} />
     </form>

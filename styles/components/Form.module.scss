@@ -11,14 +11,20 @@
     margin: 0.5rem;
     background-color: transparent;
     color: color(white);
-    border: 0.6px solid color(white);
+    border: 0.6px solid color(weak-pink);
     border-radius: 3px;
     font-size: size(sm);
     outline: none;
     font-family: inherit;
+    transition: transform 0.5s;
+
+    &:focus {
+      border: 0.6px solid color(white);
+      transform: scale(1.05);
+    }
 
     &::placeholder {
-      color: lightgray;
+      color: color(weak-pink);
     }
   }
 

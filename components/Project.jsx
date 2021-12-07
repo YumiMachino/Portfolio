@@ -32,7 +32,7 @@ const Project = ({ project }) => {
           <div className={styles.techs}>{renderTechs()}</div>
           <span className={styles.app}>{web ? `Web` : 'Mobile'}</span>
           <span className={styles.button}>
-            <CyButton content='Check Project_' link={url} />
+            <CyButton content='Check Project_' link={url} primary={false} />
           </span>
         </div>
       </div>

@@ -40,8 +40,11 @@
   }
 
   .tech {
-    font-weight: 200;
-    font-size: size(sm) * 1.4;
+    background-color: color(strong-pink);
+    padding: 0.2rem 0.4rem;
+    color: color(white);
+    border-radius: 3px;
+    margin: 0 0.2rem;
   }
   .about {
     font-family: $font-tomorrow;

@@ -27,6 +27,10 @@
     clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   }
 
+  .secondaryContent {
+    background-color: color(light-blue);
+  }
+
   .glitch {
     display: none;
     position: absolute;
@@ -40,8 +44,17 @@
       drop-shadow(2px 1px color(strong-pink));
   }
 
+  .secondaryGlitch {
+    background-color: color(light-blue);
+    filter: drop-shadow(-2px 3px color(light-blue))
+      drop-shadow(-1px -3px color(light-blue))
+      drop-shadow(2px 1px color(light-blue));
+  }
+
   &:hover .glitch,
-  &:focus .glitch {
+  &:focus .glitch,
+  &:hover .secondaryGlitch,
+  &:focus .secondaryGlitch {
     display: block;
     animation: glitch-animation 2s linear 0s infinite;
   }

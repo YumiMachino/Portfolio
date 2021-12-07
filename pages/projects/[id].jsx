@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import { myProjects } from '../../mydata/data';
@@ -6,24 +7,48 @@ import HeadingTitle from '@/components/HeadingTitle';
 import CyButton from '@/components/CyButton';
 
 const ProjectDetail = ({ project }) => {
+  const [hasDesign, setHasDesign] = useState(false);
+  const [isOverview, setIsOverview] = useState(true);
+
   console.log('inside project detail', project);
   const { title, about, technology, thumbnail, design, live, repo } = project;
 
-  console.log('title: ', title);
-  console.log('about: ', about);
-  console.log('technology: ', technology);
-  console.log('thumbnail:', thumbnail);
-  console.log('design: ', design);
-  console.log('live: ', live);
-  console.log('repo:', repo);
+  const renderTechs = () => {
+    return technology.map((tech) => {
+      return (
+        <span key={tech.id} className={styles.tech}>
+          {tech.tech}
+        </span>
+      );
+    });
+  };
+
+  const renderOverview = () => {
+    return (
+      <>
+        <div>
+          <h3>Technology</h3>
+          <p>{renderTechs()}</p>
+        </div>
+        <div>
+          <h3>About</h3>
+          <p className={styles.about}>{about}</p>
+        </div>
+      </>
+    );
+  };
+
+  const renderDesign = () => {
+    return <h1>DESIGN HERE</h1>;
+  };
 
   return (
     <Layout>
       <div className={styles.border}>
         <HeadingTitle title={title} />
         <div>
-          <CyButton link='/' content='View Live_' />
-          <CyButton link='/' content='View Code_' />
+          <CyButton link={live} content='View Live_' primary={true} />
+          <CyButton link={repo} content='View Code_' primary={false} />
         </div>
 
         <div className={styles.container}>
@@ -37,16 +62,10 @@ const ProjectDetail = ({ project }) => {
           </div>
           <div className={styles.rightContainer}>
             <h4>
-              <span>OVERVIEW</span>/ <span>DESIGN</span>
+              <span onClick={() => setIsOverview(true)}>OVERVIEW</span>/
+              <span onClick={() => setIsOverview(false)}>DESIGN</span>
             </h4>
-            <div>
-              <h3>Technology</h3>
-              <p className={styles.tech}>HTML/ CSS/ JAVASCRIPT</p>
-            </div>
-            <div>
-              <h3>About</h3>
-              <p className={styles.about}>{about}</p>
-            </div>
+            {isOverview ? renderOverview() : renderDesign()}
           </div>
         </div>
       </div>

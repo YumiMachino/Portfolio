@@ -36,7 +36,7 @@ const about = () => {
           </div>
           <div className={styles.introRight}>
             <p className={styles.intro}>{myData.self_intro}</p>
-            <CyButton link='/' content='Check Resume_' />
+            <CyButton link='/' content='Check Resume_' primary={true} />
           </div>
         </div>
         <div className={styles.skillContainer}>

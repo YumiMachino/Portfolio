@@ -7,6 +7,7 @@ import Pagination from './Pagination';
 const Layout = ({ title, keywords, description, headerItems, children }) => {
   const router = useRouter();
 
+  console.log('router pathname: ', router.pathname);
   return (
     <div>
       <Head>
@@ -48,7 +49,7 @@ const Layout = ({ title, keywords, description, headerItems, children }) => {
           </>
         )}
 
-        {router.pathname === '/projects/`${id}`' && (
+        {router.pathname == '/projects/[id]' && (
           <>
             <Pagination next={true} link={'/contact'} page='04. Contact' />
             <Pagination next={false} link={'/projects'} page='03. Projects' />

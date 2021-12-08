@@ -116,7 +116,7 @@ export const myProjects = [
     about:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
     design: null,
-    live: '',
+    live: 'https://dpcode.academy/',
     repo: null,
   },
   {
@@ -140,9 +140,12 @@ export const myProjects = [
     web: true,
     about:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    design: [''],
+    design: [
+      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
+      ['Poppins', 'Mulish'],
+    ],
     live: '',
-    repo: '',
+    repo: 'https://github.com/YumiMachino/recipe-book',
   },
   {
     id: 2,
@@ -158,7 +161,10 @@ export const myProjects = [
     web: true,
     about:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    design: ['/portfolio.jpg'],
+    design: [
+      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
+      ['Poppins', 'Mulish'],
+    ],
     live: '',
     repo: '',
   },
@@ -175,7 +181,10 @@ export const myProjects = [
     web: true,
     about:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    design: [''],
+    design: [
+      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
+      ['Poppins', 'Mulish'],
+    ],
     live: '',
     repo: '',
   },
@@ -191,7 +200,10 @@ export const myProjects = [
     web: true,
     about:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    design: [''],
+    design: [
+      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
+      ['Poppins', 'Mulish'],
+    ],
     live: '',
     repo: '',
   },

@@ -11,6 +11,7 @@
     @include flexPosition($justCont: space-around, $alignItem: center);
     width: 100%;
     height: 75%;
+    position: relative;
   }
 
   .imgContainer {
@@ -31,6 +32,17 @@
     font-weight: 300;
     font-size: size(sm) * 1.4;
     color: color(weak-pink);
+    position: absolute;
+    top: -3rem;
+    right: 0rem;
+
+    & > span {
+      transition: all 0.2s;
+      &:hover {
+        color: color(strong-pink);
+        transform: scale(1.1);
+      }
+    }
   }
 
   h3 {
@@ -50,5 +62,42 @@
     font-family: $font-tomorrow;
     font-size: size(sm) * 1.2;
     font-weight: 100;
+  }
+}
+
+.designs {
+  @include flexPosition($justCont: space-around, $alignItem: flex-start);
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.colorSet {
+  @include flexPosition($justCont: space-around, $alignItem: center);
+  flex-direction: column;
+  margin: 0 0.6rem;
+  font-family: $font-tomorrow;
+  font-weight: 200;
+
+  & > p {
+    padding: 0.6rem 0;
+  }
+}
+
+.typoName {
+  font-size: size(md);
+}
+.typoSet {
+  @include flexPosition($justCont: space-around, $alignItem: flex-start);
+  flex-direction: column;
+  margin: 0 0.6rem;
+
+  & > p {
+    padding: 0.4rem;
   }
 }

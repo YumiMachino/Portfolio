@@ -11,7 +11,10 @@ const ProjectDetail = ({ project }) => {
   const [isOverview, setIsOverview] = useState(true);
 
   console.log('inside project detail', project);
+
   const { title, about, technology, thumbnail, design, live, repo } = project;
+
+  console.log('design: ', design);
 
   const renderTechs = () => {
     return technology.map((tech) => {
@@ -38,8 +41,47 @@ const ProjectDetail = ({ project }) => {
     );
   };
 
+  const renderColors = () => {
+    if (!design) return;
+    const colors = design[0];
+    return colors.map((color) => {
+      return (
+        <div className={styles.colorSet}>
+          <div
+            className={styles.color}
+            style={{ backgroundColor: `${color}` }}
+          ></div>
+          <p>{color}</p>
+        </div>
+      );
+    });
+  };
+
+  const renderTypos = () => {
+    if (!design) return;
+    const typos = design[1];
+    return typos.map((typo) => {
+      return (
+        <div className={styles.typoSet}>
+          <p className={styles.typoName} style={{ fontFamily: `${typo}` }}>
+            {typo}
+          </p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>012345678</p>
+        </div>
+      );
+    });
+  };
+
   const renderDesign = () => {
-    return <h1>DESIGN HERE</h1>;
+    return (
+      <>
+        <h3>Color Scheme</h3>
+        <div className={styles.designs}>{renderColors()}</div>
+        <h3>Typography</h3>
+        <div className={styles.designs}>{renderTypos()}</div>
+      </>
+    );
   };
 
   return (
@@ -47,11 +89,30 @@ const ProjectDetail = ({ project }) => {
       <div className={styles.border}>
         <HeadingTitle title={title} />
         <div>
-          <CyButton link={live} content='View Live_' primary={true} />
-          <CyButton link={repo} content='View Code_' primary={false} />
+          <CyButton link='' content='View Live_' primary={true} />
+          <CyButton link='' content='View Code_' primary={false} />
         </div>
 
         <div className={styles.container}>
+          <h4>
+            <span
+              style={{ color: `${isOverview ? '#F100F5' : '#3b136b'}` }}
+              onClick={() => setIsOverview(true)}
+            >
+              OVERVIEW
+            </span>
+            {design && (
+              <>
+                /
+                <span
+                  style={{ color: `${!isOverview ? '#F100F5' : '#3b136b'}` }}
+                  onClick={() => setIsOverview(false)}
+                >
+                  DESIGN
+                </span>
+              </>
+            )}
+          </h4>
           <div className={styles.imgContainer}>
             <Image
               src={thumbnail}
@@ -61,10 +122,6 @@ const ProjectDetail = ({ project }) => {
             />
           </div>
           <div className={styles.rightContainer}>
-            <h4>
-              <span onClick={() => setIsOverview(true)}>OVERVIEW</span>/
-              <span onClick={() => setIsOverview(false)}>DESIGN</span>
-            </h4>
             {isOverview ? renderOverview() : renderDesign()}
           </div>
         </div>

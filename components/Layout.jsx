@@ -48,6 +48,13 @@ const Layout = ({ title, keywords, description, headerItems, children }) => {
           </>
         )}
 
+        {router.pathname === '/projects/`${id}`' && (
+          <>
+            <Pagination next={true} link={'/contact'} page='04. Contact' />
+            <Pagination next={false} link={'/projects'} page='03. Projects' />
+          </>
+        )}
+
         {router.pathname === '/contact' && (
           <>
             <Pagination next={true} link={'/'} page='01. Home' />

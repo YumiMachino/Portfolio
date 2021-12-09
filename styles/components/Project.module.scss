@@ -68,6 +68,18 @@
 
 .button {
   position: absolute;
-  bottom: 0rem;
-  right: 0rem;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.btn {
+  padding: 0.8rem;
+  letter-spacing: 0.1;
+  background-color: color(light-blue);
+  font-size: size(sm);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
 }

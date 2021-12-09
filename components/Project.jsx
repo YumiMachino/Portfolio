@@ -1,6 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/components/Project.module.scss';
-import CyButton from './CyButton';
 
 const Project = ({ project }) => {
   const { id, title, thumbnail, technology, web } = project;
@@ -32,7 +32,9 @@ const Project = ({ project }) => {
           <div className={styles.techs}>{renderTechs()}</div>
           <span className={styles.app}>{web ? `Web` : 'Mobile'}</span>
           <span className={styles.button}>
-            <CyButton content='Check Project_' link={url} primary={false} />
+            <Link href={url}>
+              <button className={styles.btn}>Check Project_</button>
+            </Link>
           </span>
         </div>
       </div>

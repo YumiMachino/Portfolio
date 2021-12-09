@@ -89,7 +89,8 @@ const ProjectDetail = ({ project }) => {
       <div className={styles.border}>
         <HeadingTitle title={title} />
         <div>
-          <CyButton link='' content='View Live_' primary={true} />
+          {live && <CyButton link='' content='View Live_' primary={true} />}
+
           <CyButton link='' content='View Code_' primary={false} />
         </div>
 

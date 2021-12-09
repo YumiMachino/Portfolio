@@ -26,6 +26,8 @@
     .heading {
       font-weight: 200;
       padding-bottom: 1.2rem;
+      transform: translateY(-30px);
+      animation: introAnimation 1s forwards;
     }
 
     .contactLeft {
@@ -43,6 +45,7 @@
     font-family: $font-tomorrow;
     font-weight: 300;
     padding: 1rem 0;
+    animation: introAnimation 1s forwards;
 
     .email {
       color: color(light-blue);
@@ -59,6 +62,7 @@
 
   .icons {
     @include flexPosition($justCont: center, $alignItem: center);
+    animation: introAnimation 1s forwards;
   }
 
   .icon {
@@ -73,5 +77,14 @@
       color: color(strong-pink);
       transform: scale(1.2);
     }
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

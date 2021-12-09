@@ -1,7 +1,7 @@
 @import '/styles/base/base';
 
 .headerItem {
-  font-size: size(xl);
+  font-size: size(xl) * 0.8;
   font-family: $font-tomorrow;
   letter-spacing: 3px;
   opacity: 0.6;

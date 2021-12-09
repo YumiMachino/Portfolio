@@ -16,6 +16,11 @@
     width: 220px;
     height: 220px;
 
+    @include responsive(xl) {
+      width: 200px;
+      height: 200px;
+    }
+
     & > div {
       border-radius: 50%;
     }
@@ -34,18 +39,31 @@
     margin-bottom: 1rem;
     transform: translateY(-30px);
     animation: introAnimation 1s forwards;
+    @include responsive(xl) {
+      font-size: size(sm);
+    }
   }
   .skillContainer {
     @include flexPosition($justCont: center, $alignItem: center);
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
+    height: 50%;
+    @include responsive(xl) {
+      width: 90%;
+    }
   }
 
   .iconContainer {
     font-size: 3.2rem;
     color: color(strong-pink);
-    margin: 1.4rem 2rem 0.5rem 1.4rem;
+    margin: 1.4rem 1.2rem 0.5rem 1.2rem;
+    @include responsive(xl) {
+      font-size: 2.4rem;
+    }
+    @include responsive(lg) {
+      font-size: 2rem;
+    }
   }
 }
 

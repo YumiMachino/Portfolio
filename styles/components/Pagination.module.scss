@@ -1,7 +1,7 @@
 @import '/styles/base/base';
 
 .pagination {
-  font-size: size(sm);
+  font-size: size(sm) * 1.2;
   display: inline-block;
   padding: 1rem 2rem;
 
@@ -39,6 +39,10 @@
   @include transition(transform 1s);
   color: color(strong-pink);
 
+  @include responsive(xl) {
+    bottom: 2rem;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -47,6 +51,10 @@
     width: 160px;
     height: 1px;
     background-color: color(strong-pink);
+
+    @include responsive(lg) {
+      visibility: hidden;
+    }
   }
 }
 
@@ -58,6 +66,10 @@
   @include transition(transform 1s);
   color: color(light-blue);
 
+  @include responsive(xl) {
+    bottom: 2rem;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -66,5 +78,9 @@
     width: 160px;
     height: 1px;
     background-color: color(light-blue);
+
+    @include responsive(lg) {
+      visibility: hidden;
+    }
   }
 }

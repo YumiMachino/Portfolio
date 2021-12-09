@@ -4,13 +4,17 @@
   // height: 8rem;
   display: flex;
   @include flexPosition($justCont: space-between, $alignItem: center);
-  // background-color: pink;
 
   .logo {
     position: absolute;
     top: 30px;
     left: 60px;
     cursor: pointer;
+
+    @include responsive(lg) {
+      top: 20px;
+      left: 30px;
+    }
 
     &:hover {
       animation: logoAnimation 2s;
@@ -24,6 +28,10 @@
     position: absolute;
     top: 3rem;
     right: 30px;
+
+    @include responsive(lg) {
+      display: none;
+    }
     // background-color: green;
     // .lines {
     //   padding-top: 100px;

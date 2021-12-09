@@ -1,11 +1,17 @@
 @import '/styles/base/base';
 
 .project {
-  width: 420px;
-  height: 275px;
+  // width: 420px;
+  width: 30%;
+  height: 14em;
+  // height: 275px;
   margin: 3px;
-  background-color: yellow;
   position: relative;
+
+  // @include responsive(xl) {
+  //   width: 300px;
+  //   height: 200px;
+  // }
 
   &:hover .back {
     opacity: 1;
@@ -36,8 +42,13 @@
 
     .name {
       font-size: size(md);
+      font-size: 1.8rem;
       color: color(indigo-blue);
       padding: 0.8rem 0;
+
+      // @include responsive(xl) {
+      //   font-size: size(sm) * 1.4;
+      // }
     }
 
     .techs {
@@ -51,6 +62,10 @@
         color: color(white);
         border-radius: 3px;
         margin: 0 0.2rem;
+
+        @include responsive(xl) {
+          font-size: size(xs);
+        }
       }
     }
   }
@@ -81,5 +96,9 @@
 
   &:hover {
     transform: scale(0.98);
+  }
+
+  @include responsive(xl) {
+    font-size: size(xs);
   }
 }

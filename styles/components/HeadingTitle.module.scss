@@ -8,6 +8,10 @@
   padding: 0 1rem 1.4rem 1rem;
   // animation: titleAnimation 2s;
   animation: logoAnimation 3s;
+
+  @include responsive(xl) {
+    font-size: size(md);
+  }
 }
 
 @keyframes logoAnimation {

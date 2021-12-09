@@ -16,6 +16,11 @@
   color: color(indigo-blue);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 
+  @include responsive(xl) {
+    width: 200px;
+    height: 52px;
+  }
+
   .content {
     @include flexPosition($justCont: center, $alignItem: center);
     position: absolute;

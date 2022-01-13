@@ -9,13 +9,14 @@ import styles from '@/styles/Contact.module.scss';
 const contact = () => {
   return (
     <Layout>
-      <div className={styles.border}>
+      <div className={styles.contactBorder}>
         <HeadingTitle title='Contact' />
         <div className={styles.container}>
           <div className={styles.contactLeft}>
             <h1 className={styles.heading}>Contact Form</h1>
             <Form />
           </div>
+
           <div className={styles.contactRight}>
             <h1 className={styles.heading}>Get in Touch</h1>
             <p className={styles.para}>

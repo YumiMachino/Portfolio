@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import HeadingTitle from '@/components/HeadingTitle';
 import Layout from '@/components/Layout';
-import CyButton from '@/components/CyButton';
+import Button from '@/components/Button';
 import styles from '@/styles/About.module.scss';
 import { GrHtml5 } from 'react-icons/gr';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaSass } from 'react-icons/fa';
@@ -36,7 +36,7 @@ const about = () => {
           </div>
           <div className={styles.introRight}>
             <p className={styles.intro}>{myData.self_intro}</p>
-            <CyButton link='/' content='Check Resume_' primary={true} />
+            <Button link='/' content='Check Resume_' isPrimary={true} />
           </div>
         </div>
         <div className={styles.skillContainer}>

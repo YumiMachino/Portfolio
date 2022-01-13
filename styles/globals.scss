@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none; //
 }
 
 html {
@@ -17,9 +16,10 @@ html {
 body {
   background-color: color(indigo-blue);
   color: white;
+  outline: none;
+  min-height: 100vh;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 a {

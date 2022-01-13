@@ -3,7 +3,11 @@ import Link from 'next/link';
 import HeaderItem from './HeaderItem';
 import styles from '@/styles/components/Header.module.scss';
 
-const Header = ({ headerItems }) => {
+type HeaderProps = {
+  headerItems: any;
+};
+
+const Header: React.FC<HeaderProps> = ({ headerItems }) => {
   const { home, about, projects, contact } = headerItems;
 
   return (

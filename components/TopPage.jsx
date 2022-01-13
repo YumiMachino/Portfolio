@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CyButton from '@/components/CyButton';
+import Button from '@/components/Button';
 import Typist from 'react-typist';
 import styles from '@/styles/components/TopPage.module.scss';
 
@@ -13,7 +13,7 @@ const TopPage = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.topContainer}>
       <h1 className={`${animate && styles.animate} ${styles.glitch} `}>
         <span>
           Yumi <br /> Machino
@@ -32,7 +32,7 @@ const TopPage = () => {
         </Typist>
       </h5>
 
-      <CyButton link='/projects' content='Check Projects_' primary={true} />
+      <Button link='/projects' content='Check Projects_' isPrimary={true} />
     </div>
   );
 };

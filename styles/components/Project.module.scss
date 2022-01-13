@@ -8,10 +8,22 @@
   margin: 3px;
   position: relative;
 
-  // @include responsive(xl) {
-  //   width: 300px;
-  //   height: 200px;
-  // }
+  @include responsive(xs) {
+    width: 95%;
+    margin: 6px auto;
+  }
+  @include responsive(sm) {
+    width: 95%;
+    margin: 6px auto;
+  }
+  @include responsive(md) {
+    width: 45%;
+    margin: 6px auto;
+  }
+  @include responsive(lg) {
+    width: 33%;
+    margin: 6px auto;
+  }
 
   &:hover .back {
     opacity: 1;

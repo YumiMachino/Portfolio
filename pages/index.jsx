@@ -4,9 +4,11 @@ import TopPage from '@/components/TopPage';
 import styles from '@/styles/Home.module.scss';
 
 const Home = ({ headerItems }) => (
-  <Layout>
-    <TopPage />
-  </Layout>
+  <div>
+    <Layout>
+      <TopPage />
+    </Layout>
+  </div>
 );
 
 export default Home;

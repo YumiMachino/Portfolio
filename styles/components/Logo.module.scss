@@ -2,99 +2,21 @@
 
 .logo {
   position: absolute;
-  top: 30px;
-  left: 60px;
-  cursor: pointer;
+  top: 10px;
+  left: 10px;
   z-index: 30;
-
+  width: 60px;
+  height: 60px;
   &:hover {
-    animation: logoAnimation 2s;
-    // transform: rotate(45deg);
-  }
-}
-
-@keyframes logoAnimation {
-  0% {
-    transform: translateX(0);
+    @include shakeAnimation(2s);
   }
 
-  5% {
-    transform: translateX(1px);
+  @include responsive(xs) {
+    width: 50px;
+    height: 50px;
   }
-
-  10% {
-    transform: translateX(-1px);
-  }
-
-  15% {
-    transform: translateX(1px);
-  }
-
-  20% {
-    transform: translateX(-1px);
-  }
-
-  25% {
-    transform: translateX(1px);
-  }
-
-  30% {
-    transform: translateX(-1px);
-  }
-
-  35% {
-    transform: translateX(1px);
-  }
-
-  40% {
-    transform: translateX(-1px);
-  }
-
-  45% {
-    transform: translateX(1px);
-  }
-
-  50% {
-    transform: translateX(-1px);
-  }
-
-  55% {
-    transform: translateX(1px);
-  }
-
-  60% {
-    transform: translateX(1px);
-  }
-
-  65% {
-    transform: translateX(1px);
-  }
-
-  70% {
-    transform: translateX(-1px);
-  }
-
-  75% {
-    transform: translateX(1px);
-  }
-
-  80% {
-    transform: translateX(-1px);
-  }
-
-  85% {
-    transform: translateX(1px);
-  }
-
-  90% {
-    transform: translateX(-1px);
-  }
-
-  95% {
-    transform: translateX(1px);
-  }
-
-  100% {
-    transform: translateX(0px);
+  @include responsive(xl) {
+    width: 100px;
+    height: 100px;
   }
 }

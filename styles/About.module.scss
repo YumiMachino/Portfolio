@@ -1,33 +1,81 @@
 @import '/styles/base/base';
 
 .border {
-  margin: auto;
   padding: 1rem;
-  width: 90%;
-  height: 100%;
+  width: 85%;
   border: 1px solid color(weak-pink);
+  height: fit-content;
+  margin: 60px auto;
+
+  @include responsive(xs) {
+    margin-top: 80px;
+    padding: 0.4rem;
+  }
+  @include responsive(sm) {
+    width: 70%;
+  }
+  @include responsive(md) {
+    width: 80%;
+  }
 
   .introContainer {
     @include flexPosition($justCont: space-around, $alignItem: center);
+
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+    }
+    @include responsive(md) {
+      flex-direction: row;
+    }
   }
 
   .imgContainer {
     position: relative;
     width: 220px;
     height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
 
-    @include responsive(xl) {
+    @include responsive(xs) {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include responsive(sm) {
+      width: 140px;
+      height: 140px;
+    }
+
+    @include responsive(md) {
+      width: 160px;
+      height: 160px;
+    }
+
+    @include responsive(lg) {
       width: 200px;
       height: 200px;
     }
 
-    & > div {
-      border-radius: 50%;
+    @include responsive(xl) {
+      width: 220px;
+      height: 220px;
     }
   }
 
   .introRight {
     width: 60%;
+    @include responsive(xs) {
+      width: 90%;
+    }
+    @include responsive(sm) {
+      width: 90%;
+    }
+    @include responsive(md) {
+      width: 60%;
+    }
   }
 
   .intro {
@@ -39,8 +87,27 @@
     margin-bottom: 1rem;
     transform: translateY(-30px);
     animation: introAnimation 1s forwards;
+
+    @include responsive(xs) {
+      font-size: size(sm) * 0.8;
+      line-height: 1.4;
+      padding: 0.8rem 0;
+    }
+    @include responsive(sm) {
+      font-size: size(sm) * 0.9;
+      line-height: 1.4;
+      padding: 0.8rem 0;
+    }
+    @include responsive(md) {
+      font-size: size(sm) * 1.1;
+      line-height: 1.4;
+      padding: 0.8rem 0;
+    }
+    @include responsive(lg) {
+      font-size: size(sm) * 1.2;
+    }
     @include responsive(xl) {
-      font-size: size(sm);
+      font-size: size(sm) * 1.8;
     }
   }
   .skillContainer {
@@ -49,7 +116,16 @@
     width: 80%;
     margin: 0 auto;
     height: 50%;
-    @include responsive(xl) {
+
+    @include responsive(xs) {
+      width: 100%;
+      height: fit-content;
+    }
+    @include responsive(sm) {
+      width: 100%;
+    }
+
+    @include responsive(md) {
       width: 90%;
     }
   }
@@ -58,11 +134,23 @@
     font-size: 3.2rem;
     color: color(strong-pink);
     margin: 1.4rem 1.2rem 0.5rem 1.2rem;
-    @include responsive(xl) {
-      font-size: 2.4rem;
+
+    @include responsive(xs) {
+      font-size: 1.6rem;
     }
-    @include responsive(lg) {
+    @include responsive(sm) {
+      font-size: 1.6rem;
+    }
+
+    @include responsive(md) {
       font-size: 2rem;
+    }
+
+    @include responsive(lg) {
+      font-size: 3.2rem;
+    }
+    @include responsive(xl) {
+      font-size: 3.8rem;
     }
   }
 }
@@ -75,6 +163,20 @@
     width: 100%;
     display: inline-block;
     text-align: center;
+
+    @include responsive(xs) {
+      font-size: size(xs);
+    }
+    @include responsive(sm) {
+      font-size: size(xs);
+    }
+    @include responsive(lg) {
+      font-size: size(sm);
+    }
+    @include responsive(xl) {
+      font-size: size(md);
+      margin: 10px;
+    }
   }
 }
 

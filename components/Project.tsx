@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/components/Project.module.scss';
+import Button from './Button';
 
 const Project = ({ project }) => {
   const { id, title, thumbnail, technology, web } = project;

@@ -1,14 +1,20 @@
 @import '/styles/base/base';
 
 .headerItem {
-  font-size: size(xl) * 0.8;
+  font-size: size(xl);
   font-family: $font-tomorrow;
   letter-spacing: 3px;
   opacity: 0.6;
   font-weight: 300;
   margin: 1rem;
   position: relative;
-  @include transition(transform 0.9s ease);
+  transition: transform 0.9s ease;
+  animation: slideIn 2s;
+  display: none;
+
+  @include responsive(lg) {
+    display: block;
+  }
 
   &:after {
     content: '';
@@ -19,18 +25,17 @@
     opacity: 0;
     top: 50%;
     right: -100px;
-    @include transform-origin(right);
-    @include transition(transform 0.9s ease);
+    transform-origin: right;
+    transition: transform 0.9s ease;
   }
 
   &:hover {
-    cursor: pointer;
-    @include transform(translateX(-120px));
+    transform: translateX(-120px);
   }
 
   a {
     color: color(weak-pink);
-    @include transition(color 0.9s ease);
+    transition: color 0.9s ease;
   }
 
   &:hover a {
@@ -38,7 +43,7 @@
     color: color(strong-pink);
   }
   &:hover:after {
-    @include transform(scaleX(10));
+    transform: scaleX(10);
     opacity: 1;
   }
 }

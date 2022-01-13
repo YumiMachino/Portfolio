@@ -1,0 +1,58 @@
+@import '/styles/base/base';
+
+.navStyles {
+  width: fit-content;
+  height: min-content;
+  border: 1px solid color(weak-pink);
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: large;
+  text-align: center;
+
+  & > ul {
+    list-style-type: none;
+
+    & > li {
+      @include responsive(xs) {
+        display: inline-block;
+      }
+    }
+  }
+
+  @include responsive(xs) {
+    width: fit-content;
+    top: 10px;
+    right: 10px;
+  }
+
+  @include responsive(xl) {
+    width: fit-content;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.navIconStyle {
+  width: 70px;
+  height: 60px;
+  font-size: size(xl);
+  padding: 10px;
+
+  @include responsive(xs) {
+    width: 44px;
+    height: 44px;
+    font-size: size(md);
+  }
+
+  @include responsive(xl) {
+    width: 100px;
+    height: 100px;
+    font-size: size(xl) * 1.2;
+  }
+
+  &:hover {
+    color: color(strong-pink);
+  }
+}

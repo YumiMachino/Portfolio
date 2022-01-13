@@ -1,15 +1,42 @@
 @import '/styles/base/base';
 
-.border {
+.projectBorder {
   margin: auto;
   padding: 0.2rem;
   width: 90%;
-  height: 100%;
+  height: fit-content;
   border: 1px solid color(weak-pink);
+
+  @include responsive(xs) {
+    margin-top: 80px;
+    padding: 0.4rem;
+  }
+  @include responsive(sm) {
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @include responsive(md) {
+    width: 80%;
+    margin-top: 2rem;
+  }
 
   .projectContainer {
     @include flexPosition($justCont: center, $alignItem: center);
     flex-wrap: wrap;
+
+    @include responsive(xs) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include responsive(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 

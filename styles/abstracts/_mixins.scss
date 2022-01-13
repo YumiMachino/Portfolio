@@ -1,16 +1,7 @@
-// Flexbox
 @mixin flexPosition($justCont: center, $alignItem: center) {
   display: flex;
   justify-content: $justCont;
   align-items: $alignItem;
-}
-
-@mixin animation($animation) {
-  -webkit-animation: $animation;
-  -moz-animation: $animation;
-  -ms-animation: $animation;
-  -o-animation: $animation;
-  animation: $animation;
 }
 
 @mixin transform($transform) {
@@ -54,38 +45,66 @@
   -webkit-text-stroke: $stroke $color;
 }
 
+@mixin shakeAnimation($sec) {
+  animation: shakeAnimationStyle $sec;
+}
+
+@keyframes shakeAnimationStyle {
+  $val: 1;
+
+  @for $i from 0 through 100 {
+    @if $i == 0 or $i == 100 {
+      #{$i * 1%} {
+        transform: translateX(0);
+      }
+    } @else {
+      @if $i % 5 == 0 {
+        @if $i % 2 == 0 {
+          #{$i * 1%} {
+            transform: translateX(-1px);
+          }
+        } @else {
+          #{$i * 1% } {
+            transform: translateX(1px);
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin btnStyle() {
   padding: 1rem 2rem;
 }
 
 // Responsive breakpoints
 @mixin responsive($breakpoint) {
-  @if ($breakpoint == xl) {
-    @media (max-width: 1200px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == lg) {
-    @media (max-width: 1000px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == md) {
-    @media (max-width: 775px) {
+  @if ($breakpoint == xs) {
+    @media (max-width: 599px) {
       @content;
     }
   }
 
   @if ($breakpoint == sm) {
-    @media (max-width: 670px) {
+    @media (min-width: 600px) {
       @content;
     }
   }
 
-  @if ($breakpoint == xs) {
-    @media (max-width: 460px) {
+  @if ($breakpoint == md) {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xl) {
+    @media (min-width: 1800px) {
       @content;
     }
   }

@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 import { myProjects } from '../../mydata/data';
 import styles from '@/styles/ProjectDetail.module.scss';
 import HeadingTitle from '@/components/HeadingTitle';
-import CyButton from '@/components/CyButton';
+import Button from '@/components/Button';
 
 const ProjectDetail = ({ project }) => {
   const [hasDesign, setHasDesign] = useState(false);
@@ -28,7 +28,7 @@ const ProjectDetail = ({ project }) => {
 
   const renderOverview = () => {
     return (
-      <>
+      <div className={styles.projectOverview}>
         <div>
           <h3>Technology</h3>
           <p>{renderTechs()}</p>
@@ -37,7 +37,7 @@ const ProjectDetail = ({ project }) => {
           <h3>About</h3>
           <p className={styles.about}>{about}</p>
         </div>
-      </>
+      </div>
     );
   };
 
@@ -86,15 +86,15 @@ const ProjectDetail = ({ project }) => {
 
   return (
     <Layout>
-      <div className={styles.border}>
+      <div className={styles.detailBorder}>
         <HeadingTitle title={title} />
         <div>
-          {live && <CyButton link='' content='View Live_' primary={true} />}
+          {live && <Button link='' content='View Live_' primary={true} />}
 
-          <CyButton link='' content='View Code_' primary={false} />
+          <Button link='' content='View Code_' isPrimary={false} />
         </div>
 
-        <div className={styles.container}>
+        <div className={styles.detailWrapper}>
           <h4>
             <span
               style={{ color: `${isOverview ? '#F100F5' : '#3b136b'}` }}

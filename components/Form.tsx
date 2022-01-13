@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
-import CyButton from '@/components/CyButton';
 import styles from '@/styles/components/Form.module.scss';
 
 const Form = () => {

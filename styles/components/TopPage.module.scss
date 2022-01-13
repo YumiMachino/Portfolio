@@ -1,27 +1,40 @@
 @import '/styles/base/base';
 
-.container {
-  //   background-color: yellow;
-  @include transform(translateY(-30%));
+.topContainer {
+  padding: 10px;
+  width: 90vw;
   position: absolute;
-  top: 45%;
-  left: 7rem;
-  //   width: 100%;
-  //   height: 80vw;
-  //   margin-top: 100px;
-  //   padding-left: 4rem;
+  top: 30%;
+  left: 5%;
 
   .role {
     font-family: $font-tomorrow;
-    font-size: size(lg);
-    padding: 1rem 0 2rem 0;
-    font-weight: 300;
+    font-size: size(sm) * 1.5;
+    padding: 1rem 0;
+    font-weight: 100;
     color: color(weak-pink);
+
+    @include responsive(sm) {
+      font-size: size(lg);
+      padding: 1rem 0 2rem 0;
+      font-weight: 300;
+    }
+    @include responsive(xl) {
+      font-size: size(xl);
+    }
+  }
+
+  @include responsive(xs) {
+    @include flexPosition(center, center);
+    flex-direction: column;
+  }
+  @include responsive(xl) {
+    width: 80vw;
   }
 }
 
 .glitch {
-  font-size: size(xl) * 2;
+  font-size: size(lg) * 1.2;
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
@@ -31,6 +44,16 @@
     0.025em 0.05em 0 rgba(69, 14, 255, 0.75);
 
   // animation: glitch 500ms infinite;
+
+  @include responsive(sm) {
+    font-size: size(xl) * 1.2;
+  }
+  @include responsive(md) {
+    font-size: size(xl) * 2;
+  }
+  @include responsive(xl) {
+    font-size: size(xl) * 3;
+  }
 
   span {
     position: absolute;

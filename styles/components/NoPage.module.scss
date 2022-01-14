@@ -1,0 +1,15 @@
+@import '/styles/base/base';
+
+.noPageBorder {
+  padding: 1rem;
+  width: 80%;
+  height: 70vh;
+  margin: 4rem auto;
+  border: 1px solid color(weak-pink);
+  @include flexPosition(center, center);
+  flex-direction: column;
+
+  @include responsive(sm) {
+    width: 70%;
+  }
+}

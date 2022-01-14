@@ -12,10 +12,10 @@
   }
   @include responsive(md) {
     width: 80%;
+    height: 70vh;
   }
   @include responsive(lg) {
     width: 70%;
-    height: 70vh;
   }
 
   .msg {
@@ -67,6 +67,7 @@
       width: 100%;
       height: fit-content;
       margin: 1rem 0;
+
       @include responsive(md) {
         width: 50%;
       }
@@ -77,23 +78,26 @@
   }
 
   .para {
-    font-size: size(xs);
+    font-size: size(xs) * 1.2;
     font-family: $font-tomorrow;
     font-weight: 300;
     padding: 1rem 0;
     animation: introAnimation 1s forwards;
     @include responsive(md) {
       font-size: size(sm);
+      padding: 0.8rem 1rem;
     }
 
     .email {
       color: color(light-blue);
       display: inline-block;
       padding: 0.8rem;
+      font-weight: 400;
       @include transition(transform 0.5s);
       font-size: size(sm);
       &:hover {
         color: color(strong-pink);
+        font-weight: 600;
         @include scale(1.1);
       }
     }

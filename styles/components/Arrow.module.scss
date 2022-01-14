@@ -8,6 +8,10 @@
   right: 0;
   text-align: center;
 
+  @include responsive(lg) {
+    height: 120px;
+  }
+
   .arrowIcon {
     font-size: size(md);
     color: color(strong-pink);
@@ -15,9 +19,8 @@
     @include responsive(md) {
       font-size: size(lg);
     }
-    @include responsive(xl) {
-      font-size: size(xl);
-      height: 100px;
+    @include responsive(lg) {
+      font-size: size(xl) * 1.6;
     }
   }
 

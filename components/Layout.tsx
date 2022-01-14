@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Arrow from './Arrow';
 import Logo from './Logo';
 import Navigation from './Navigation';
+
+import styles from '@/styles/Layout.module.scss';
 
 type LayoutProps = {
   title?: string;
@@ -21,9 +22,6 @@ const Layout: React.FC<LayoutProps> = ({
   nextLink,
   indicator,
 }) => {
-  const router = useRouter();
-
-  console.log('router pathname: ', router.pathname);
   return (
     <div>
       <Head>
@@ -32,14 +30,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name='keywords' content={keywords} />
       </Head>
 
-      <div
-        style={{
-          position: 'relative',
-          minHeight: '100vh',
-          paddingTop: '40px',
-          paddingBottom: '70px',
-        }}
-      >
+      <div className={styles.layoutWrapper}>
         <Logo link='/' />
         <Navigation />
         <div>{children}</div>

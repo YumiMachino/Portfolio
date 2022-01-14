@@ -147,7 +147,7 @@ export const myProjects: ProjectDataType = [
   },
   {
     id: 1,
-    title: 'RecipeBook Web App(In development)',
+    title: 'RecipeBook(Dev)',
     thumbnail: '/recipeBook.png',
     technology: [
       {
@@ -173,7 +173,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'A Web Application that let users to share their unique recipes with others and see recipes from all over the world. Users can save favorite recipes, and try cooking multi-national recipe, and comment on that recipe! This project has been developed with other developer. I have created UI design from the scratch. The development of this project is still on going.',
+      'DEVELOPMENT ONGOING. A Web Application that let users to share their unique recipes with others and see recipes from all over the world. Users can save favorite recipes, and try cooking multi-national recipe, and comment on that recipe! This project has been developed with other developer. I have created UI design from the scratch. ',
     design: [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
       ['Poppins', 'Mulish'],
@@ -183,7 +183,7 @@ export const myProjects: ProjectDataType = [
   },
   {
     id: 2,
-    title: 'Portfolio website',
+    title: 'My Portfolio',
     thumbnail: '/updatePortfolio.png',
     technology: [
       {
@@ -199,14 +199,14 @@ export const myProjects: ProjectDataType = [
       'My portfolio website, whih shows about myself, projects, and contact information. For this website, I wanted to develop something unique, so I started from UI design.  I decided to use Sass in order to have more flexibility on CSS, and broke into smaller files to make file structure more simple. All the data is separated from UI components so that it is easier to update later.',
     design: [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
-      ['Poppins', 'Mulish'],
+      ['Orbitron', 'Tomorrow'],
     ],
-    live: '',
+    live: 'https://www.yumimachino.tech/',
     repo: 'https://github.com/YumiMachino/Portfolio-nextJS',
   },
   {
     id: 3,
-    title: 'Country Journal Web App',
+    title: 'Country Journal',
     thumbnail: '/countryJournal.png',
     technology: [
       { id: 31, tech: 'HTML' },
@@ -227,7 +227,7 @@ export const myProjects: ProjectDataType = [
   },
   {
     id: 4,
-    title: 'JTravel Tour Website',
+    title: 'JTravel Tour',
     thumbnail: '/jTravel.png',
     technology: [
       { id: 41, tech: 'HTML' },
@@ -261,7 +261,7 @@ export const myProjects: ProjectDataType = [
   },
   {
     id: 6,
-    title: 'HangOut Planner App',
+    title: 'HangOut Planner',
     thumbnail: '/hangOutPlanner.jpg',
     technology: [
       { id: 61, tech: 'Swift' },
@@ -276,18 +276,32 @@ export const myProjects: ProjectDataType = [
   },
   {
     id: 7,
-    title: 'React Redux movie app',
-    thumbnail: '/dpcodeAcademy.jpg',
+    title: 'To Do List App',
+    thumbnail: '/toDoList.jpeg',
     technology: [
-      { id: 71, tech: 'React' },
-      { id: 72, tech: 'Redux' },
-      { id: 73, tech: 'Redux Toolkit' },
+      { id: 71, tech: 'Swift' },
+      { id: 72, tech: 'CoreData' },
+    ],
+    web: false,
+    about:
+      'A native iOS app developed by Swift. This let users to create, add, update and delete to do items. By using Core data, this app allows data to be persistent.',
+    repo: 'https://github.com/YumiMachino/CoreData_ToDoList',
+    design: null,
+    live: null,
+  },
+  {
+    id: 8,
+    title: 'crwn-clothing',
+    thumbnail: '/crwnClothing.png',
+    technology: [
+      { id: 81, tech: 'React' },
+      { id: 82, tech: 'Redux' },
+      { id: 83, tech: 'Firebase' },
     ],
     web: true,
-    about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    live: '',
-    repo: '',
+    about: 'Tutorial based web application which features e-commerce.',
+    live: 'https://crwn-clothing-tutorial-live.herokuapp.com/',
+    repo: 'https://github.com/YumiMachino/crwn-clothing/tree/main/src',
     design: null,
   },
 ];

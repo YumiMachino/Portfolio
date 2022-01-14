@@ -6,7 +6,7 @@
   border: 1px solid color(weak-pink);
   margin: 2rem auto 0 auto;
   padding: 0.4rem;
-  height: 80vh;
+  // height: 80vh;
 
   @include responsive(sm) {
     width: 70%;
@@ -117,6 +117,7 @@
     color: color(white);
     border-radius: 3px;
     margin: 0.4rem 0.2rem;
+    display: inline-block;
 
     @include responsive(xs) {
       font-size: size(xs);

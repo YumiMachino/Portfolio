@@ -53,12 +53,14 @@ const ProjectDetail = ({ project }) => {
     });
   };
 
+  // Poppins, Mulish, Orbitron, Tomorrow, Barlow, Josefin Sans, Montserrat Alternates, Badoni Moda, Lato
   const renderTypos = () => {
     if (!design) return;
     const typos = design[1];
-    return typos.map((typo) => {
+
+    return typos.map((typo, index) => {
       return (
-        <div className={styles.typoSet}>
+        <div className={styles.typoSet} key={index}>
           <p className={styles.typoName} style={{ fontFamily: `${typo}` }}>
             {typo}
           </p>
@@ -85,9 +87,9 @@ const ProjectDetail = ({ project }) => {
       <div className={styles.detailBorder}>
         <HeadingTitle title={title} />
         <div className={styles.buttons}>
-          {live && <Button link='' content='View Live_' isPrimary={true} />}
+          {live && <Button link={live} content='View Live_' isPrimary={true} />}
 
-          <Button link='' content='View Code_' isPrimary={false} />
+          <Button link={repo} content='View Code_' isPrimary={false} />
         </div>
 
         <div className={styles.detailWrapper}>

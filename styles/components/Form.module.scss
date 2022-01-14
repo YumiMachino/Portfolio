@@ -13,18 +13,18 @@
     width: 80%;
     padding: 0.8rem 1rem;
     margin: 0.5rem;
-    background-color: color(indigo-blue);
+    background-color: transparent;
     color: color(strong-pink);
     border: 0.6px solid color(weak-pink);
     border-radius: 3px;
     font-size: size(sm);
     outline: none;
-    font-family: inherit;
-    transition: transform 0.5s;
+    font-family: $font-tomorrow;
+    @include transition(transform 0.5s);
 
     &:focus {
       border: 0.6px solid color(strong-pink);
-      transform: scale(1.01);
+      @include scale(1.01);
     }
 
     &::placeholder {
@@ -43,6 +43,5 @@
 
 .submitBtn {
   width: 80%;
-
   @include flexPosition(flex-end, center);
 }

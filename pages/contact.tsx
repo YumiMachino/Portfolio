@@ -8,7 +8,7 @@ import styles from '@/styles/Contact.module.scss';
 
 const contact = () => {
   return (
-    <Layout nextLink='/'>
+    <Layout nextLink='/' indicator='To Home'>
       <div className={styles.contactBorder}>
         <HeadingTitle title='Contact' />
         <div className={styles.contactContainer}>

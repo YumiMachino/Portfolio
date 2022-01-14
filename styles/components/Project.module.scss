@@ -19,12 +19,12 @@
   }
 
   &:hover .overview {
-    transform: scale(1.02);
+    @include scale(1.02);
   }
 
   .back {
     opacity: 0;
-    transition: opacity 0.3s;
+    @include transition(opacity 0.3s);
   }
 
   .overview {
@@ -39,7 +39,7 @@
     @include flexPosition($justCont: center, $alignItem: flex-start);
     flex-direction: column;
     z-index: 10;
-    transition: transform 0.3s;
+    @include transition(transform 0.3s);
 
     .name {
       font-size: size(sm) * 1.4;

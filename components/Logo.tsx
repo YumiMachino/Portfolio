@@ -10,7 +10,9 @@ const Logo: React.FC<LogoProps> = ({ link }) => {
   return (
     <div className={styles.logo}>
       <Link href={link}>
-        <Image src={'/logo_img.png'} alt='logo' layout='fill' />
+        <a>
+          <Image src={'/logo_img.png'} alt='logo' layout='fill' />
+        </a>
       </Link>
     </div>
   );

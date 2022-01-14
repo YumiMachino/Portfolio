@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import styles from '@/styles/components/Form.module.scss';
@@ -20,6 +20,7 @@ const initialState: Inputs = {
 
 const Form = () => {
   const form = useRef();
+
   const {
     register,
     handleSubmit,

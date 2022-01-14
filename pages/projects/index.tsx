@@ -12,7 +12,7 @@ const projects = () => {
   };
 
   return (
-    <Layout nextLink='/contact'>
+    <Layout nextLink='/contact' indicator='Contact Me'>
       <div className={styles.projectBorder}>
         <HeadingTitle title='Projects' />
         <div className={styles.projectContainer}>{renderProjects()}</div>

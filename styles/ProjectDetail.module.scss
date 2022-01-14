@@ -74,10 +74,10 @@
     }
 
     & > span {
-      transition: all 0.2s;
+      @include transition(all 0.2s);
       &:hover {
         color: color(strong-pink);
-        transform: scale(1.1);
+        @include scale(1.1);
       }
     }
   }

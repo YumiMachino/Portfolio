@@ -30,6 +30,7 @@
   width: 44px;
   height: 44px;
   font-size: size(md);
+  @include transition(all 0.2s);
 
   @include responsive(sm) {
     width: 70px;

@@ -10,6 +10,7 @@ type LayoutProps = {
   description?: string;
   children: any;
   nextLink: string;
+  indicator: string;
 };
 
 const Layout: React.FC<LayoutProps> = ({
@@ -18,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({
   description,
   children,
   nextLink,
+  indicator,
 }) => {
   const router = useRouter();
 
@@ -35,13 +37,13 @@ const Layout: React.FC<LayoutProps> = ({
           position: 'relative',
           minHeight: '100vh',
           paddingTop: '40px',
-          paddingBottom: '60px',
+          paddingBottom: '70px',
         }}
       >
         <Logo link='/' />
         <Navigation />
         <div>{children}</div>
-        <Arrow nextLink={nextLink} />
+        <Arrow nextLink={nextLink} indicator={indicator} />
       </div>
     </div>
   );

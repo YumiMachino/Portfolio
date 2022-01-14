@@ -42,7 +42,7 @@
 
     .heading {
       font-weight: 200;
-      transform: translateY(-30px);
+      @include transform(translateY(-30px));
       animation: introAnimation 1s forwards;
       font-size: size(sm) * 1.2;
       padding-bottom: 0.4rem;
@@ -90,11 +90,11 @@
       color: color(light-blue);
       display: inline-block;
       padding: 0.8rem;
-      transition: transform 0.5s;
+      @include transition(transform 0.5s);
       font-size: size(sm);
       &:hover {
         color: color(strong-pink);
-        transform: scale(1.1);
+        @include scale(1.1);
       }
     }
   }
@@ -108,7 +108,7 @@
     font-size: size(sm) * 1.6;
     color: color(light-blue);
     margin: 0.8rem 1rem;
-    transition: transform 0.5s;
+    @include transition(transform 0.5s);
 
     @include responsive(md) {
       font-size: size(md);
@@ -116,16 +116,16 @@
 
     &:hover {
       color: color(strong-pink);
-      transform: scale(1.2);
+      @include scale(1.2);
     }
   }
 }
 
 @keyframes introAnimation {
   0% {
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   100% {
-    transform: translateY(0);
+    @include transform(translateY(0));
   }
 }

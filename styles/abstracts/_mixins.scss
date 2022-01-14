@@ -11,23 +11,8 @@
   transform: $transform;
 }
 
-@mixin rotate($deg) {
-  @include transform(rotate(#{deg}deg));
-}
-
 @mixin scale($scale) {
   @include transform(scale($scale));
-}
-
-@mixin skew($x, $y) {
-  @include transform(skew(#{$x}deg, #{$y}deg));
-}
-
-@mixin transform-origin($origin) {
-  -webkit-transform-origin: $origin;
-  -moz-transform-origin: $origin;
-  -ms-transform-origin: $origin;
-  transform-origin: $origin;
 }
 
 @mixin transition($args...) {

@@ -1,3 +1,4 @@
+import { IconType } from 'react-icons';
 import {
   FaCss3,
   FaHtml5,
@@ -19,8 +20,18 @@ import {
   SiFirebase,
 } from 'react-icons/si';
 
+type myDataType = {
+  self_intro: string;
+  skills: [
+    {
+      name: string;
+      icon: IconType;
+    }
+  ];
+};
+
 // Data for About page
-export const myData = {
+export const myData: myDataType = {
   self_intro:
     "I'm a motivated front-end developer with passion for user experience and interaction design and strength in creative and strategic thinking. Learning and growing as a software developer is my passion. I've learnt front-end development as well as iOS App development, throughout school projects and volunteer work, I've always enjoyed working in a team, also love taking new challenges. My motto is to have fun learning! ",
   skills: [
@@ -92,8 +103,23 @@ export const myData = {
   ],
 };
 
+type ProjectDataType = {
+  id: number;
+  title: string;
+  thumbnail: string;
+  technology: {
+    id: number;
+    tech: string;
+  }[];
+  web: boolean;
+  about: string;
+  design?: null | any;
+  live: string;
+  repo: string;
+}[];
+
 // Data for Project page
-export const myProjects = [
+export const myProjects: ProjectDataType = [
   {
     id: 0,
     title: 'DPCODE ACADEMY',

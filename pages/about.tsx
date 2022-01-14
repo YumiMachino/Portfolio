@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import { IconBaseProps, IconContext } from 'react-icons';
+import { IconType, IconContext } from 'react-icons';
 import HeadingTitle from '@/components/HeadingTitle';
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import styles from '@/styles/About.module.scss';
-import { myData } from '@/mydata/data.js';
+import { myData } from '@/mydata/data';
 
-const renderIconSet = (name: string, icon: IconBaseProps) => {
+const renderIconSet = (name: string, icon: IconType, index: number) => {
   return (
-    <div className={styles.iconSet}>
+    <div key={index} className={styles.iconSet}>
       <div>{icon}</div>
       <span>{name}</span>
     </div>
@@ -17,7 +17,7 @@ const renderIconSet = (name: string, icon: IconBaseProps) => {
 
 const about = () => {
   return (
-    <Layout nextLink='/projects'>
+    <Layout nextLink='/projects' indicator='Projects'>
       <div className={styles.aboutBorder}>
         <HeadingTitle title='About Me / Skills' />
 
@@ -39,8 +39,8 @@ const about = () => {
           <IconContext.Provider
             value={{ className: `${styles.iconContainer}` }}
           >
-            {myData.skills.map((skill) => {
-              return renderIconSet(skill.name, skill.icon);
+            {myData.skills.map((skill, index) => {
+              return renderIconSet(skill.name, skill.icon, index);
             })}
           </IconContext.Provider>
         </div>

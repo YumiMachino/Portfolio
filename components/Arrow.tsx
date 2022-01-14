@@ -4,14 +4,16 @@ import Link from 'next/link';
 
 type ArrowProps = {
   nextLink: string;
+  indicator: string;
 };
 
-const Arrow: React.FC<ArrowProps> = ({ nextLink }) => {
+const Arrow: React.FC<ArrowProps> = ({ nextLink, indicator }) => {
   return (
     <div className={styles.arrowStyle}>
       <Link href={nextLink}>
-        <a>
+        <a className={styles.next}>
           <FaAngleDoubleDown className={styles.arrowIcon} />
+          <p>{indicator}</p>
         </a>
       </Link>
     </div>

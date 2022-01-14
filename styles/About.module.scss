@@ -70,7 +70,7 @@
     letter-spacing: 1.2px;
     font-weight: 200;
     margin-bottom: 1rem;
-    transform: translateY(-30px);
+    @include transform(translateY(-30px));
     animation: introAnimation 1s forwards;
 
     @include responsive(md) {
@@ -128,18 +128,18 @@
 
 @keyframes introAnimation {
   0% {
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   100% {
-    transform: translateY(0);
+    @include transform(translateY(0));
   }
 }
 
 @keyframes iconAnimation {
   0% {
-    transform: translateX(-100%);
+    @include transform(translateX(-100%));
   }
   100% {
-    transform: translateX(0);
+    @include transform(translateX(0));
   }
 }

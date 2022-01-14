@@ -81,7 +81,7 @@ const ProjectDetail = ({ project }) => {
   };
 
   return (
-    <Layout nextLink='/projects'>
+    <Layout nextLink='/projects' indicator='Back To Projects'>
       <div className={styles.detailBorder}>
         <HeadingTitle title={title} />
         <div className={styles.buttons}>

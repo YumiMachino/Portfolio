@@ -32,7 +32,11 @@ const about = () => {
           </div>
           <div className={styles.introRight}>
             <p className={styles.intro}>{myData.self_intro}</p>
-            <Button link='/' content='Check Resume_' isPrimary={true} />
+            <Button
+              link='https://docs.google.com/document/d/e/2PACX-1vQTB3CUFkEDUTjlu7EmWx6kweVmf5HixFeRYIjWcTlsxAOm2zbnDqbPlSJKOEPT_1HEqaujtNmpgFX9/pub'
+              content='Check Resume_'
+              isPrimary={true}
+            />
           </div>
         </div>
         <div className={styles.skillContainer}>

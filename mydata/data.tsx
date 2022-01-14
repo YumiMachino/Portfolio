@@ -140,15 +140,15 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+      'A website created for DPCode Academy which offers users to access to the online learning platform. On the website, users can login so that they are able to see the  limited resources either for students or admin. This project has been developed by a team involving UI/UX designers, Front End Developers and Back End Developers',
     design: null,
     live: 'https://dpcode.academy/',
     repo: null,
   },
   {
     id: 1,
-    title: 'RecipeBook Web App',
-    thumbnail: '/dpcodeAcademy.jpg',
+    title: 'RecipeBook Web App(In development)',
+    thumbnail: '/recipeBook.png',
     technology: [
       {
         id: 11,
@@ -156,16 +156,24 @@ export const myProjects: ProjectDataType = [
       },
       {
         id: 21,
-        tech: 'tailwindCSS',
+        tech: 'TypeScript',
       },
       {
         id: 31,
+        tech: 'tailwindCSS',
+      },
+      {
+        id: 41,
         tech: 'Firebase',
+      },
+      {
+        id: 42,
+        tech: 'Figma',
       },
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+      'A Web Application that let users to share their unique recipes with others and see recipes from all over the world. Users can save favorite recipes, and try cooking multi-national recipe, and comment on that recipe! This project has been developed with other developer. I have created UI design from the scratch. The development of this project is still on going.',
     design: [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
       ['Poppins', 'Mulish'],
@@ -176,62 +184,65 @@ export const myProjects: ProjectDataType = [
   {
     id: 2,
     title: 'Portfolio website',
-    thumbnail: '/portfolio.jpg',
+    thumbnail: '/updatePortfolio.png',
     technology: [
       {
         id: 21,
-        tech: 'NEXTJS',
+        tech: 'Next.js',
       },
-      { id: 22, tech: 'SCSS' },
+      { id: 22, tech: 'TypeScript' },
+      { id: 23, tech: 'Sass' },
+      { id: 24, tech: 'Figma' },
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+      'My portfolio website, whih shows about myself, projects, and contact information. For this website, I wanted to develop something unique, so I started from UI design.  I decided to use Sass in order to have more flexibility on CSS, and broke into smaller files to make file structure more simple. All the data is separated from UI components so that it is easier to update later.',
     design: [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
       ['Poppins', 'Mulish'],
     ],
     live: '',
-    repo: '',
+    repo: 'https://github.com/YumiMachino/Portfolio-nextJS',
   },
   {
     id: 3,
     title: 'Country Journal Web App',
-    thumbnail: '/dpcodeAcademy.jpg',
+    thumbnail: '/countryJournal.png',
     technology: [
       { id: 31, tech: 'HTML' },
       { id: 32, tech: 'CSS' },
-      { id: 33, tech: 'JS' },
+      { id: 33, tech: 'JavaScipt' },
       { id: 34, tech: 'Webpack' },
+      { id: 35, tech: 'Figma' },
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+      'A website that lets users check overview information of all the countries including country flag, common name,languages and population. Additionally, for those who likes to go travelling, they can create journals per country. They can be edited, or deleted later. Users can see all the countries they have been to, and all the journals they wrote at glance. ',
     design: [
-      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
-      ['Poppins', 'Mulish'],
+      ['#395380', '#F6E8C9', '#BFCC85', '#464646'],
+      ['Josefin Sans', 'Montserrat Alternates'],
     ],
-    live: '',
-    repo: '',
+    live: 'https://yumimachino.github.io/country-journal-app/',
+    repo: 'https://github.com/YumiMachino/country-journal-app',
   },
   {
     id: 4,
     title: 'JTravel Tour Website',
-    thumbnail: '/dpcodeAcademy.jpg',
+    thumbnail: '/jTravel.png',
     technology: [
       { id: 41, tech: 'HTML' },
-      { id: 42, tech: 'SCSS' },
-      { id: 43, tech: 'JS' },
+      { id: 42, tech: 'Sass' },
+      { id: 43, tech: 'JavaScript' },
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
+      'A demonstration website for a travel agency which features Japan. I created this website to brush up my front end skills using HTML, Sass and JavaScript, and also including design. For development, I used Sass to break down style files to smaller components considering readability and maintainability. For the motion of card flow, I used "cover flow" by swiper.js. For testimonials and FAQ, they are created by pure JavaScript. ',
     design: [
-      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
-      ['Poppins', 'Mulish'],
+      ['#8D0801', '#66666E', '#E6E6E9', '#000000'],
+      ['Bodoni Moda', 'Lato'],
     ],
-    live: '',
-    repo: '',
+    live: 'https://yumimachino.github.io/jtravel-tour/',
+    repo: 'https://github.com/YumiMachino/jtravel-tour',
   },
   {
     id: 5,
@@ -243,8 +254,8 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    repo: '',
+      'A website that lets users to play a card game called "BlackJack". The rule of this game is simple, whoever holds the cards with sum of 21 wins, and whoever holds cards with sum of more than 21 is busted. Each game will be conducted by a dealer and 2 players. This is developed with other developers according to MVC patterns. I took part of the game logic, I was able to learn how to make logic out of game rules.',
+    repo: 'https://github.com/YumiMachino/Black-Jack',
     design: null,
     live: null,
   },
@@ -258,8 +269,8 @@ export const myProjects: ProjectDataType = [
     ],
     web: false,
     about:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic neque quaerat voluptas perspiciatis omnis autem dolore dolorem porro architecto aperiam.',
-    repo: '',
+      'A native iOS app developed by Swift. This app suggests optimized root to the destination of the category user picks from users current location. This app uses modern collection views with diffable data source, async API-fetch with dispatch group. The project was developed by a team of developers accordign to agile project management. I developed parts of front end, also implement API fetching.',
+    repo: 'https://github.com/cookie777/Hang-Out-Planner',
     design: null,
     live: null,
   },

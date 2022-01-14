@@ -8,12 +8,10 @@ type LogoProps = {
 
 const Logo: React.FC<LogoProps> = ({ link }) => {
   return (
-    <div>
-      <div className={styles.logo}>
-        <Link href={link}>
-          <Image src={'/logo_img.png'} alt='logo' layout='fill' />
-        </Link>
-      </div>
+    <div className={styles.logo}>
+      <Link href={link}>
+        <Image src={'/logo_img.png'} alt='logo' layout='fill' />
+      </Link>
     </div>
   );
 };

@@ -2,10 +2,14 @@ import styles from '@/styles/components/Arrow.module.scss';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import Link from 'next/link';
 
-const Arrow = () => {
+type ArrowProps = {
+  nextLink: string;
+};
+
+const Arrow: React.FC<ArrowProps> = ({ nextLink }) => {
   return (
     <div className={styles.arrowStyle}>
-      <Link href='/about'>
+      <Link href={nextLink}>
         <a>
           <FaAngleDoubleDown className={styles.arrowIcon} />
         </a>

@@ -1,9 +1,8 @@
-import styles from '@/styles/components/Navigation.module.scss';
+import Link from 'next/link';
 import { FaHome, FaFileCode } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
-
-import Link from 'next/link';
+import styles from '@/styles/components/Navigation.module.scss';
 
 const linkData = [
   {

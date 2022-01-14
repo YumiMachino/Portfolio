@@ -1,28 +1,17 @@
 @import '/styles/base/base';
 
 .project {
-  // width: 420px;
-  width: 30%;
+  width: 95%;
   height: 14em;
-  // height: 275px;
-  margin: 3px;
   position: relative;
+  margin: 6px auto;
 
-  @include responsive(xs) {
-    width: 95%;
-    margin: 6px auto;
-  }
-  @include responsive(sm) {
-    width: 95%;
-    margin: 6px auto;
-  }
   @include responsive(md) {
     width: 45%;
-    margin: 6px auto;
+    height: 16em;
   }
   @include responsive(lg) {
     width: 33%;
-    margin: 6px auto;
   }
 
   &:hover .back {
@@ -53,18 +42,24 @@
     transition: transform 0.3s;
 
     .name {
-      font-size: size(md);
-      font-size: 1.8rem;
+      font-size: size(sm) * 1.4;
       color: color(indigo-blue);
-      padding: 0.8rem 0;
+      padding: 0.2rem 0;
 
-      // @include responsive(xl) {
-      //   font-size: size(sm) * 1.4;
-      // }
+      @include responsive(sm) {
+        font-size: size(md);
+        padding: 0.8rem 0;
+      }
+      @include responsive(md) {
+        font-size: size(sm) * 1.4;
+      }
+      @include responsive(xl) {
+        font-size: size(md);
+      }
     }
 
     .techs {
-      width: 90%;
+      width: 100%;
       @include flexPosition($justCont: flex-start, $alignItem: flex-start);
       flex-wrap: wrap;
 
@@ -74,10 +69,7 @@
         color: color(white);
         border-radius: 3px;
         margin: 0 0.2rem;
-
-        @include responsive(xl) {
-          font-size: size(xs);
-        }
+        font-size: size(xs) * 0.9;
       }
     }
   }
@@ -91,6 +83,7 @@
   border: 1px solid color(light-blue);
   color: color(light-blue);
   border-radius: 3px;
+  font-size: size(xs) * 0.9;
 }
 
 .button {

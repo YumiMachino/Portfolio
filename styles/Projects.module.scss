@@ -1,76 +1,27 @@
 @import '/styles/base/base';
 
 .projectBorder {
-  margin: auto;
   padding: 0.2rem;
   width: 90%;
   height: fit-content;
   border: 1px solid color(weak-pink);
+  margin: 40px auto;
 
-  @include responsive(xs) {
-    margin-top: 80px;
-    padding: 0.4rem;
-  }
   @include responsive(sm) {
     width: 70%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
   @include responsive(md) {
     width: 80%;
-    margin-top: 2rem;
   }
 
   .projectContainer {
     @include flexPosition($justCont: center, $alignItem: center);
     flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
 
-    @include responsive(xs) {
-      flex-direction: column;
-      width: 100%;
-    }
-    @include responsive(sm) {
-      flex-direction: column;
-      width: 100%;
-    }
     @include responsive(md) {
       flex-direction: row;
-      flex-wrap: wrap;
     }
-  }
-}
-
-.arrows {
-  size: size(md);
-  color: color(strong-pink);
-  width: 40px;
-  height: 40px;
-  transition: transform 0.5s;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  left: 3rem;
-}
-
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  right: 3rem;
-}
-
-.pagination {
-  font-size: size(md);
-  position: absolute;
-  top: 8rem;
-  right: 10rem;
-
-  & > span {
-    color: color(strong-pink);
   }
 }

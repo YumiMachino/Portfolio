@@ -3,41 +3,50 @@ import styles from '@/styles/components/Button.module.scss';
 
 type ButtonProps = {
   isPrimary: boolean;
-  link: string;
+  link?: string;
   content: string;
-} & typeof defaultProps;
-
-const defaultProps = {
-  isPrimary: true,
-  link: '/',
-  content: 'check projects_',
 };
 
 const Button = (props: ButtonProps) => {
   const { isPrimary, link, content } = props;
 
-  return (
-    <Link href={link}>
-      <a>
-        <button className={styles.mainBtn}>
-          <div
-            className={`${styles.content} ${
-              !isPrimary && styles.secondaryContent
-            }`}
-          >
-            {content}
-          </div>
-          <span
-            className={`${styles.glitch} ${
-              !isPrimary && styles.secondaryGlitch
-            }`}
-          ></span>
-        </button>
-      </a>
-    </Link>
-  );
+  if (link) {
+    return (
+      <Link href={link}>
+        <a>
+          <button className={styles.mainBtn}>
+            <div
+              className={`${styles.content} ${
+                !isPrimary && styles.secondaryContent
+              }`}
+            >
+              {content}
+            </div>
+            <span
+              className={`${styles.glitch} ${
+                !isPrimary && styles.secondaryGlitch
+              }`}
+            ></span>
+          </button>
+        </a>
+      </Link>
+    );
+  } else {
+    return (
+      <button className={styles.mainBtn}>
+        <div
+          className={`${styles.content} ${
+            !isPrimary && styles.secondaryContent
+          }`}
+        >
+          {content}
+        </div>
+        <span
+          className={`${styles.glitch} ${!isPrimary && styles.secondaryGlitch}`}
+        ></span>
+      </button>
+    );
+  }
 };
-
-Button.defaultProps = defaultProps;
 
 export default Button;

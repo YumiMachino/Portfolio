@@ -1,17 +1,17 @@
+import { IconContext } from 'react-icons';
+import { FaGithub, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import { SiQiita } from 'react-icons/si';
 import Form from '@/components/Form';
 import HeadingTitle from '@/components/HeadingTitle';
 import Layout from '@/components/Layout';
-import { FaGithub, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
-import { SiQiita } from 'react-icons/si';
-import { IconContext } from 'react-icons';
 import styles from '@/styles/Contact.module.scss';
 
 const contact = () => {
   return (
-    <Layout>
+    <Layout nextLink='/'>
       <div className={styles.contactBorder}>
         <HeadingTitle title='Contact' />
-        <div className={styles.container}>
+        <div className={styles.contactContainer}>
           <div className={styles.contactLeft}>
             <h1 className={styles.heading}>Contact Form</h1>
             <Form />
@@ -33,8 +33,8 @@ const contact = () => {
 
             <p className={styles.para}>
               Straight shot to my index:
-              <a href='mailto:yumimachino@gmail.com' className={styles.email}>
-                yumimachino@GMAIL.COM
+              <a href='mailto:machinoyumi@gmail.com' className={styles.email}>
+                machinoyumi@GMAIL.COM
               </a>
             </p>
 

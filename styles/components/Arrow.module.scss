@@ -3,25 +3,19 @@
 .arrowStyle {
   position: absolute;
   width: 100%;
-  height: 40px;
+  height: 60px;
   bottom: 0;
   right: 0;
   text-align: center;
 
   .arrowIcon {
-    font-size: size(xl);
+    font-size: size(md);
     color: color(strong-pink);
     &:hover {
       @include shakeAnimation(2s);
     }
-
-    @include responsive(xs) {
-      font-size: size(md);
-      width: 100px;
-    }
-
-    @include responsive(sm) {
-      font-size: size(md);
+    @include responsive(md) {
+      font-size: size(lg);
     }
     @include responsive(xl) {
       font-size: size(xl);

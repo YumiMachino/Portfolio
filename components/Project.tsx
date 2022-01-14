@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/components/Project.module.scss';
 import Button from './Button';
+import styles from '@/styles/components/Project.module.scss';
 
 const Project = ({ project }) => {
   const { id, title, thumbnail, technology, web } = project;
@@ -33,9 +33,7 @@ const Project = ({ project }) => {
           <div className={styles.techs}>{renderTechs()}</div>
           <span className={styles.app}>{web ? `Web` : 'Mobile'}</span>
           <span className={styles.button}>
-            <Link href={url}>
-              <button className={styles.btn}>Check Project_</button>
-            </Link>
+            <Button isPrimary={true} content='Check Project_' link={url} />
           </span>
         </div>
       </div>

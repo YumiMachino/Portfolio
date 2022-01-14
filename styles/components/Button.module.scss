@@ -1,29 +1,29 @@
 @import '/styles/base/base';
 
 .mainBtn {
-  width: 160px;
-  height: 46px;
+  // width: 160px;
+  // height: 46px;
+  width: 140px;
+  height: 40px;
   font-size: size(xs);
   border: 0;
   background-color: black;
   position: relative;
   font-family: $font-tomorrow;
   font-weight: 600;
- 
+
   text-transform: uppercase;
   color: color(indigo-blue);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 
-  @include responsive(sm){
-       width: 200px;
+  @include responsive(sm) {
+    width: 200px;
     height: 52px;
-   
   }
   @include responsive(md) {
-      width: 230px;
-     height: 60px;
+    width: 230px;
+    height: 60px;
   }
-
 
   .content {
     @include flexPosition($justCont: center, $alignItem: center);

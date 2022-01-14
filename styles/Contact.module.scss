@@ -1,124 +1,89 @@
 @import '/styles/base/base';
 
 .contactBorder {
-  margin: auto;
-  padding: 1rem;
+  padding: 0.2rem 0 2rem 0;
   width: 90%;
-  // height: 100%;
+  height: fit-content;
   border: 1px solid color(weak-pink);
+  margin: 40px auto;
   position: relative;
-
-  @include responsive(xs) {
-    width: 90%;
-    margin-top: 4rem;
-    padding: 0.4rem;
-  }
   @include responsive(sm) {
-    width: 90%;
-    margin-top: 4rem;
-    padding: 0.4rem;
+    width: 70%;
   }
   @include responsive(md) {
     width: 80%;
-    margin-top: 4rem;
-    padding: 0.4rem;
+  }
+  @include responsive(lg) {
+    width: 70%;
+    height: 70vh;
   }
 
   .msg {
-    // position: absolute;
-    // bottom: 1rem;
-    // right: 2rem;
     font-family: $font-tomorrow;
-    font-weight: 100;
+    font-weight: 300;
     color: color(strong-pink);
-    font-size: size(sm);
+    font-size: size(xs);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include responsive(lg) {
+      font-size: size(sm);
+    }
   }
 
-  .container {
+  .contactContainer {
     @include flexPosition($justCont: space-around, $alignItem: center);
     width: 100%;
-    // height: 94%;
-
-    @include responsive(xs) {
-      flex-direction: column;
-    }
-    @include responsive(sm) {
-      flex-direction: column;
-    }
+    flex-direction: column;
+    padding: 0 1rem;
     @include responsive(md) {
       flex-direction: row;
     }
 
     .heading {
       font-weight: 200;
-      padding-bottom: 1.2rem;
       transform: translateY(-30px);
       animation: introAnimation 1s forwards;
-
-      @include responsive(xs) {
-        font-size: size(sm) * 1.2;
-        padding-bottom: 0.4rem;
-      }
-      @include responsive(sm) {
-        font-size: size(sm) * 1.2;
-        padding-bottom: 0.4rem;
-      }
+      font-size: size(sm) * 1.2;
+      padding-bottom: 0.4rem;
+      color: color(light-blue);
       @include responsive(md) {
         font-size: size(sm) * 1.8;
-        padding-bottom: 0.4rem;
       }
     }
 
     .contactLeft {
-      width: 40%;
-      // height: 100%;
-      @include responsive(xs) {
-        width: 100%;
-        height: fit-content;
-      }
-      @include responsive(sm) {
-        width: 80%;
-        height: fit-content;
-      }
+      width: 100%;
+      height: fit-content;
+      margin: 1rem 0;
       @include responsive(md) {
         width: 50%;
-        height: fit-content;
+      }
+      @include responsive(lg) {
+        height: 50vh;
       }
     }
     .contactRight {
-      width: 40%;
-      // height: 100%;
-
-      @include responsive(xs) {
-        width: 100%;
-        height: fit-content;
-      }
-      @include responsive(sm) {
-        width: 80%;
-        height: fit-content;
-      }
+      width: 100%;
+      height: fit-content;
+      margin: 1rem 0;
       @include responsive(md) {
         width: 50%;
-        height: fit-content;
+      }
+      @include responsive(lg) {
+        height: 50vh;
       }
     }
   }
 
   .para {
-    font-size: size(sm) * 1.4;
+    font-size: size(xs);
     font-family: $font-tomorrow;
     font-weight: 300;
     padding: 1rem 0;
     animation: introAnimation 1s forwards;
-
-    @include responsive(xs) {
-      font-size: size(sm);
-    }
-    @include responsive(sm) {
-      font-size: size(sm);
-    }
     @include responsive(md) {
-      font-size: size(sm) * 1.4;
+      font-size: size(sm);
     }
 
     .email {
@@ -126,15 +91,8 @@
       display: inline-block;
       padding: 0.8rem;
       transition: transform 0.5s;
-
-      @include responsive(xs) {
-        font-size: size(sm);
-      }
-      @include responsive(sm) {
-        font-size: size(sm);
-      }
+      font-size: size(sm);
       &:hover {
-        color: color(light-blue);
         color: color(strong-pink);
         transform: scale(1.1);
       }
@@ -147,24 +105,16 @@
   }
 
   .icon {
-    font-size: size(lg);
+    font-size: size(sm) * 1.6;
     color: color(light-blue);
-
     margin: 0.8rem 1rem;
     transition: transform 0.5s;
 
-    @include responsive(xs) {
-      font-size: size(sm) * 1.6;
-    }
-    @include responsive(sm) {
-      font-size: size(sm) * 1.6;
-    }
     @include responsive(md) {
       font-size: size(md);
     }
 
     &:hover {
-      color: color(light-blue);
       color: color(strong-pink);
       transform: scale(1.2);
     }

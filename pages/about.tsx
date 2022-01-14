@@ -1,16 +1,12 @@
 import Image from 'next/image';
-
+import { IconBaseProps, IconContext } from 'react-icons';
 import HeadingTitle from '@/components/HeadingTitle';
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import styles from '@/styles/About.module.scss';
-import { GrHtml5 } from 'react-icons/gr';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaSass } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
-
 import { myData } from '@/mydata/data.js';
 
-const iconSet = (name, icon) => {
+const renderIconSet = (name: string, icon: IconBaseProps) => {
   return (
     <div className={styles.iconSet}>
       <div>{icon}</div>
@@ -21,8 +17,8 @@ const iconSet = (name, icon) => {
 
 const about = () => {
   return (
-    <Layout>
-      <div className={styles.border}>
+    <Layout nextLink='/projects'>
+      <div className={styles.aboutBorder}>
         <HeadingTitle title='About Me / Skills' />
 
         <div className={styles.introContainer}>
@@ -44,7 +40,7 @@ const about = () => {
             value={{ className: `${styles.iconContainer}` }}
           >
             {myData.skills.map((skill) => {
-              return iconSet(skill.name, skill.icon);
+              return renderIconSet(skill.name, skill.icon);
             })}
           </IconContext.Provider>
         </div>

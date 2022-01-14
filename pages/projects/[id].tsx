@@ -1,20 +1,16 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
-import { myProjects } from '../../mydata/data';
-import styles from '@/styles/ProjectDetail.module.scss';
 import HeadingTitle from '@/components/HeadingTitle';
 import Button from '@/components/Button';
+import styles from '@/styles/ProjectDetail.module.scss';
+import { myProjects } from '../../mydata/data';
 
 const ProjectDetail = ({ project }) => {
   const [hasDesign, setHasDesign] = useState(false);
   const [isOverview, setIsOverview] = useState(true);
 
-  console.log('inside project detail', project);
-
   const { title, about, technology, thumbnail, design, live, repo } = project;
-
-  console.log('design: ', design);
 
   const renderTechs = () => {
     return technology.map((tech) => {
@@ -29,7 +25,7 @@ const ProjectDetail = ({ project }) => {
   const renderOverview = () => {
     return (
       <div className={styles.projectOverview}>
-        <div>
+        <div className={styles.techStack}>
           <h3>Technology</h3>
           <p>{renderTechs()}</p>
         </div>
@@ -66,8 +62,8 @@ const ProjectDetail = ({ project }) => {
           <p className={styles.typoName} style={{ fontFamily: `${typo}` }}>
             {typo}
           </p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>012345678</p>
+          <p style={{ fontFamily: `${typo}` }}>Lorem ipsum dolor sit amet.</p>
+          <p style={{ fontFamily: `${typo}` }}>012345678</p>
         </div>
       );
     });
@@ -75,21 +71,21 @@ const ProjectDetail = ({ project }) => {
 
   const renderDesign = () => {
     return (
-      <>
+      <div className={styles.projectOverview}>
         <h3>Color Scheme</h3>
         <div className={styles.designs}>{renderColors()}</div>
         <h3>Typography</h3>
         <div className={styles.designs}>{renderTypos()}</div>
-      </>
+      </div>
     );
   };
 
   return (
-    <Layout>
+    <Layout nextLink='/projects'>
       <div className={styles.detailBorder}>
         <HeadingTitle title={title} />
-        <div>
-          {live && <Button link='' content='View Live_' primary={true} />}
+        <div className={styles.buttons}>
+          {live && <Button link='' content='View Live_' isPrimary={true} />}
 
           <Button link='' content='View Code_' isPrimary={false} />
         </div>

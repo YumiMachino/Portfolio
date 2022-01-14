@@ -1,16 +1,20 @@
 @import '/styles/base/base';
 
 .form {
-  @include flexPosition($justCont: space-around, $alignItem: flex-end);
+  @include flexPosition($justCont: space-around, $alignItem: center);
   flex-direction: column;
-  height: 80%;
+  height: 100%;
+
+  @include responsive(lg) {
+    @include flexPosition($justCont: space-around, $alignItem: flex-end);
+  }
 
   .inputStyle {
     width: 80%;
     padding: 0.8rem 1rem;
     margin: 0.5rem;
     background-color: color(indigo-blue);
-    color: color(white);
+    color: color(strong-pink);
     border: 0.6px solid color(weak-pink);
     border-radius: 3px;
     font-size: size(sm);
@@ -19,12 +23,14 @@
     transition: transform 0.5s;
 
     &:focus {
-      border: 0.6px solid color(white);
-      transform: scale(1.05);
+      border: 0.6px solid color(strong-pink);
+      transform: scale(1.01);
     }
 
     &::placeholder {
-      color: color(weak-pink);
+      color: color(white);
+      opacity: 0.8;
+      font-weight: 300;
     }
   }
 
@@ -33,38 +39,10 @@
     max-height: 280px;
     resize: none;
   }
-
-  // .btn {
-  //   width: 60%;
-  //   height: 50px;
-  //   border: 0;
-  //   outline: none;
-  //   background-color: color(light-blue);
-  //   cursor: pointer;
-  //   font-family: $font-tomorrow;
-  //   padding: 1rem;
-  //   font-weight: 600;
-  //   font-size: 0.85rem;
-  //   text-transform: uppercase;
-  //   color: color(indigo-blue);
-  //   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-  //   transition: transform 0.5s;
-
-  //   &:hover {
-  //     transform: scale(1.1);
-  //     background-color: color(strong-pink);
-  //   }
-  // }
 }
 
-.btn {
-  padding: 0.8rem;
-  letter-spacing: 0.1;
-  background-color: color(strong-pink);
-  font-size: size(sm);
-  transition: transform 0.2s;
+.submitBtn {
+  width: 80%;
 
-  &:hover {
-    transform: scale(0.98);
-  }
+  @include flexPosition(flex-end, center);
 }

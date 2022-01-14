@@ -1,74 +1,62 @@
 @import '/styles/base/base';
 
 .detailBorder {
-  margin: auto;
   padding: 1rem;
   width: 90%;
   border: 1px solid color(weak-pink);
-
-  @include responsive(xs) {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding: 0.4rem;
-  }
+  margin: 2rem auto;
+  padding: 0.4rem;
 
   @include responsive(sm) {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding: 0.4rem;
     width: 70%;
+  }
+
+  @include responsive(xl) {
+    height: 70vh;
+    margin: 4rem auto;
   }
 
   .detailWrapper {
     @include flexPosition($justCont: space-around, $alignItem: center);
     width: 100%;
     position: relative;
+    flex-direction: column;
+    margin-top: 4rem;
 
-    @include responsive(xs) {
-      flex-direction: column;
-      margin-top: 4rem;
-    }
-    @include responsive(sm) {
-      flex-direction: column;
-      margin-top: 4rem;
-    }
     @include responsive(lg) {
       flex-direction: row;
-      width: 100%;
-      margin-top: 4rem;
     }
   }
 
   .imgContainer {
     position: relative;
-    width: 40%;
-    height: 400px;
+    width: 100%;
+    height: 200px;
 
-    @include responsive(xs) {
-      width: 100%;
-      height: 200px;
-    }
     @include responsive(sm) {
-      width: 100%;
       height: 300px;
+    }
+    @include responsive(md) {
+      width: 70%;
+    }
+    @include responsive(lg) {
+      width: 50%;
+      height: 400px;
     }
   }
 
   .rightContainer {
-    width: 60%;
-    padding: 1rem 3rem;
     @include flexPosition($justCont: space-around, $alignItem: flex-start);
     flex-direction: column;
+    width: 100%;
 
-    @include responsive(xs) {
-      background-color: red;
-      padding: 0.6rem;
-      width: 100%;
-    }
     @include responsive(sm) {
-      background-color: red;
-      padding: 0.6rem;
-      width: 100%;
+      padding: 1rem;
+    }
+
+    @include responsive(lg) {
+      width: 50%;
+      height: 400px;
     }
   }
 
@@ -95,18 +83,28 @@
   }
 
   .projectOverview {
-    background-color: blue;
     width: 100%;
+    padding: 0.6rem 0;
+
+    @include responsive(md) {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   h3 {
     color: color(light-blue);
-    font-size: size(md);
-    padding: 0 0 1rem 0;
+    font-size: size(sm);
+    padding: 0.4rem 0;
 
-    @include responsive(xs) {
-      font-size: size(sm);
+    @include responsive(md) {
+      font-size: size(sm) * 1.2;
+      padding: 0.8rem 0;
     }
+  }
+
+  .techStack {
+    padding: 0.8rem 0;
   }
 
   .tech {
@@ -114,7 +112,7 @@
     padding: 0.2rem 0.4rem;
     color: color(white);
     border-radius: 3px;
-    margin: 0 0.2rem;
+    margin: 0.4rem 0.2rem;
 
     @include responsive(xs) {
       font-size: size(xs);
@@ -122,9 +120,14 @@
   }
   .about {
     font-family: $font-tomorrow;
-    font-size: size(sm) * 1.2;
+    font-size: size(sm);
     font-weight: 100;
   }
+}
+
+.buttons {
+  @include flexPosition(flex-start, center);
+  flex-direction: row;
 }
 
 .designs {
@@ -134,7 +137,6 @@
 .color {
   width: 60px;
   height: 60px;
-  background-color: blue;
   display: inline-block;
   border-radius: 50%;
 

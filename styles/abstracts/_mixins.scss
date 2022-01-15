@@ -1,0 +1,96 @@
+@mixin flexPosition($justCont: center, $alignItem: center) {
+  display: flex;
+  justify-content: $justCont;
+  align-items: $alignItem;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin headingStyle($size, $weight, $color, $stroke) {
+  font-size: size($size);
+  font-weight: $weight;
+  color: #fff;
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin shakeAnimation($sec) {
+  animation: shakeAnimationStyle $sec;
+}
+
+@keyframes shakeAnimationStyle {
+  $val: 1;
+
+  @for $i from 0 through 100 {
+    @if $i == 0 or $i == 100 {
+      #{$i * 1%} {
+        transform: translateX(0);
+      }
+    } @else {
+      @if $i % 5 == 0 {
+        @if $i % 2 == 0 {
+          #{$i * 1%} {
+            transform: translateX(-1px);
+          }
+        } @else {
+          #{$i * 1% } {
+            transform: translateX(1px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin btnStyle() {
+  padding: 1rem 2rem;
+}
+
+// Responsive breakpoints
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == xs) {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xl) {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}

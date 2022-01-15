@@ -1,0 +1,146 @@
+@import '/styles/base/base';
+
+.aboutBorder {
+  padding: 1rem;
+  width: 85%;
+  border: 1px solid color(weak-pink);
+  height: fit-content;
+  margin: 60px auto;
+
+  @include responsive(xs) {
+    margin-top: 40px;
+    padding: 0.4rem;
+  }
+  @include responsive(sm) {
+    width: 70%;
+  }
+  @include responsive(md) {
+    width: 80%;
+  }
+
+  .introContainer {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    flex-direction: column;
+    @include responsive(md) {
+      flex-direction: row;
+    }
+
+    @include responsive(lg) {
+      padding: 30px;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include responsive(sm) {
+      width: 140px;
+      height: 140px;
+    }
+    @include responsive(md) {
+      width: 160px;
+      height: 160px;
+    }
+    @include responsive(lg) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .introRight {
+    width: 90%;
+    @include responsive(md) {
+      width: 60%;
+    }
+  }
+
+  .intro {
+    font-family: $font-tomorrow;
+    font-size: size(sm) * 0.8;
+    line-height: 1.4;
+    padding: 0.8rem 0;
+    letter-spacing: 1.2px;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    @include transform(translateY(-30px));
+    animation: introAnimation 1s forwards;
+
+    @include responsive(md) {
+      font-size: size(sm);
+    }
+    @include responsive(lg) {
+      font-weight: 300;
+      letter-spacing: 2;
+      line-height: 1.5;
+    }
+
+    @include responsive(xl) {
+      font-size: size(sm) * 1.4;
+    }
+  }
+  .skillContainer {
+    @include flexPosition($justCont: center, $alignItem: center);
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    @include responsive(md) {
+      width: 90%;
+    }
+
+    @include responsive(lg) {
+      padding: 60px;
+    }
+  }
+
+  .iconContainer {
+    font-size: 1.6rem;
+    color: color(strong-pink);
+    margin: 1.4rem 1.2rem 0.5rem 1.2rem;
+
+    @include responsive(md) {
+      font-size: 2rem;
+    }
+
+    @include responsive(xl) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.iconSet {
+  animation: iconAnimation 2s forwards;
+  span {
+    font-size: size(xs);
+    color: color(strong-pink);
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    @include responsive(lg) {
+      font-size: size(sm);
+    }
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    @include transform(translateY(-50%));
+  }
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    @include transform(translateX(-100%));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}

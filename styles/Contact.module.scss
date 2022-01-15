@@ -1,0 +1,135 @@
+@import '/styles/base/base';
+
+.contactBorder {
+  padding: 0.2rem 0 2rem 0;
+  width: 90%;
+  height: fit-content;
+  border: 1px solid color(weak-pink);
+  margin: 40px auto;
+  position: relative;
+  @include responsive(sm) {
+    width: 70%;
+  }
+  @include responsive(md) {
+    width: 80%;
+  }
+  @include responsive(lg) {
+    width: 70%;
+    padding: 0.2rem 0 4rem 0;
+  }
+
+  .msg {
+    font-family: $font-tomorrow;
+    font-weight: 400;
+    color: color(strong-pink);
+    font-size: size(xs);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include responsive(lg) {
+      font-size: size(sm);
+    }
+  }
+
+  .contactContainer {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    width: 100%;
+    flex-direction: column;
+    padding: 0 1rem;
+    @include responsive(md) {
+      flex-direction: row;
+    }
+
+    .heading {
+      font-weight: 200;
+      @include transform(translateY(-30px));
+      animation: introAnimation 1s forwards;
+      font-size: size(sm) * 1.2;
+      padding-bottom: 0.4rem;
+      color: color(light-blue);
+      @include responsive(md) {
+        font-size: size(sm) * 1.8;
+      }
+    }
+
+    .contactLeft {
+      width: 100%;
+      height: fit-content;
+      margin: 1rem 0;
+      @include responsive(md) {
+        width: 50%;
+      }
+      @include responsive(lg) {
+        height: 50vh;
+      }
+    }
+    .contactRight {
+      width: 100%;
+      height: fit-content;
+      margin: 1rem 0;
+
+      @include responsive(md) {
+        width: 50%;
+      }
+      @include responsive(lg) {
+        height: 50vh;
+      }
+    }
+  }
+
+  .para {
+    font-size: size(xs) * 1.2;
+    font-family: $font-tomorrow;
+    font-weight: 300;
+    padding: 1rem 0;
+    animation: introAnimation 1s forwards;
+    @include responsive(md) {
+      font-size: size(sm);
+      padding: 0.8rem 1rem;
+    }
+
+    .email {
+      color: color(light-blue);
+      display: inline-block;
+      padding: 0.8rem;
+      font-weight: 400;
+      @include transition(transform 0.5s);
+      font-size: size(sm);
+      &:hover {
+        color: color(strong-pink);
+        font-weight: 600;
+        @include scale(1.1);
+      }
+    }
+  }
+
+  .icons {
+    @include flexPosition($justCont: center, $alignItem: center);
+    animation: introAnimation 1s forwards;
+  }
+
+  .icon {
+    font-size: size(sm) * 1.6;
+    color: color(light-blue);
+    margin: 0.8rem 1rem;
+    @include transition(transform 0.5s);
+
+    @include responsive(md) {
+      font-size: size(md);
+    }
+
+    &:hover {
+      color: color(strong-pink);
+      @include scale(1.2);
+    }
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    @include transform(translateY(-50%));
+  }
+  100% {
+    @include transform(translateY(0));
+  }
+}

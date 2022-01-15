@@ -1,0 +1,22 @@
+@import '/styles/base/base';
+
+.title {
+  font-size: size(md) * 0.8;
+  padding: 1rem;
+  color: color(white);
+  text-shadow: -2px 2px 0px color(strong-pink), -5px 5px 0px color(light-blue);
+  text-transform: uppercase;
+  @include shakeAnimation(3s);
+
+  @include responsive(sm) {
+    font-size: size(md);
+    text-shadow: -5px 5px 0px color(strong-pink),
+      -10px 10px 0px color(light-blue);
+  }
+  @include responsive(lg) {
+    font-size: size(xl);
+  }
+  @include responsive(xl) {
+    font-size: size(xl) * 1.2;
+  }
+}

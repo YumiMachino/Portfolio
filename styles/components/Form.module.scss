@@ -1,0 +1,74 @@
+@import '/styles/base/base';
+
+.form {
+  @include flexPosition($justCont: space-around, $alignItem: center);
+  flex-direction: column;
+  height: 100%;
+
+  @include responsive(lg) {
+    @include flexPosition($justCont: space-around, $alignItem: flex-end);
+  }
+
+  .inputStyle {
+    width: 80%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem;
+    background-color: transparent;
+    color: color(strong-pink);
+    border: 0.6px solid color(weak-pink);
+    border-radius: 3px;
+    font-size: size(sm);
+    outline: none;
+    font-family: $font-tomorrow;
+    @include transition(transform 0.5s);
+
+    &:focus {
+      border: 0.6px solid color(strong-pink);
+      @include scale(1.01);
+    }
+
+    &::placeholder {
+      color: color(white);
+      opacity: 0.8;
+      font-weight: 300;
+    }
+  }
+
+  textarea {
+    width: 80%;
+    max-height: 280px;
+    resize: none;
+  }
+
+  // change autocomplete color on chrome
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px color(indigo-blue) inset;
+    -webkit-text-fill-color: color(strong-pink);
+  }
+}
+
+.submitMsg {
+  width: 100%;
+  height: 50px;
+  background-color: color(weak-pink);
+  border: 1px solid color(light-blue);
+  font-weight: 600;
+
+  @include flexPosition(center, center);
+}
+
+.success {
+  color: green;
+  @include flexPosition(center, center);
+}
+
+.failure {
+  color: red;
+  @include flexPosition(center, center);
+}
+
+.submitBtn {
+  width: 80%;
+  @include flexPosition(flex-end, center);
+}

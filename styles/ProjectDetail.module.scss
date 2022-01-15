@@ -1,0 +1,194 @@
+@import '/styles/base/base';
+
+.detailBorder {
+  padding: 1rem;
+  width: 90%;
+  border: 1px solid color(weak-pink);
+  margin: 2rem auto 0 auto;
+  padding: 0.4rem;
+
+  @include responsive(sm) {
+    width: 70%;
+  }
+
+  .detailWrapper {
+    @include flexPosition($justCont: space-around, $alignItem: center);
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    @include responsive(lg) {
+      flex-direction: row;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+    @include responsive(sm) {
+      height: 300px;
+    }
+    @include responsive(md) {
+      width: 70%;
+    }
+    @include responsive(lg) {
+      width: 50%;
+    }
+  }
+
+  .rightContainer {
+    @include flexPosition($justCont: space-around, $alignItem: flex-start);
+    flex-direction: column;
+    width: 100%;
+
+    @include responsive(sm) {
+      padding: 1rem;
+    }
+
+    @include responsive(lg) {
+      width: 50%;
+    }
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: size(sm) * 1.4;
+    color: color(weak-pink);
+    position: absolute;
+    top: -3rem;
+    right: 0rem;
+
+    @include responsive(xs) {
+      font-size: size(sm);
+      top: -2rem;
+    }
+
+    & > span {
+      @include transition(all 0.2s);
+      cursor: pointer;
+      &:hover {
+        color: color(strong-pink);
+        @include scale(1.1);
+      }
+    }
+  }
+
+  .projectOverview {
+    width: 100%;
+    padding: 0.6rem 0;
+
+    @include responsive(md) {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  h3 {
+    color: color(light-blue);
+    font-size: size(sm);
+    padding: 0.4rem 0;
+
+    @include responsive(md) {
+      font-size: size(sm) * 1.2;
+      padding: 0.8rem 0;
+    }
+  }
+
+  .techStack {
+    padding: 0.8rem 0;
+  }
+
+  .tech {
+    background-color: color(strong-pink);
+    padding: 0.2rem 0.4rem;
+    color: color(white);
+    border-radius: 3px;
+    margin: 0.4rem 0.2rem;
+    display: inline-block;
+
+    @include responsive(xs) {
+      font-size: size(xs);
+    }
+  }
+  .about {
+    font-family: $font-tomorrow;
+    font-size: size(sm);
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 3;
+
+    @include responsive(md) {
+      font-size: size(sm) * 1.1;
+    }
+  }
+}
+
+.buttons {
+  @include flexPosition(flex-start, center);
+  flex-direction: row;
+}
+
+.designs {
+  @include flexPosition($justCont: space-around, $alignItem: flex-start);
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+
+  @include responsive(xs) {
+    width: 24px;
+    height: 24px;
+  }
+  @include responsive(lg) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.colorSet {
+  @include flexPosition($justCont: space-around, $alignItem: center);
+  flex-direction: column;
+  margin: 0 0.6rem;
+  font-family: $font-tomorrow;
+  font-weight: 200;
+  flex-wrap: wrap;
+
+  @include responsive(xs) {
+    margin: 0 0.2rem;
+  }
+
+  & > p {
+    padding: 0.6rem 0;
+
+    @include responsive(xs) {
+      font-size: size(xs);
+    }
+  }
+}
+
+.typoName {
+  font-size: size(md);
+
+  @include responsive(xs) {
+    font-size: size(sm);
+  }
+
+  @include responsive(lg) {
+    font-size: size(sm) * 1.4;
+  }
+}
+.typoSet {
+  @include flexPosition($justCont: space-around, $alignItem: flex-start);
+  flex-direction: column;
+  margin: 0 0.6rem;
+
+  & > p {
+    padding: 0.4rem;
+  }
+}

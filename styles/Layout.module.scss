@@ -1,0 +1,18 @@
+@import '/styles/base/base';
+
+.layoutWrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  & > div {
+    @include responsive(md) {
+      @include flexPosition(center, center);
+    }
+  }
+
+  @include responsive(lg) {
+    padding-bottom: 120px;
+  }
+}

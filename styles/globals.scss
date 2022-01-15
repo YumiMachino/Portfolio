@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Josefin+Sans&family=Lato&family=Montserrat+Alternates&family=Mulish&family=Orbitron:wght@400;500&family=Poppins&family=Tomorrow:wght@100;200;300;400;500;600&display=swap');
+
+@import '/styles/abstracts/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-orbitron;
+}
+
+body {
+  background-color: color(indigo-blue);
+  color: white;
+  outline: none;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}

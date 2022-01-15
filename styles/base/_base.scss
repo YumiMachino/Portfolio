@@ -1,0 +1,19 @@
+@import '/styles/abstracts/variables';
+@import '/styles/abstracts/mixins';
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: pink;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  color: color(white);
+  font-family: inherit;
+  letter-spacing: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}

@@ -1,0 +1,54 @@
+@import '/styles/base/base';
+
+.arrowStyle {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+
+  @include responsive(lg) {
+    height: 120px;
+  }
+
+  .arrowIcon {
+    font-size: size(md);
+    color: color(strong-pink);
+
+    @include responsive(md) {
+      font-size: size(lg);
+    }
+    @include responsive(lg) {
+      font-size: size(xl) * 1.6;
+    }
+  }
+
+  p {
+    font-size: size(sm) * 1.2;
+    font-weight: 400;
+    display: inline-block;
+
+    @include responsive(md) {
+      font-size: size(md);
+      padding: 0 1rem;
+    }
+
+    @include responsive(xl) {
+      font-size: size(lg);
+    }
+  }
+}
+
+.next {
+  display: block;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  @include flexPosition(center, center);
+
+  &:hover {
+    @include shakeAnimation(2s);
+    color: color(strong-pink);
+  }
+}

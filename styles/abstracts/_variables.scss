@@ -1,0 +1,29 @@
+$colors: (
+  indigo-blue: #16063c,
+  weak-pink: #3b136b,
+  strong-pink: #f100f5,
+  light-blue: #450eff,
+  red: #fe3218,
+  navy: #21006f,
+  orange: #ff911a,
+  white: #fff,
+);
+
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+$font-orbitron: 'Orbitron', sans-serif;
+$font-tomorrow: 'Tomorrow', sans-serif;
+
+$font-sizes: (
+  xs: 0.8rem,
+  sm: 1rem,
+  md: 2rem,
+  lg: 2.5rem,
+  xl: 3.2rem,
+);
+
+@function size($size) {
+  @return map-get($map: $font-sizes, $key: $size);
+}

@@ -1,0 +1,109 @@
+@import '/styles/base/base';
+
+.project {
+  width: 95%;
+  height: 14em;
+  position: relative;
+  margin: 6px auto;
+
+  @include responsive(md) {
+    width: 45%;
+    height: 16em;
+  }
+  @include responsive(lg) {
+    width: 33%;
+  }
+
+  &:hover .back {
+    opacity: 1;
+  }
+
+  &:hover .overview {
+    @include scale(1.02);
+  }
+
+  .back {
+    opacity: 0;
+    @include transition(opacity 0.3s);
+  }
+
+  .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    opacity: 0.8;
+    padding: 1rem;
+    @include flexPosition($justCont: center, $alignItem: flex-start);
+    flex-direction: column;
+    z-index: 10;
+    @include transition(transform 0.3s);
+
+    .name {
+      font-size: size(sm) * 1.4;
+      color: color(indigo-blue);
+      padding: 0.2rem 0;
+
+      @include responsive(sm) {
+        font-size: size(md);
+        padding: 0.8rem 0;
+      }
+      @include responsive(md) {
+        font-size: size(sm) * 1.4;
+      }
+      @include responsive(xl) {
+        font-size: size(md);
+      }
+    }
+
+    .techs {
+      width: 100%;
+      @include flexPosition($justCont: flex-start, $alignItem: flex-start);
+      flex-wrap: wrap;
+
+      .tech {
+        background-color: color(strong-pink);
+        padding: 0.2rem 0.4rem;
+        color: color(white);
+        border-radius: 3px;
+        margin: 0 0.2rem;
+        font-size: size(xs) * 0.9;
+      }
+    }
+  }
+}
+
+.app {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid color(light-blue);
+  color: color(light-blue);
+  border-radius: 3px;
+  font-size: size(xs) * 0.9;
+}
+
+.button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.btn {
+  padding: 0.8rem;
+  letter-spacing: 0.1;
+  background-color: color(light-blue);
+  font-size: size(sm);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  @include responsive(xl) {
+    font-size: size(xs);
+  }
+}

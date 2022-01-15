@@ -6,7 +6,7 @@ import Button from '@/components/Button';
 import styles from '@/styles/About.module.scss';
 import { myData } from '@/mydata/data';
 
-const renderIconSet = (name: string, icon: IconType, index: number) => {
+const renderIconSet = (name: string, icon: JSX.Element, index: number) => {
   return (
     <div key={index} className={styles.iconSet}>
       <div>{icon}</div>

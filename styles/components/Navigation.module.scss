@@ -31,6 +31,7 @@
   height: 44px;
   font-size: size(md);
   @include transition(all 0.2s);
+  color: color(weak-pink);
 
   @include responsive(sm) {
     width: 70px;

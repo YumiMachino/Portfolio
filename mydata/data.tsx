@@ -22,12 +22,10 @@ import {
 
 type myDataType = {
   self_intro: string;
-  skills: [
-    {
-      name: string;
-      icon: IconType;
-    }
-  ];
+  skills: {
+    name: string;
+    icon: JSX.Element;
+  }[];
 };
 
 // Data for About page

@@ -49,7 +49,7 @@ const contact = () => {
                 <a href='https://twitter.com/YumiMachino'>
                   <FaTwitterSquare />
                 </a>
-                <a>
+                <a href='https://qiita.com/machinoyumi'>
                   <SiQiita />
                 </a>
               </IconContext.Provider>

@@ -1,8 +1,10 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import styles from '@/styles/components/Form.module.scss';
 import Button from './Button';
+import { FaCheckCircle } from 'react-icons/fa';
+import { MdSmsFailed } from 'react-icons/md';
 
 type Inputs = {
   name: string;
@@ -20,6 +22,8 @@ const initialState: Inputs = {
 
 const Form = () => {
   const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const [isOk, setIsOk] = useState(false);
 
   const {
     register,
@@ -41,15 +45,39 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsSent(true);
+          setIsOk(true);
         },
         (error) => {
           console.log(error.text);
+          setIsSent(true);
+          setIsOk(false);
         }
       );
   };
 
+  const renderMessage = () => {
+    const timeout = setTimeout(() => setIsSent(false), 5000);
+    return (
+      <div className={styles.submitMsg}>
+        {isOk ? (
+          <div className={styles.success}>
+            <FaCheckCircle />
+            <p>Thank you! Your Message has been sent.</p>
+          </div>
+        ) : (
+          <div className={styles.failure}>
+            <MdSmsFailed />
+            <p>Message Failed to Send. </p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <form ref={form} className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      {isSent && renderMessage()}
       <input
         {...register('name', {
           required: true,

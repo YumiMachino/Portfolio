@@ -12,6 +12,7 @@
   text-transform: uppercase;
   color: color(indigo-blue);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  cursor: pointer;
 
   @include responsive(sm) {
     width: 200px;

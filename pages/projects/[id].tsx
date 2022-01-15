@@ -88,8 +88,9 @@ const ProjectDetail = ({ project }) => {
         <HeadingTitle title={title} />
         <div className={styles.buttons}>
           {live && <Button link={live} content='View Live_' isPrimary={true} />}
-
-          <Button link={repo} content='View Code_' isPrimary={false} />
+          {repo && (
+            <Button link={repo} content='View Code_' isPrimary={false} />
+          )}
         </div>
 
         <div className={styles.detailWrapper}>

@@ -114,8 +114,8 @@ type ProjectDataType = {
   web: boolean;
   about: string;
   design?: null | any;
-  live: string;
-  repo: string;
+  live?: null | string;
+  repo?: null | string;
 }[];
 
 // Data for Project page
@@ -178,7 +178,7 @@ export const myProjects: ProjectDataType = [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
       ['Poppins', 'Mulish'],
     ],
-    live: '',
+    live: null,
     repo: 'https://github.com/YumiMachino/recipe-book',
   },
   {
@@ -198,7 +198,7 @@ export const myProjects: ProjectDataType = [
     about:
       'My portfolio website, whih shows about myself, projects, and contact information. For this website, I wanted to develop something unique, so I started from UI design.  I decided to use Sass in order to have more flexibility on CSS, and broke into smaller files to make file structure more simple. All the data is separated from UI components so that it is easier to update later.',
     design: [
-      ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
+      ['#16063c', '#f100f5', '#450eff', '#3b136b'],
       ['Orbitron', 'Tomorrow'],
     ],
     live: 'https://www.yumimachino.tech/',
@@ -255,9 +255,9 @@ export const myProjects: ProjectDataType = [
     web: true,
     about:
       'A website that lets users to play a card game called "BlackJack". The rule of this game is simple, whoever holds the cards with sum of 21 wins, and whoever holds cards with sum of more than 21 is busted. Each game will be conducted by a dealer and 2 players. This is developed with other developers according to MVC patterns. I took part of the game logic, I was able to learn how to make logic out of game rules.',
-    repo: 'https://github.com/YumiMachino/Black-Jack',
     design: null,
     live: null,
+    repo: 'https://github.com/YumiMachino/Black-Jack',
   },
   {
     id: 6,
@@ -270,9 +270,9 @@ export const myProjects: ProjectDataType = [
     web: false,
     about:
       'A native iOS app developed by Swift. This app suggests optimized root to the destination of the category user picks from users current location. This app uses modern collection views with diffable data source, async API-fetch with dispatch group. The project was developed by a team of developers accordign to agile project management. I developed parts of front end, also implement API fetching.',
-    repo: 'https://github.com/cookie777/Hang-Out-Planner',
     design: null,
     live: null,
+    repo: 'https://github.com/cookie777/Hang-Out-Planner',
   },
   {
     id: 7,
@@ -285,9 +285,9 @@ export const myProjects: ProjectDataType = [
     web: false,
     about:
       'A native iOS app developed by Swift. This let users to create, add, update and delete to do items. By using Core data, this app allows data to be persistent.',
-    repo: 'https://github.com/YumiMachino/CoreData_ToDoList',
     design: null,
     live: null,
+    repo: 'https://github.com/YumiMachino/CoreData_ToDoList',
   },
   {
     id: 8,
@@ -300,8 +300,8 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about: 'Tutorial based web application which features e-commerce.',
+    design: null,
     live: 'https://crwn-clothing-tutorial-live.herokuapp.com/',
     repo: 'https://github.com/YumiMachino/crwn-clothing/tree/main/src',
-    design: null,
   },
 ];

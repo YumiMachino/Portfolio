@@ -20,13 +20,13 @@ const contact = () => {
           <div className={styles.contactRight}>
             <h1 className={styles.heading}>Get in Touch</h1>
             <p className={styles.para}>
-              I'd love to hear from you!
+              I would love to hear from you!
               <br />
               Simply fill the form and send me an email.
             </p>
 
             <p className={styles.para}>
-              Or check my work in Github or connect with me on LinkedIn.
+              Or check my work on Github or connect with me on LinkedIn.
             </p>
 
             <p className={styles.para}>Thanks for stopping by!</p>
@@ -57,7 +57,7 @@ const contact = () => {
           </div>
         </div>
         <p className={styles.msg}>
-          This website is designed & developed by me! (with passion)
+          This website is designed & developed by me!
         </p>
       </div>
     </Layout>

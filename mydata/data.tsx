@@ -33,7 +33,7 @@ type myDataType = {
 // Data for About page
 export const myData: myDataType = {
   self_intro:
-    "I'm a motivated front-end developer with passion for user experience and interaction design and strength in creative and strategic thinking. Learning and growing as a software developer is my passion. I've learnt front-end development as well as iOS App development, throughout school projects and volunteer work, I've always enjoyed working in a team, also love taking new challenges. My motto is to have fun learning! ",
+    'I am a Front-End Developer with a passion for user experience and interaction design, and strength in creative and strategic thinking. Learning and growing as a software developer is my passion. I have learnt Front-End development as well as iOS app development, throughout school projects and volunteer work, I have always enjoyed working in a team, also love taking new challenges. My motto is to have fun learning! ',
   skills: [
     {
       name: 'HTML',
@@ -127,7 +127,7 @@ export const myProjects: ProjectDataType = [
     technology: [
       {
         id: 10,
-        tech: 'NEXTJS',
+        tech: 'Next.js',
       },
       {
         id: 20,
@@ -140,7 +140,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'A website created for DPCode Academy which offers users to access to the online learning platform. On the website, users can login so that they are able to see the  limited resources either for students or admin. This project has been developed by a team involving UI/UX designers, Front End Developers and Back End Developers',
+      'A website created for DPCode Academy which offers users to access to the online learning platform. On the website, users can login so that they are able to see the limited resources either for students or admin. This project has been developed by a team involving UI/UX designers, Front End Developers and Back End Developers.',
     design: null,
     live: 'https://dpcode.academy/',
     repo: null,
@@ -173,7 +173,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'DEVELOPMENT ONGOING. A Web Application that let users to share their unique recipes with others and see recipes from all over the world. Users can save favorite recipes, and try cooking multi-national recipe, and comment on that recipe! This project has been developed with other developer. I have created UI design from the scratch. ',
+      'DEVELOPMENT ONGOING. A Web Application that let users share their unique recipes with others and see recipes from all over the world. Users can save favorite recipes, and try cooking multi-national recipes, and comment on that recipes! This project has been developed with another developer. I have created UI design from the scratch. ',
     design: [
       ['#A8763E', '#F7F3E3', '#4F2D07', '#E8CAA9'],
       ['Poppins', 'Mulish'],
@@ -196,7 +196,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'My portfolio website, whih shows about myself, projects, and contact information. For this website, I wanted to develop something unique, so I started from UI design.  I decided to use Sass in order to have more flexibility on CSS, and broke into smaller files to make file structure more simple. All the data is separated from UI components so that it is easier to update later.',
+      'My portfolio website, which shows about myself, projects, and contact information. For this website, I wanted to develop something unique, so I started from UI design.  I decided to use Sass in order to have more flexibility on CSS, and broke them into smaller files to make the file structure more simple. All the data is separated from UI components so that it is easier to update later.',
     design: [
       ['#16063c', '#f100f5', '#450eff', '#3b136b'],
       ['Orbitron', 'Tomorrow'],
@@ -217,7 +217,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'A website that lets users check overview information of all the countries including country flag, common name,languages and population. Additionally, for those who likes to go travelling, they can create journals per country. They can be edited, or deleted later. Users can see all the countries they have been to, and all the journals they wrote at glance. ',
+      'A website that lets users check overview information of all the countries including country flag, common name, languages and population. Additionally, for those who likes to go travelling, they can create journals per country. They can be edited, or deleted later. Users can see all the countries they have been to, and all the journals they wrote at a glance. ',
     design: [
       ['#395380', '#F6E8C9', '#BFCC85', '#464646'],
       ['Josefin Sans', 'Montserrat Alternates'],
@@ -236,7 +236,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'A demonstration website for a travel agency which features Japan. I created this website to brush up my front end skills using HTML, Sass and JavaScript, and also including design. For development, I used Sass to break down style files to smaller components considering readability and maintainability. For the motion of card flow, I used "cover flow" by swiper.js. For testimonials and FAQ, they are created by pure JavaScript. ',
+      'A demonstration website for a travel agency which features Japan. I created this website to brush up my front end skills using HTML, Sass and JavaScript, and also including design. For development, I used Sass to break down style files to smaller components considering readability and maintainability. For the motion of card flow, I used swiper.js. For testimonials and FAQ, they are created by pure JavaScript. ',
     design: [
       ['#8D0801', '#66666E', '#E6E6E9', '#000000'],
       ['Bodoni Moda', 'Lato'],
@@ -254,7 +254,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: true,
     about:
-      'A website that lets users to play a card game called "BlackJack". The rule of this game is simple, whoever holds the cards with sum of 21 wins, and whoever holds cards with sum of more than 21 is busted. Each game will be conducted by a dealer and 2 players. This is developed with other developers according to MVC patterns. I took part of the game logic, I was able to learn how to make logic out of game rules.',
+      'A website that lets users play a card game called "BlackJack". The rule of this game is simple, whoever holds the cards with the sum of 21 wins, and whoever holds cards with the sum of more than 21 is busted. Each game will be conducted by a dealer and 2 players. This was developed with other developers according to MVC patterns. I took part of the game logic, I was able to learn how to make logic out of game rules.',
     design: null,
     live: null,
     repo: 'https://github.com/YumiMachino/Black-Jack',
@@ -269,7 +269,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: false,
     about:
-      'A native iOS app developed by Swift. This app suggests optimized root to the destination of the category user picks from users current location. This app uses modern collection views with diffable data source, async API-fetch with dispatch group. The project was developed by a team of developers accordign to agile project management. I developed parts of front end, also implement API fetching.',
+      'A native iOS app developed by Swift. This app suggests optimized roots to the destination of the category user picks from users current location. This app uses modern collection views with diffable data source, async API-fetch with dispatch group. The project was developed by a team of developers according to agile project management. I developed parts of front end, also implemented API fetching.',
     design: null,
     live: null,
     repo: 'https://github.com/cookie777/Hang-Out-Planner',
@@ -284,7 +284,7 @@ export const myProjects: ProjectDataType = [
     ],
     web: false,
     about:
-      'A native iOS app developed by Swift. This let users to create, add, update and delete to do items. By using Core data, this app allows data to be persistent.',
+      'A native iOS app developed by Swift. This let users create, add, update and delete to do items. By using Core data, this app allows data to be persistent.',
     design: null,
     live: null,
     repo: 'https://github.com/YumiMachino/CoreData_ToDoList',
@@ -299,7 +299,7 @@ export const myProjects: ProjectDataType = [
       { id: 83, tech: 'Firebase' },
     ],
     web: true,
-    about: 'Tutorial based web application which features e-commerce.',
+    about: 'Tutorial based web application which features e-commerce website.',
     design: null,
     live: 'https://crwn-clothing-tutorial-live.herokuapp.com/',
     repo: 'https://github.com/YumiMachino/crwn-clothing/tree/main/src',

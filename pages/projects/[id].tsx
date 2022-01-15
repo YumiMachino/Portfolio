@@ -42,7 +42,7 @@ const ProjectDetail = ({ project }) => {
     const colors = design[0];
     return colors.map((color) => {
       return (
-        <div className={styles.colorSet}>
+        <div key={color} className={styles.colorSet}>
           <div
             className={styles.color}
             style={{ backgroundColor: `${color}` }}
@@ -53,7 +53,6 @@ const ProjectDetail = ({ project }) => {
     });
   };
 
-  // Poppins, Mulish, Orbitron, Tomorrow, Barlow, Josefin Sans, Montserrat Alternates, Badoni Moda, Lato
   const renderTypos = () => {
     if (!design) return;
     const typos = design[1];

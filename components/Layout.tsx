@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Arrow from './Arrow';
 import Logo from './Logo';
 import Navigation from './Navigation';
-
 import styles from '@/styles/Layout.module.scss';
 
 type LayoutProps = {

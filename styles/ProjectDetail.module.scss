@@ -6,18 +6,9 @@
   border: 1px solid color(weak-pink);
   margin: 2rem auto 0 auto;
   padding: 0.4rem;
-  // height: 80vh;
 
   @include responsive(sm) {
     width: 70%;
-  }
-  @include responsive(md) {
-    height: fit-content;
-  }
-
-  @include responsive(xl) {
-    height: 70vh;
-    margin: 4rem auto;
   }
 
   .detailWrapper {
@@ -45,7 +36,6 @@
     }
     @include responsive(lg) {
       width: 50%;
-      height: 400px;
     }
   }
 
@@ -60,7 +50,6 @@
 
     @include responsive(lg) {
       width: 50%;
-      height: 400px;
     }
   }
 
@@ -127,7 +116,13 @@
   .about {
     font-family: $font-tomorrow;
     font-size: size(sm);
-    font-weight: 100;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 3;
+
+    @include responsive(md) {
+      font-size: size(sm) * 1.1;
+    }
   }
 }
 
@@ -149,6 +144,10 @@
   @include responsive(xs) {
     width: 24px;
     height: 24px;
+  }
+  @include responsive(lg) {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -178,6 +177,10 @@
 
   @include responsive(xs) {
     font-size: size(sm);
+  }
+
+  @include responsive(lg) {
+    font-size: size(sm) * 1.4;
   }
 }
 .typoSet {

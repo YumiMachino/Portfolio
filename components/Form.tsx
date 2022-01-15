@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-import styles from '@/styles/components/Form.module.scss';
-import Button from './Button';
 import { FaCheckCircle } from 'react-icons/fa';
 import { MdSmsFailed } from 'react-icons/md';
+import Button from './Button';
+import styles from '@/styles/components/Form.module.scss';
 
 type Inputs = {
   name: string;

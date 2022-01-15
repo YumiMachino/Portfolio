@@ -17,10 +17,6 @@
   @include responsive(md) {
     width: 80%;
   }
-  @include responsive(lg) {
-    height: 80vh;
-    margin: auto;
-  }
 
   .introContainer {
     @include flexPosition($justCont: space-around, $alignItem: center);
@@ -75,6 +71,11 @@
 
     @include responsive(md) {
       font-size: size(sm);
+    }
+    @include responsive(lg) {
+      font-weight: 300;
+      letter-spacing: 2;
+      line-height: 1.5;
     }
 
     @include responsive(xl) {

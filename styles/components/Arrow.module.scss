@@ -28,6 +28,7 @@
     font-size: size(sm) * 1.2;
     font-weight: 400;
     display: inline-block;
+    color: color(weak-pink);
 
     @include responsive(md) {
       font-size: size(md);
@@ -47,8 +48,14 @@
   margin: auto;
   @include flexPosition(center, center);
 
-  &:hover {
+  &:hover,
+  &:hover > p {
     @include shakeAnimation(2s);
     color: color(strong-pink);
   }
+}
+
+.iconName {
+  font-size: size(xs);
+  color: red;
 }

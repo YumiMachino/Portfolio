@@ -8,18 +8,22 @@ const linkData = [
   {
     link: '/',
     icon: <FaHome />,
+    name: 'Home',
   },
   {
     link: '/about',
     icon: <SiAboutdotme />,
+    name: 'About',
   },
   {
     link: '/projects',
     icon: <FaFileCode />,
+    name: 'Projects',
   },
   {
     link: '/contact',
     icon: <MdEmail />,
+    name: 'Contact',
   },
 ];
 
@@ -30,7 +34,10 @@ const Navigation = () => {
         {linkData.map((link, index) => (
           <li key={index}>
             <Link href={link.link}>
-              <a className={styles.navIconStyle}>{link.icon}</a>
+              <a className={styles.navItem}>
+                <span className={styles.navIconStyle}> {link.icon}</span>
+                <span className={styles.iconName}>{link.name}</span>
+              </a>
             </Link>
           </li>
         ))}

@@ -25,12 +25,12 @@ const TopPage = () => {
         </span>
       </h1>
 
-      <h5 className={styles.role}>
+      <h2 className={styles.role}>
         <Typist>
           <Typist.Delay ms={300} />
           Front End Developer.
         </Typist>
-      </h5>
+      </h2>
 
       <Button link='/projects' content='Check Projects_' isPrimary={true} />
     </div>

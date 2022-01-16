@@ -12,7 +12,7 @@
     font-size: size(sm) * 1.5;
     padding: 1rem 0;
     font-weight: 200;
-    color: color(weak-pink);
+    color: color(strong-pink);
 
     @include responsive(sm) {
       font-size: size(lg);

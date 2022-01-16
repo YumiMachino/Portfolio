@@ -9,11 +9,12 @@
   top: 10px;
   right: 10px;
   text-align: center;
+  z-index: 50;
 
   & > ul {
     list-style-type: none;
+
     @include responsive(xs) {
-      height: 50px;
       @include flexPosition(space-around, center);
     }
 
@@ -25,28 +26,17 @@
   }
 }
 
-.navIconStyle {
-  padding: 10px;
-  width: 44px;
-  height: 44px;
-  font-size: size(md);
-  @include transition(all 0.2s);
-  color: color(weak-pink);
+.navItem {
+  @include flexPosition(center, center);
+  flex-direction: column;
+  margin: 2px 1px;
 
-  @include responsive(sm) {
-    width: 70px;
-    height: 60px;
-    font-size: size(xl);
+  & > span {
+    display: inline-block;
   }
 
-  @include responsive(xl) {
-    width: 100px;
-    height: 100px;
-    font-size: size(xl) * 1.2;
-  }
-
-  &:hover,
-  &:focus {
+  &:hover .navIconStyle,
+  &:focus .navIconStyle {
     color: color(strong-pink);
     font-size: size(md) * 1.2;
 
@@ -55,6 +45,37 @@
     }
     @include responsive(xl) {
       font-size: size(xl) * 2;
+    }
+  }
+
+  &:hover .iconName {
+    font-size: size(sm);
+    color: color(strong-pink);
+  }
+
+  .navIconStyle {
+    padding: 2px;
+    font-size: size(md);
+    @include transition(all 0.2s);
+    color: color(weak-pink);
+
+    @include responsive(sm) {
+      font-size: size(xl);
+    }
+
+    @include responsive(xl) {
+      font-size: size(xl) * 1.2;
+    }
+  }
+
+  .iconName {
+    font-size: size(xs);
+    color: color(weak-pink);
+    font-weight: 600;
+    padding: 1px 0;
+    display: none;
+    @include responsive(sm) {
+      display: block;
     }
   }
 }

@@ -50,7 +50,6 @@
 
   &:hover .iconName {
     font-size: size(sm);
-    color: color(strong-pink);
   }
 
   .navIconStyle {
@@ -70,7 +69,8 @@
 
   .iconName {
     font-size: size(xs);
-    color: color(weak-pink);
+    color: color(strong-pink);
+    text-transform: uppercase;
     font-weight: 600;
     padding: 1px 0;
     display: none;
